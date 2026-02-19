@@ -5,8 +5,16 @@ Automated English trend briefing media engine for ad-funded passive income.
 ## Goals
 - Fully automated ingest -> approve -> generate -> publish pipeline
 - Google AdSense-only monetization
-- 3 verticals: `ai_tech`, `finance`, `lifestyle_pop`
+- 2-level categories (major/subcategory) for SEO and navigation
 - Rollout ladder: `12 -> 18 -> 24` daily publish limit based on 7-day quality streak
+
+## Category Taxonomy
+- Major: `ai_tech` (AI & Technology)
+  - Sub: `ai-models`, `developer-tools`, `startups-funding`, `enterprise-adoption`, `policy-regulation`, `general`
+- Major: `finance` (Business & Finance)
+  - Sub: `markets-macro`, `fintech-payments`, `company-earnings`, `personal-finance`, `policy-regulation`, `general`
+- Major: `lifestyle_pop` (Culture & Media)
+  - Sub: `creator-economy`, `streaming-entertainment`, `social-platforms`, `consumer-trends`, `fandom-culture`, `general`
 
 ## Quick Start
 ```bash
@@ -16,6 +24,7 @@ python3 run_pipeline.py --vertical all --max-publish 12 --mode production
 
 ## CLI
 ```bash
+# --vertical is major category selector
 python3 run_pipeline.py --vertical all --max-publish 12 --mode production
 python3 run_pipeline.py --vertical finance --mode dry-run
 python3 ops_report.py --window 24h --format json
@@ -24,8 +33,8 @@ python3 ops_report.py --window 24h --format json
 ## Outputs
 - State: `state/pipeline_state.json`
 - Metrics: `state/ops_metrics.jsonl`
-- Content artifacts: `artifacts/YYYY-MM-DD/<vertical>/*.md|*.json`
-- Static site: `site/`
+- Content artifacts: `artifacts/YYYY-MM-DD/<major>/<sub>/*.md|*.json`
+- Static site: `site/<major>/<sub>/...`
 
 ## Automation Rules
 - Start at daily publish limit 12

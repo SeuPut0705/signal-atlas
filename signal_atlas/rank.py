@@ -9,6 +9,7 @@ from typing import Callable, Iterable
 
 from .models import ApprovedTopic, PolicyResult, TopicCandidate
 from .policy import evaluate_policy
+from .taxonomy import classify_subcategory
 from .utils import dedupe_hash, normalize_text
 
 
@@ -100,6 +101,7 @@ def approve_topics(
             continue
 
         conf = _confidence_score(candidate, policy)
+        subcategory = classify_subcategory(candidate.vertical, candidate.title, candidate.snippet)
         approved.append(
             ApprovedTopic(
                 id=candidate.id,
@@ -110,6 +112,7 @@ def approve_topics(
                 confidence_score=conf,
                 policy_score=policy.score,
                 dedupe_hash=d_hash,
+                subcategory=subcategory,
                 policy_flags=policy.flags,
                 snippet=candidate.snippet,
             )

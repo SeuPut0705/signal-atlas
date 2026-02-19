@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .constants import (
     ALL_VERTICALS,
+    DEFAULT_SUBCATEGORY,
     DEFAULT_PUBLISH_LIMIT,
     DEPLOY_FAILURE_DISABLE_COUNT,
     POLICY_DISABLE_RATE,
@@ -51,6 +52,7 @@ class Pipeline:
         now_iso = isoformat(now)
 
         state = load_state(self.state_file, now_iso=now_iso)
+        self._migrate_published_taxonomy(state)
         disabled = set(state.get("disabled_verticals") or [])
 
         requested_verticals = self._resolve_verticals(vertical)
@@ -89,6 +91,7 @@ class Pipeline:
                     {
                         "title": topic.title,
                         "dedupe_hash": topic.dedupe_hash,
+                        "subcategory": topic.subcategory,
                     }
                     for topic in approved
                 ]
@@ -246,11 +249,11 @@ class Pipeline:
 
         files = []
         for brief in generated_briefs:
-            vertical_dir = run_dir / brief.topic.vertical
-            ensure_dir(vertical_dir)
+            category_dir = run_dir / brief.topic.vertical / brief.topic.subcategory
+            ensure_dir(category_dir)
 
-            md_path = vertical_dir / f"{brief.slug}.md"
-            json_path = vertical_dir / f"{brief.slug}.json"
+            md_path = category_dir / f"{brief.slug}.md"
+            json_path = category_dir / f"{brief.slug}.json"
 
             md_path.write_text(brief.markdown, encoding="utf-8")
             write_json(json_path, brief.to_dict())
@@ -279,3 +282,54 @@ class Pipeline:
         rows = list(merged.values())
         rows.sort(key=lambda x: str(x.get("published_at") or ""), reverse=True)
         return rows
+
+    def _migrate_published_taxonomy(self, state: dict) -> None:
+        """Normalize legacy single-level paths into major/subcategory paths."""
+        rows = state.get("published") or []
+        if not rows:
+            return
+
+        migrated: list[dict] = []
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+
+            obj = dict(row)
+            vertical = str(obj.get("vertical") or "")
+            subcategory = str(obj.get("subcategory") or DEFAULT_SUBCATEGORY)
+            path = str(obj.get("path") or "")
+
+            if vertical not in ALL_VERTICALS:
+                if path.startswith("/"):
+                    parts = path.strip("/").split("/")
+                    if parts:
+                        vertical = parts[0]
+                if vertical not in ALL_VERTICALS:
+                    continue
+                obj["vertical"] = vertical
+
+            if not subcategory:
+                subcategory = DEFAULT_SUBCATEGORY
+            obj["subcategory"] = subcategory
+
+            # Legacy: /<vertical>/<slug>.html -> /<vertical>/<subcategory>/<slug>.html
+            if path.startswith("/"):
+                parts = path.strip("/").split("/")
+                if len(parts) == 2 and parts[0] == vertical:
+                    slug_part = parts[1]
+                    obj["path"] = f"/{vertical}/{subcategory}/{slug_part}"
+                elif len(parts) >= 3 and parts[0] == vertical:
+                    if not obj.get("subcategory"):
+                        obj["subcategory"] = parts[1] or DEFAULT_SUBCATEGORY
+                else:
+                    slug = str(obj.get("slug") or "").strip()
+                    if slug:
+                        obj["path"] = f"/{vertical}/{subcategory}/{slug}.html"
+            else:
+                slug = str(obj.get("slug") or "").strip()
+                if slug:
+                    obj["path"] = f"/{vertical}/{subcategory}/{slug}.html"
+
+            migrated.append(obj)
+
+        state["published"] = migrated

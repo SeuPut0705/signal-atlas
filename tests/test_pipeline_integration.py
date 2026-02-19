@@ -99,6 +99,8 @@ class PipelineIntegrationTests(unittest.TestCase):
             self.assertEqual(out["deploy_attempts"], 3)
             self.assertEqual(out["published"], 2)
             self.assertTrue((base / "site" / "index.html").exists())
+            sub_indexes = list((base / "site" / "ai_tech").glob("*/index.html"))
+            self.assertGreaterEqual(len(sub_indexes), 1)
 
     def test_vertical_is_disabled_after_3_failed_deploy_runs(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from typing import Callable
 
-from .constants import ALL_VERTICALS, VERTICAL_AI_TECH, VERTICAL_FINANCE, VERTICAL_LIFESTYLE_POP
+from .constants import ALL_VERTICALS, DEFAULT_SUBCATEGORY, VERTICAL_AI_TECH, VERTICAL_FINANCE, VERTICAL_LIFESTYLE_POP
 from .models import TopicCandidate
 from .utils import isoformat, stable_hash
 
@@ -151,6 +151,7 @@ class Ingestor:
                         title=title,
                         source_urls=source_urls,
                         discovered_at=discovered_at,
+                        subcategory=DEFAULT_SUBCATEGORY,
                         snippet=snippet,
                     )
                 )
@@ -172,6 +173,7 @@ class Ingestor:
                         title=title,
                         source_urls=[f"https://example.com/fallback/{vertical}/{idx}"],
                         discovered_at=isoformat(now),
+                        subcategory=DEFAULT_SUBCATEGORY,
                         snippet="Fallback topic used due to temporary source instability.",
                     )
                 )

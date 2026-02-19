@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
-from .constants import ADSENSE_SLOTS, ALL_VERTICALS, PROJECT_TAGLINE, PROJECT_TITLE, VERTICAL_LABELS
+from .constants import ADSENSE_SLOTS, ALL_VERTICALS, PROJECT_TAGLINE, PROJECT_TITLE, SUBCATEGORY_LABELS, VERTICAL_LABELS
 from .models import GeneratedBrief, PublishedBrief
 from .utils import ensure_dir
 
@@ -55,10 +55,11 @@ class StaticSitePublisher:
         else:
             ensure_dir(staging)
 
+        self._cleanup_legacy_vertical_pages(staging)
         self._write_shared_assets(staging)
 
         for brief in generated_briefs:
-            path = f"/{brief.topic.vertical}/{brief.slug}.html"
+            path = f"/{brief.topic.vertical}/{brief.topic.subcategory}/{brief.slug}.html"
             published = PublishedBrief(
                 slug=brief.slug,
                 vertical=brief.topic.vertical,
@@ -69,6 +70,7 @@ class StaticSitePublisher:
                 ad_slots=list(ADSENSE_SLOTS),
                 dedupe_hash=brief.topic.dedupe_hash,
                 path=path,
+                subcategory=brief.topic.subcategory,
             )
             new_posts.append(published)
 
@@ -77,9 +79,13 @@ class StaticSitePublisher:
 
         # Render post pages for new content.
         for post, brief in zip(new_posts, generated_briefs):
-            internal_links = [p for p in all_posts if p.vertical == post.vertical and p.path != post.path][:5]
+            internal_links = [
+                p
+                for p in all_posts
+                if p.vertical == post.vertical and p.subcategory == post.subcategory and p.path != post.path
+            ][:5]
             html_body = self._render_post_html(brief, post, internal_links)
-            out_path = staging / post.vertical / f"{post.slug}.html"
+            out_path = staging / post.vertical / post.subcategory / f"{post.slug}.html"
             ensure_dir(out_path.parent)
             out_path.write_text(html_body, encoding="utf-8")
 
@@ -90,6 +96,11 @@ class StaticSitePublisher:
             out_path = staging / vertical / "index.html"
             ensure_dir(out_path.parent)
             out_path.write_text(self._render_vertical_html(vertical, vertical_posts), encoding="utf-8")
+            for subcategory in self._active_subcategories_for_vertical(vertical_posts):
+                sub_posts = [p for p in vertical_posts if p.subcategory == subcategory]
+                sub_out = staging / vertical / subcategory / "index.html"
+                ensure_dir(sub_out.parent)
+                sub_out.write_text(self._render_subcategory_html(vertical, subcategory, sub_posts), encoding="utf-8")
 
         (staging / "sitemap.xml").write_text(self._render_sitemap(all_posts), encoding="utf-8")
         (staging / "rss.xml").write_text(self._render_rss(all_posts), encoding="utf-8")
@@ -128,6 +139,7 @@ class StaticSitePublisher:
                         ad_slots=list(row.get("ad_slots") or []),
                         dedupe_hash=str(row.get("dedupe_hash") or ""),
                         path=str(row["path"]),
+                        subcategory=str(row.get("subcategory") or "general"),
                     )
                 )
             except (KeyError, TypeError, ValueError):
@@ -166,6 +178,17 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
             + "\n",
             encoding="utf-8",
         )
+
+    def _cleanup_legacy_vertical_pages(self, root: Path) -> None:
+        """Remove old one-level article pages before writing category/subcategory pages."""
+        for vertical in ALL_VERTICALS:
+            vertical_dir = root / vertical
+            if not vertical_dir.exists():
+                continue
+            for old_file in vertical_dir.glob("*.html"):
+                if old_file.name == "index.html":
+                    continue
+                old_file.unlink(missing_ok=True)
 
     def _html_page(self, title: str, body: str) -> str:
         esc_title = html.escape(title)
@@ -213,7 +236,8 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
         body = f"""
 <header class=\"hero\">
   <h1>{html.escape(payload['title'])}</h1>
-  <p>{html.escape(VERTICAL_LABELS.get(brief.topic.vertical, brief.topic.vertical))} · <small class=\"meta\">{html.escape(published.published_at)}</small></p>
+  <p>{html.escape(VERTICAL_LABELS.get(brief.topic.vertical, brief.topic.vertical))} / {html.escape(SUBCATEGORY_LABELS.get(brief.topic.subcategory, brief.topic.subcategory))} · <small class=\"meta\">{html.escape(published.published_at)}</small></p>
+  <p><small class=\"meta\"><a href=\"{html.escape(self._href(f'/{brief.topic.vertical}/index.html'))}\">{html.escape(VERTICAL_LABELS.get(brief.topic.vertical, brief.topic.vertical))}</a> / <a href=\"{html.escape(self._href(f'/{brief.topic.vertical}/{brief.topic.subcategory}/index.html'))}\">{html.escape(SUBCATEGORY_LABELS.get(brief.topic.subcategory, brief.topic.subcategory))}</a></small></p>
 </header>
 {self._ad_slot('top-banner')}
 <article>
@@ -242,7 +266,7 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
     def _render_home_html(self, posts: list[PublishedBrief]) -> str:
         items = "".join(
             [
-                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(VERTICAL_LABELS.get(p.vertical, p.vertical))} · {html.escape(p.published_at)}</small></li>"
+                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(VERTICAL_LABELS.get(p.vertical, p.vertical))} / {html.escape(SUBCATEGORY_LABELS.get(p.subcategory, p.subcategory))} · {html.escape(p.published_at)}</small></li>"
                 for p in posts[:60]
             ]
         )
@@ -265,16 +289,24 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
     def _render_vertical_html(self, vertical: str, posts: list[PublishedBrief]) -> str:
         items = "".join(
             [
-                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(p.published_at)}</small></li>"
+                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(SUBCATEGORY_LABELS.get(p.subcategory, p.subcategory))} · {html.escape(p.published_at)}</small></li>"
                 for p in posts[:80]
             ]
         )
         label = VERTICAL_LABELS.get(vertical, vertical)
+        active_subcats = self._active_subcategories_for_vertical(posts)
+        sub_nav = "".join(
+            [
+                f"<a href=\"{html.escape(self._href(f'/{vertical}/{sub}/index.html'))}\">{html.escape(SUBCATEGORY_LABELS.get(sub, sub))}</a>"
+                for sub in active_subcats
+            ]
+        )
         body = f"""
 <header class=\"hero\">
   <h1>{html.escape(label)}</h1>
   <p><a href=\"{html.escape(self._href('/index.html'))}\">Back to home</a></p>
 </header>
+<nav class=\"verticals\">{sub_nav}</nav>
 {self._ad_slot('top-banner')}
 <div class=\"card\">
   <h2>Recent stories</h2>
@@ -283,8 +315,35 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
 """
         return self._html_page(f"{label} · {PROJECT_TITLE}", body)
 
+    def _render_subcategory_html(self, vertical: str, subcategory: str, posts: list[PublishedBrief]) -> str:
+        major = VERTICAL_LABELS.get(vertical, vertical)
+        sub_label = SUBCATEGORY_LABELS.get(subcategory, subcategory)
+        items = "".join(
+            [
+                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(p.published_at)}</small></li>"
+                for p in posts[:80]
+            ]
+        )
+        body = f"""
+<header class=\"hero\">
+  <h1>{html.escape(major)} / {html.escape(sub_label)}</h1>
+  <p><a href=\"{html.escape(self._href('/index.html'))}\">Home</a> · <a href=\"{html.escape(self._href(f'/{vertical}/index.html'))}\">{html.escape(major)}</a></p>
+</header>
+{self._ad_slot('top-banner')}
+<div class=\"card\">
+  <h2>Recent stories</h2>
+  <ul class=\"posts\">{items or '<li>No stories yet.</li>'}</ul>
+</div>
+"""
+        return self._html_page(f"{major} / {sub_label} · {PROJECT_TITLE}", body)
+
     def _render_sitemap(self, posts: list[PublishedBrief]) -> str:
         urls = [f"{self.site_url}/index.html", *[f"{self.site_url}/{v}/index.html" for v in ALL_VERTICALS]]
+        subcategory_indexes = {
+            f"{self.site_url}/{post.vertical}/{post.subcategory}/index.html"
+            for post in posts
+        }
+        urls.extend(sorted(subcategory_indexes))
         urls.extend([f"{self.site_url}{post.path}" for post in posts])
 
         body = "\n".join([f"  <url><loc>{html.escape(url)}</loc></url>" for url in urls])
@@ -328,3 +387,10 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
 </channel>
 </rss>
 """
+
+    def _active_subcategories_for_vertical(self, posts: list[PublishedBrief]) -> list[str]:
+        order: dict[str, int] = {}
+        for idx, post in enumerate(posts):
+            if post.subcategory not in order:
+                order[post.subcategory] = idx
+        return sorted(order.keys(), key=lambda key: order[key])

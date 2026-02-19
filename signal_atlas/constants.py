@@ -13,9 +13,9 @@ ALL_VERTICALS = (
 )
 
 VERTICAL_LABELS = {
-    VERTICAL_AI_TECH: "AI & Tech",
-    VERTICAL_FINANCE: "Finance",
-    VERTICAL_LIFESTYLE_POP: "Lifestyle & Pop",
+    VERTICAL_AI_TECH: "AI & Technology",
+    VERTICAL_FINANCE: "Business & Finance",
+    VERTICAL_LIFESTYLE_POP: "Culture & Media",
 }
 
 DEFAULT_PUBLISH_LIMIT = 12
@@ -26,6 +26,54 @@ PROJECT_TITLE = "Signal Atlas"
 PROJECT_TAGLINE = "Automated English trend briefings for ad-funded media"
 
 ADSENSE_SLOTS = ("top-banner", "inline-1", "inline-2", "footer")
+
+DEFAULT_SUBCATEGORY = "general"
+
+# Two-level taxonomy (major category -> subcategory)
+SUBCATEGORIES_BY_VERTICAL = {
+    VERTICAL_AI_TECH: (
+        "ai-models",
+        "developer-tools",
+        "startups-funding",
+        "enterprise-adoption",
+        "policy-regulation",
+        DEFAULT_SUBCATEGORY,
+    ),
+    VERTICAL_FINANCE: (
+        "markets-macro",
+        "fintech-payments",
+        "company-earnings",
+        "personal-finance",
+        "policy-regulation",
+        DEFAULT_SUBCATEGORY,
+    ),
+    VERTICAL_LIFESTYLE_POP: (
+        "creator-economy",
+        "streaming-entertainment",
+        "social-platforms",
+        "consumer-trends",
+        "fandom-culture",
+        DEFAULT_SUBCATEGORY,
+    ),
+}
+
+SUBCATEGORY_LABELS = {
+    "ai-models": "AI Models",
+    "developer-tools": "Developer Tools",
+    "startups-funding": "Startups & Funding",
+    "enterprise-adoption": "Enterprise Adoption",
+    "policy-regulation": "Policy & Regulation",
+    "markets-macro": "Markets & Macro",
+    "fintech-payments": "Fintech & Payments",
+    "company-earnings": "Company Earnings",
+    "personal-finance": "Personal Finance",
+    "creator-economy": "Creator Economy",
+    "streaming-entertainment": "Streaming & Entertainment",
+    "social-platforms": "Social Platforms",
+    "consumer-trends": "Consumer Trends",
+    "fandom-culture": "Fandom & Culture",
+    DEFAULT_SUBCATEGORY: "General",
+}
 
 # Rolling conditions to unlock the next publish stage.
 SCALE_RULES = {

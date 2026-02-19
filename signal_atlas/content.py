@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from .constants import ADSENSE_SLOTS, VERTICAL_FINANCE, VERTICAL_LABELS
+from .constants import ADSENSE_SLOTS, SUBCATEGORY_LABELS, VERTICAL_FINANCE, VERTICAL_LABELS
 from .models import ApprovedTopic, GeneratedBrief
 from .utils import slugify
 
@@ -60,7 +60,7 @@ def build_generated_brief(topic: ApprovedTopic) -> GeneratedBrief:
     md_lines = [
         f"# {topic.title}",
         "",
-        f"Vertical: {VERTICAL_LABELS.get(topic.vertical, topic.vertical)}",
+        f"Category: {VERTICAL_LABELS.get(topic.vertical, topic.vertical)} / {SUBCATEGORY_LABELS.get(topic.subcategory, topic.subcategory)}",
         "",
         "[AD_SLOT:top-banner]",
         "",
@@ -102,6 +102,7 @@ def build_generated_brief(topic: ApprovedTopic) -> GeneratedBrief:
         "slug": slug,
         "title": topic.title,
         "vertical": topic.vertical,
+        "subcategory": topic.subcategory,
         "summary": summary,
         "key_points": key_points,
         "faq": faq,
