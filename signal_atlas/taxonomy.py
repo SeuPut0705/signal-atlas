@@ -3,38 +3,116 @@
 from __future__ import annotations
 
 from .constants import (
+    CATEGORY_AI,
+    CATEGORY_FINANCE,
+    CATEGORY_HEALTHCARE,
+    CATEGORY_STOCKS,
+    CATEGORY_STARTUP,
+    CATEGORY_TECH,
     CATEGORIES_BY_VERTICAL,
     DEFAULT_CATEGORY,
-    VERTICAL_AI_TECH,
-    VERTICAL_FINANCE,
-    VERTICAL_LIFESTYLE_POP,
 )
 from .utils import normalize_text
 
 
-_RULES: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
-    VERTICAL_AI_TECH: (
-        ("ai-models", ("model", "llm", "gpt", "inference", "reasoning", "multimodal")),
-        ("developer-tools", ("developer", "devtool", "sdk", "api", "framework", "platform launch")),
-        ("startups-funding", ("funding", "seed", "series", "valuation", "venture", "startup")),
-        ("enterprise-adoption", ("enterprise", "adoption", "workflow", "copilot", "deployment")),
-        ("policy-regulation", ("regulation", "compliance", "policy", "governance", "safety act")),
+_RULES: tuple[tuple[str, tuple[str, ...]], ...] = (
+    # Prioritize stocks first so mixed headlines (e.g. "AI stock rally") are grouped into stocks.
+    (
+        CATEGORY_STOCKS,
+        (
+            "stock",
+            "stocks",
+            "share price",
+            "shares",
+            "nasdaq",
+            "nyse",
+            "s&p",
+            "dow jones",
+            "earnings",
+            "ipo",
+            "etf",
+            "market rally",
+        ),
     ),
-    VERTICAL_FINANCE: (
-        ("markets-macro", ("inflation", "fed", "rates", "yield", "macro", "recession", "market outlook")),
-        ("fintech-payments", ("fintech", "payment", "wallet", "neobank", "transaction", "remittance")),
-        ("company-earnings", ("earnings", "guidance", "quarter", "revenue", "profit", "eps")),
-        ("personal-finance", ("household", "budget", "savings", "debt", "consumer spending", "credit score")),
-        ("policy-regulation", ("regulation", "central bank", "policy", "tax", "sanction")),
+    (
+        CATEGORY_HEALTHCARE,
+        (
+            "health",
+            "healthcare",
+            "medical",
+            "hospital",
+            "biotech",
+            "pharma",
+            "drug",
+            "fda",
+            "clinical trial",
+            "patient",
+            "diagnosis",
+        ),
     ),
-    VERTICAL_LIFESTYLE_POP: (
-        ("creator-economy", ("creator", "influencer", "newsletter", "ugc", "monetization")),
-        ("streaming-entertainment", ("streaming", "netflix", "series", "movie", "box office", "entertainment")),
-        ("social-platforms", ("social platform", "instagram", "tiktok", "youtube", "algorithm", "engagement")),
-        ("consumer-trends", ("trend", "shopping", "lifestyle", "wellness", "consumer behavior")),
-        ("fandom-culture", ("fandom", "kpop", "anime", "community", "fanbase", "viral culture")),
+    (
+        CATEGORY_AI,
+        (
+            "ai",
+            "artificial intelligence",
+            "llm",
+            "model",
+            "gpt",
+            "openai",
+            "anthropic",
+            "machine learning",
+            "copilot",
+            "inference",
+            "agent",
+        ),
     ),
-}
+    (
+        CATEGORY_TECH,
+        (
+            "technology",
+            "software",
+            "cloud",
+            "semiconductor",
+            "chip",
+            "developer",
+            "api",
+            "operating system",
+            "smartphone",
+            "streaming service",
+            "social media",
+        ),
+    ),
+    (
+        CATEGORY_STARTUP,
+        (
+            "startup",
+            "funding",
+            "seed",
+            "series a",
+            "series b",
+            "series c",
+            "venture capital",
+            "unicorn",
+            "founder",
+        ),
+    ),
+    (
+        CATEGORY_FINANCE,
+        (
+            "finance",
+            "fintech",
+            "payment",
+            "bank",
+            "credit",
+            "inflation",
+            "interest rate",
+            "federal reserve",
+            "economy",
+            "monetary policy",
+            "budget",
+        ),
+    ),
+)
 
 
 def classify_category(vertical: str, title: str, snippet: str = "") -> str:
@@ -42,7 +120,7 @@ def classify_category(vertical: str, title: str, snippet: str = "") -> str:
     allowed = set(CATEGORIES_BY_VERTICAL.get(vertical, (DEFAULT_CATEGORY,)))
     corpus = normalize_text(f"{title} {snippet}")
 
-    for category, keywords in _RULES.get(vertical, ()):
+    for category, keywords in _RULES:
         if category not in allowed:
             continue
         if any(keyword in corpus for keyword in keywords):

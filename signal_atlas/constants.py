@@ -28,69 +28,79 @@ PROJECT_TAGLINE = "Automated English trend briefings for ad-funded media"
 ADSENSE_SLOTS = ("top-banner", "inline-1", "inline-2", "footer")
 
 DEFAULT_CATEGORY = "general"
+CATEGORY_AI = "ai"
+CATEGORY_TECH = "tech"
+CATEGORY_FINANCE = "finance"
+CATEGORY_HEALTHCARE = "healthcare"
+CATEGORY_STOCKS = "stocks"
+CATEGORY_STARTUP = "startup"
 
 # Single-level taxonomy (category only)
 CATEGORIES_BY_VERTICAL = {
     VERTICAL_AI_TECH: (
-        "ai-models",
-        "developer-tools",
-        "startups-funding",
-        "enterprise-adoption",
-        "policy-regulation",
+        CATEGORY_AI,
+        CATEGORY_TECH,
+        CATEGORY_FINANCE,
+        CATEGORY_HEALTHCARE,
+        CATEGORY_STOCKS,
+        CATEGORY_STARTUP,
         DEFAULT_CATEGORY,
     ),
     VERTICAL_FINANCE: (
-        "markets-macro",
-        "fintech-payments",
-        "company-earnings",
-        "personal-finance",
-        "policy-regulation",
+        CATEGORY_AI,
+        CATEGORY_TECH,
+        CATEGORY_FINANCE,
+        CATEGORY_HEALTHCARE,
+        CATEGORY_STOCKS,
+        CATEGORY_STARTUP,
         DEFAULT_CATEGORY,
     ),
     VERTICAL_LIFESTYLE_POP: (
-        "creator-economy",
-        "streaming-entertainment",
-        "social-platforms",
-        "consumer-trends",
-        "fandom-culture",
+        CATEGORY_AI,
+        CATEGORY_TECH,
+        CATEGORY_FINANCE,
+        CATEGORY_HEALTHCARE,
+        CATEGORY_STOCKS,
+        CATEGORY_STARTUP,
         DEFAULT_CATEGORY,
     ),
 }
 
 ALL_CATEGORIES = (
-    "ai-models",
-    "developer-tools",
-    "startups-funding",
-    "enterprise-adoption",
-    "policy-regulation",
-    "markets-macro",
-    "fintech-payments",
-    "company-earnings",
-    "personal-finance",
-    "creator-economy",
-    "streaming-entertainment",
-    "social-platforms",
-    "consumer-trends",
-    "fandom-culture",
+    CATEGORY_AI,
+    CATEGORY_TECH,
+    CATEGORY_FINANCE,
+    CATEGORY_HEALTHCARE,
+    CATEGORY_STOCKS,
+    CATEGORY_STARTUP,
     DEFAULT_CATEGORY,
 )
 
 CATEGORY_LABELS = {
-    "ai-models": "AI Models",
-    "developer-tools": "Developer Tools",
-    "startups-funding": "Startups Funding",
-    "enterprise-adoption": "Enterprise Adoption",
-    "policy-regulation": "Policy Regulation",
-    "markets-macro": "Markets Macro",
-    "fintech-payments": "Fintech Payments",
-    "company-earnings": "Company Earnings",
-    "personal-finance": "Personal Finance",
-    "creator-economy": "Creator Economy",
-    "streaming-entertainment": "Streaming Entertainment",
-    "social-platforms": "Social Platforms",
-    "consumer-trends": "Consumer Trends",
-    "fandom-culture": "Fandom Culture",
+    CATEGORY_AI: "AI",
+    CATEGORY_TECH: "Tech",
+    CATEGORY_FINANCE: "Finance",
+    CATEGORY_HEALTHCARE: "Healthcare",
+    CATEGORY_STOCKS: "Stocks",
+    CATEGORY_STARTUP: "Startup",
     DEFAULT_CATEGORY: "General",
+}
+
+LEGACY_CATEGORY_MAP = {
+    "ai-models": CATEGORY_AI,
+    "developer-tools": CATEGORY_TECH,
+    "enterprise-adoption": CATEGORY_TECH,
+    "startups-funding": CATEGORY_STARTUP,
+    "markets-macro": CATEGORY_FINANCE,
+    "fintech-payments": CATEGORY_FINANCE,
+    "personal-finance": CATEGORY_FINANCE,
+    "policy-regulation": CATEGORY_FINANCE,
+    "company-earnings": CATEGORY_STOCKS,
+    "creator-economy": CATEGORY_STARTUP,
+    "streaming-entertainment": CATEGORY_TECH,
+    "social-platforms": CATEGORY_TECH,
+    "consumer-trends": DEFAULT_CATEGORY,
+    "fandom-culture": DEFAULT_CATEGORY,
 }
 
 # Rolling conditions to unlock the next publish stage.

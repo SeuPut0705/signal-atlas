@@ -7,10 +7,12 @@ from datetime import datetime
 from pathlib import Path
 
 from .constants import (
+    ALL_CATEGORIES,
     ALL_VERTICALS,
     DEFAULT_CATEGORY,
     DEFAULT_PUBLISH_LIMIT,
     DEPLOY_FAILURE_DISABLE_COUNT,
+    LEGACY_CATEGORY_MAP,
     POLICY_DISABLE_RATE,
 )
 from .content import build_generated_brief
@@ -308,7 +310,8 @@ class Pipeline:
                     continue
                 obj["vertical"] = vertical
 
-            if not category:
+            category = LEGACY_CATEGORY_MAP.get(category, category)
+            if not category or category not in set(ALL_CATEGORIES):
                 category = DEFAULT_CATEGORY
             obj["category"] = category
             obj.pop("subcategory", None)
@@ -320,10 +323,12 @@ class Pipeline:
             if path.startswith("/"):
                 parts = path.strip("/").split("/")
                 if len(parts) >= 3 and parts[0] == "category":
-                    obj["category"] = parts[1] or category
+                    normalized = LEGACY_CATEGORY_MAP.get(parts[1], parts[1])
+                    obj["category"] = normalized if normalized in set(ALL_CATEGORIES) else category
                     obj["path"] = f"/category/{obj['category']}/{parts[-1]}"
                 elif len(parts) >= 3 and parts[0] in ALL_VERTICALS:
-                    obj["category"] = parts[1] or category
+                    normalized = LEGACY_CATEGORY_MAP.get(parts[1], parts[1])
+                    obj["category"] = normalized if normalized in set(ALL_CATEGORIES) else category
                     obj["path"] = f"/category/{obj['category']}/{parts[-1]}"
                 elif len(parts) == 2 and parts[0] in ALL_VERTICALS:
                     obj["path"] = f"/category/{category}/{parts[1]}"

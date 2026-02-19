@@ -6,21 +6,29 @@ from signal_atlas.taxonomy import classify_category
 
 
 class TaxonomyUnitTests(unittest.TestCase):
-    def test_ai_models_category(self) -> None:
+    def test_ai_category(self) -> None:
         category = classify_category(
             "ai_tech",
             "Open source reasoning model launch shakes enterprise roadmap",
             "Teams compare multimodal model benchmarks for inference cost.",
         )
-        self.assertEqual(category, "ai-models")
+        self.assertEqual(category, "ai")
 
-    def test_fintech_category(self) -> None:
+    def test_finance_category(self) -> None:
         category = classify_category(
             "finance",
             "Payment wallet competition intensifies across neobank apps",
             "Fintech players race to lower transaction fees.",
         )
-        self.assertEqual(category, "fintech-payments")
+        self.assertEqual(category, "finance")
+
+    def test_tech_category(self) -> None:
+        category = classify_category(
+            "lifestyle_pop",
+            "Major streaming platform rolls out developer API toolkit",
+            "Cloud app teams adopt new software platform integration.",
+        )
+        self.assertEqual(category, "tech")
 
     def test_general_fallback(self) -> None:
         category = classify_category(

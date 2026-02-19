@@ -9,20 +9,12 @@ Automated English trend briefing media engine for ad-funded passive income.
 - Rollout ladder: `12 -> 18 -> 24` daily publish limit based on 7-day quality streak
 
 ## Category Taxonomy
-- `ai-models`
-- `developer-tools`
-- `startups-funding`
-- `enterprise-adoption`
-- `policy-regulation`
-- `markets-macro`
-- `fintech-payments`
-- `company-earnings`
-- `personal-finance`
-- `creator-economy`
-- `streaming-entertainment`
-- `social-platforms`
-- `consumer-trends`
-- `fandom-culture`
+- `ai`
+- `tech`
+- `finance`
+- `healthcare`
+- `stocks`
+- `startup`
 - `general`
 
 ## Quick Start
