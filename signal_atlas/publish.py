@@ -10,7 +10,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
-from .constants import ADSENSE_SLOTS, ALL_VERTICALS, CATEGORY_LABELS, PROJECT_TAGLINE, PROJECT_TITLE
+from .constants import ADSENSE_SLOTS, ALL_CATEGORIES, ALL_VERTICALS, CATEGORY_LABELS, PROJECT_TAGLINE, PROJECT_TITLE
 from .models import GeneratedBrief, PublishedBrief
 from .utils import ensure_dir
 
@@ -87,7 +87,7 @@ class StaticSitePublisher:
 
         # Render aggregate pages.
         (staging / "index.html").write_text(self._render_home_html(all_posts), encoding="utf-8")
-        for category in self._active_categories(all_posts):
+        for category in ALL_CATEGORIES:
             category_posts = [p for p in all_posts if p.category == category]
             out_path = staging / "category" / category / "index.html"
             ensure_dir(out_path.parent)
@@ -260,7 +260,7 @@ nav.categories a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius
             ]
         )
 
-        active_categories = self._active_categories(posts)
+        active_categories = [category for category in ALL_CATEGORIES if category in CATEGORY_LABELS]
         nav = "".join(
             [
                 f"<a href=\"{html.escape(self._href(f'/category/{category}/index.html'))}\">{html.escape(CATEGORY_LABELS.get(category, category))}</a>"
