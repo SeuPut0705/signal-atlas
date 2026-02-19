@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import os
 import shutil
+import urllib.parse
 from datetime import datetime
 from pathlib import Path
 from typing import Iterable
@@ -30,6 +31,9 @@ class StaticSitePublisher:
             or "https://signal-atlas.example.com"
         ).rstrip("/")
         self.adsense_client = adsense_client or os.getenv("ADSENSE_CLIENT_ID") or "ca-pub-REPLACE_ME"
+        parsed = urllib.parse.urlparse(self.site_url)
+        path = (parsed.path or "").rstrip("/")
+        self.base_path = "" if path in {"", "/"} else path
 
     def publish(
         self,
@@ -172,7 +176,7 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
   <title>{esc_title}</title>
   <meta name=\"description\" content=\"{html.escape(PROJECT_TAGLINE)}\" />
-  <link rel=\"stylesheet\" href=\"/assets/site.css\" />
+  <link rel=\"stylesheet\" href=\"{self._href('/assets/site.css')}\" />
   <script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={html.escape(self.adsense_client)}\" crossorigin=\"anonymous\"></script>
 </head>
 <body>
@@ -182,6 +186,10 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
 </body>
 </html>
 """
+
+    def _href(self, path: str) -> str:
+        normalized = path if path.startswith("/") else f"/{path}"
+        return f"{self.base_path}{normalized}" if self.base_path else normalized
 
     def _ad_slot(self, slot: str) -> str:
         return f"<div class=\"ad-slot\" data-slot=\"{html.escape(slot)}\">AdSense Slot: {html.escape(slot)}</div>"
@@ -196,7 +204,7 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
         src_items = "".join([f"<li><a href=\"{html.escape(u)}\" target=\"_blank\" rel=\"noopener\">{html.escape(u)}</a></li>" for u in payload["source_urls"]])
         kp_items = "".join([f"<li>{html.escape(line)}</li>" for line in payload["key_points"]])
         faq_items = "".join([f"<li><strong>{html.escape(item['q'])}</strong> {html.escape(item['a'])}</li>" for item in payload["faq"]])
-        related = "".join([f"<li><a href=\"{html.escape(p.path)}\">{html.escape(p.title)}</a></li>" for p in internal_links])
+        related = "".join([f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a></li>" for p in internal_links])
 
         disclaimer = ""
         if payload.get("disclaimer"):
@@ -234,12 +242,12 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
     def _render_home_html(self, posts: list[PublishedBrief]) -> str:
         items = "".join(
             [
-                f"<li><a href=\"{html.escape(p.path)}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(VERTICAL_LABELS.get(p.vertical, p.vertical))} · {html.escape(p.published_at)}</small></li>"
+                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(VERTICAL_LABELS.get(p.vertical, p.vertical))} · {html.escape(p.published_at)}</small></li>"
                 for p in posts[:60]
             ]
         )
 
-        nav = "".join([f"<a href=\"/{v}/index.html\">{html.escape(VERTICAL_LABELS[v])}</a>" for v in ALL_VERTICALS])
+        nav = "".join([f"<a href=\"{html.escape(self._href(f'/{v}/index.html'))}\">{html.escape(VERTICAL_LABELS[v])}</a>" for v in ALL_VERTICALS])
         body = f"""
 <header class=\"hero\">
   <h1>{html.escape(PROJECT_TITLE)}</h1>
@@ -257,7 +265,7 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
     def _render_vertical_html(self, vertical: str, posts: list[PublishedBrief]) -> str:
         items = "".join(
             [
-                f"<li><a href=\"{html.escape(p.path)}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(p.published_at)}</small></li>"
+                f"<li><a href=\"{html.escape(self._href(p.path))}\">{html.escape(p.title)}</a><br /><small class=\"meta\">{html.escape(p.published_at)}</small></li>"
                 for p in posts[:80]
             ]
         )
@@ -265,7 +273,7 @@ nav.verticals a { background: #e9f7f5; border: 1px solid #b8ece6; border-radius:
         body = f"""
 <header class=\"hero\">
   <h1>{html.escape(label)}</h1>
-  <p><a href=\"/index.html\">Back to home</a></p>
+  <p><a href=\"{html.escape(self._href('/index.html'))}\">Back to home</a></p>
 </header>
 {self._ad_slot('top-banner')}
 <div class=\"card\">
