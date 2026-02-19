@@ -1,10 +1,10 @@
-"""Two-level category inference for Signal Atlas."""
+"""Single-level category inference for Signal Atlas."""
 
 from __future__ import annotations
 
 from .constants import (
-    DEFAULT_SUBCATEGORY,
-    SUBCATEGORIES_BY_VERTICAL,
+    CATEGORIES_BY_VERTICAL,
+    DEFAULT_CATEGORY,
     VERTICAL_AI_TECH,
     VERTICAL_FINANCE,
     VERTICAL_LIFESTYLE_POP,
@@ -37,15 +37,20 @@ _RULES: dict[str, tuple[tuple[str, tuple[str, ...]], ...]] = {
 }
 
 
-def classify_subcategory(vertical: str, title: str, snippet: str = "") -> str:
-    """Infer a subcategory from title/snippet with deterministic keyword rules."""
-    allowed = set(SUBCATEGORIES_BY_VERTICAL.get(vertical, (DEFAULT_SUBCATEGORY,)))
+def classify_category(vertical: str, title: str, snippet: str = "") -> str:
+    """Infer a category from title/snippet with deterministic keyword rules."""
+    allowed = set(CATEGORIES_BY_VERTICAL.get(vertical, (DEFAULT_CATEGORY,)))
     corpus = normalize_text(f"{title} {snippet}")
 
-    for subcategory, keywords in _RULES.get(vertical, ()):
-        if subcategory not in allowed:
+    for category, keywords in _RULES.get(vertical, ()):
+        if category not in allowed:
             continue
         if any(keyword in corpus for keyword in keywords):
-            return subcategory
+            return category
 
-    return DEFAULT_SUBCATEGORY
+    return DEFAULT_CATEGORY
+
+
+def classify_subcategory(vertical: str, title: str, snippet: str = "") -> str:
+    """Backward-compatible alias for older call sites."""
+    return classify_category(vertical, title, snippet)

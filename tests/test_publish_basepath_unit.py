@@ -14,7 +14,7 @@ class PublishBasePathUnitTests(unittest.TestCase):
         topic = ApprovedTopic(
             id="a1",
             vertical="ai_tech",
-            subcategory="ai-models",
+            category="ai-models",
             title="Signal Atlas test headline",
             source_urls=["https://example.com/a"],
             discovered_at="2026-02-19T00:00:00+09:00",
@@ -36,8 +36,8 @@ class PublishBasePathUnitTests(unittest.TestCase):
 
             index_html = (site_dir / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="/signal-atlas/assets/site.css"', index_html)
-            self.assertIn('href="/signal-atlas/ai_tech/index.html"', index_html)
-            self.assertIn('href="/signal-atlas/ai_tech/ai-models/signal-atlas-test-headline.html"', index_html)
+            self.assertIn('href="/signal-atlas/category/ai-models/index.html"', index_html)
+            self.assertIn('href="/signal-atlas/category/ai-models/signal-atlas-test-headline.html"', index_html)
 
 
 if __name__ == "__main__":

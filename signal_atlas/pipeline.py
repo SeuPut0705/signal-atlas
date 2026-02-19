@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .constants import (
     ALL_VERTICALS,
-    DEFAULT_SUBCATEGORY,
+    DEFAULT_CATEGORY,
     DEFAULT_PUBLISH_LIMIT,
     DEPLOY_FAILURE_DISABLE_COUNT,
     POLICY_DISABLE_RATE,
@@ -52,7 +52,7 @@ class Pipeline:
         now_iso = isoformat(now)
 
         state = load_state(self.state_file, now_iso=now_iso)
-        self._migrate_published_taxonomy(state)
+        self._migrate_published_category(state)
         disabled = set(state.get("disabled_verticals") or [])
 
         requested_verticals = self._resolve_verticals(vertical)
@@ -91,7 +91,7 @@ class Pipeline:
                     {
                         "title": topic.title,
                         "dedupe_hash": topic.dedupe_hash,
-                        "subcategory": topic.subcategory,
+                        "category": topic.category,
                     }
                     for topic in approved
                 ]
@@ -249,7 +249,7 @@ class Pipeline:
 
         files = []
         for brief in generated_briefs:
-            category_dir = run_dir / brief.topic.vertical / brief.topic.subcategory
+            category_dir = run_dir / brief.topic.category
             ensure_dir(category_dir)
 
             md_path = category_dir / f"{brief.slug}.md"
@@ -283,8 +283,8 @@ class Pipeline:
         rows.sort(key=lambda x: str(x.get("published_at") or ""), reverse=True)
         return rows
 
-    def _migrate_published_taxonomy(self, state: dict) -> None:
-        """Normalize legacy single-level paths into major/subcategory paths."""
+    def _migrate_published_category(self, state: dict) -> None:
+        """Normalize legacy paths into single-level category paths."""
         rows = state.get("published") or []
         if not rows:
             return
@@ -296,7 +296,7 @@ class Pipeline:
 
             obj = dict(row)
             vertical = str(obj.get("vertical") or "")
-            subcategory = str(obj.get("subcategory") or DEFAULT_SUBCATEGORY)
+            category = str(obj.get("category") or obj.get("subcategory") or DEFAULT_CATEGORY)
             path = str(obj.get("path") or "")
 
             if vertical not in ALL_VERTICALS:
@@ -308,27 +308,33 @@ class Pipeline:
                     continue
                 obj["vertical"] = vertical
 
-            if not subcategory:
-                subcategory = DEFAULT_SUBCATEGORY
-            obj["subcategory"] = subcategory
+            if not category:
+                category = DEFAULT_CATEGORY
+            obj["category"] = category
+            obj.pop("subcategory", None)
 
-            # Legacy: /<vertical>/<slug>.html -> /<vertical>/<subcategory>/<slug>.html
+            # Supported path migrations:
+            # 1) /<vertical>/<slug>.html -> /category/<category>/<slug>.html
+            # 2) /<vertical>/<subcategory>/<slug>.html -> /category/<subcategory>/<slug>.html
+            # 3) /category/<category>/<slug>.html (no-op)
             if path.startswith("/"):
                 parts = path.strip("/").split("/")
-                if len(parts) == 2 and parts[0] == vertical:
-                    slug_part = parts[1]
-                    obj["path"] = f"/{vertical}/{subcategory}/{slug_part}"
-                elif len(parts) >= 3 and parts[0] == vertical:
-                    if not obj.get("subcategory"):
-                        obj["subcategory"] = parts[1] or DEFAULT_SUBCATEGORY
+                if len(parts) >= 3 and parts[0] == "category":
+                    obj["category"] = parts[1] or category
+                    obj["path"] = f"/category/{obj['category']}/{parts[-1]}"
+                elif len(parts) >= 3 and parts[0] in ALL_VERTICALS:
+                    obj["category"] = parts[1] or category
+                    obj["path"] = f"/category/{obj['category']}/{parts[-1]}"
+                elif len(parts) == 2 and parts[0] in ALL_VERTICALS:
+                    obj["path"] = f"/category/{category}/{parts[1]}"
                 else:
                     slug = str(obj.get("slug") or "").strip()
                     if slug:
-                        obj["path"] = f"/{vertical}/{subcategory}/{slug}.html"
+                        obj["path"] = f"/category/{category}/{slug}.html"
             else:
                 slug = str(obj.get("slug") or "").strip()
                 if slug:
-                    obj["path"] = f"/{vertical}/{subcategory}/{slug}.html"
+                    obj["path"] = f"/category/{category}/{slug}.html"
 
             migrated.append(obj)
 

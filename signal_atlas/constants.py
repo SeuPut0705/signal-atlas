@@ -13,9 +13,9 @@ ALL_VERTICALS = (
 )
 
 VERTICAL_LABELS = {
-    VERTICAL_AI_TECH: "AI & Technology",
-    VERTICAL_FINANCE: "Business & Finance",
-    VERTICAL_LIFESTYLE_POP: "Culture & Media",
+    VERTICAL_AI_TECH: "AI Technology",
+    VERTICAL_FINANCE: "Business Finance",
+    VERTICAL_LIFESTYLE_POP: "Culture Media",
 }
 
 DEFAULT_PUBLISH_LIMIT = 12
@@ -27,17 +27,17 @@ PROJECT_TAGLINE = "Automated English trend briefings for ad-funded media"
 
 ADSENSE_SLOTS = ("top-banner", "inline-1", "inline-2", "footer")
 
-DEFAULT_SUBCATEGORY = "general"
+DEFAULT_CATEGORY = "general"
 
-# Two-level taxonomy (major category -> subcategory)
-SUBCATEGORIES_BY_VERTICAL = {
+# Single-level taxonomy (category only)
+CATEGORIES_BY_VERTICAL = {
     VERTICAL_AI_TECH: (
         "ai-models",
         "developer-tools",
         "startups-funding",
         "enterprise-adoption",
         "policy-regulation",
-        DEFAULT_SUBCATEGORY,
+        DEFAULT_CATEGORY,
     ),
     VERTICAL_FINANCE: (
         "markets-macro",
@@ -45,7 +45,7 @@ SUBCATEGORIES_BY_VERTICAL = {
         "company-earnings",
         "personal-finance",
         "policy-regulation",
-        DEFAULT_SUBCATEGORY,
+        DEFAULT_CATEGORY,
     ),
     VERTICAL_LIFESTYLE_POP: (
         "creator-economy",
@@ -53,26 +53,44 @@ SUBCATEGORIES_BY_VERTICAL = {
         "social-platforms",
         "consumer-trends",
         "fandom-culture",
-        DEFAULT_SUBCATEGORY,
+        DEFAULT_CATEGORY,
     ),
 }
 
-SUBCATEGORY_LABELS = {
+ALL_CATEGORIES = (
+    "ai-models",
+    "developer-tools",
+    "startups-funding",
+    "enterprise-adoption",
+    "policy-regulation",
+    "markets-macro",
+    "fintech-payments",
+    "company-earnings",
+    "personal-finance",
+    "creator-economy",
+    "streaming-entertainment",
+    "social-platforms",
+    "consumer-trends",
+    "fandom-culture",
+    DEFAULT_CATEGORY,
+)
+
+CATEGORY_LABELS = {
     "ai-models": "AI Models",
     "developer-tools": "Developer Tools",
-    "startups-funding": "Startups & Funding",
+    "startups-funding": "Startups Funding",
     "enterprise-adoption": "Enterprise Adoption",
-    "policy-regulation": "Policy & Regulation",
-    "markets-macro": "Markets & Macro",
-    "fintech-payments": "Fintech & Payments",
+    "policy-regulation": "Policy Regulation",
+    "markets-macro": "Markets Macro",
+    "fintech-payments": "Fintech Payments",
     "company-earnings": "Company Earnings",
     "personal-finance": "Personal Finance",
     "creator-economy": "Creator Economy",
-    "streaming-entertainment": "Streaming & Entertainment",
+    "streaming-entertainment": "Streaming Entertainment",
     "social-platforms": "Social Platforms",
     "consumer-trends": "Consumer Trends",
-    "fandom-culture": "Fandom & Culture",
-    DEFAULT_SUBCATEGORY: "General",
+    "fandom-culture": "Fandom Culture",
+    DEFAULT_CATEGORY: "General",
 }
 
 # Rolling conditions to unlock the next publish stage.

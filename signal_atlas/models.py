@@ -13,7 +13,7 @@ class TopicCandidate:
     title: str
     source_urls: list[str]
     discovered_at: str
-    subcategory: str = "general"
+    category: str = "general"
     snippet: str = ""
 
     def to_dict(self) -> dict[str, Any]:
@@ -30,7 +30,7 @@ class ApprovedTopic:
     confidence_score: float
     policy_score: float
     dedupe_hash: str
-    subcategory: str = "general"
+    category: str = "general"
     policy_flags: list[str] = field(default_factory=list)
     snippet: str = ""
 
@@ -49,7 +49,7 @@ class PublishedBrief:
     ad_slots: list[str]
     dedupe_hash: str
     path: str
-    subcategory: str = "general"
+    category: str = "general"
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
