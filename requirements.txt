@@ -1,1 +1,2 @@
-# Standard library only (no third-party packages required)
+# Core generation SDK
+google-genai>=1.30.0

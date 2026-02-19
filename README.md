@@ -20,22 +20,31 @@ Automated English trend briefing media engine for ad-funded passive income.
 ## Quick Start
 ```bash
 cd /Users/choejinseo/Desktop/github/signal-atlas
-python3 run_pipeline.py --vertical all --max-publish 12 --mode production
+python3 run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
 ```
 
 ## CLI
 ```bash
 # --vertical is ingest source selector
-python3 run_pipeline.py --vertical all --max-publish 12 --mode production
-python3 run_pipeline.py --vertical finance --mode dry-run
+python3 run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
+python3 run_pipeline.py --vertical finance --mode dry-run --generation-engine template --quality-tier balanced
 python3 ops_report.py --window 24h --format json
+python3 backfill_archive.py --scope all --generation-engine gemini --quality-tier premium
 ```
 
 ## Outputs
 - State: `state/pipeline_state.json`
 - Metrics: `state/ops_metrics.jsonl`
+- Backfill checkpoint: `state/backfill_checkpoint.json`
 - Content artifacts: `artifacts/YYYY-MM-DD/<category>/*.md|*.json`
 - Static site: `site/category/<category>/...`
+
+## Environment Variables
+- `GEMINI_API_KEY` (required in `gemini` mode)
+- `GEMINI_MODEL` (default: `gemini-2.5-pro`)
+- `GENERATION_ENGINE` (`gemini` or `template`, default: `gemini`)
+- `QUALITY_TIER` (`premium` or `balanced`, default: `premium`)
+- `MONTHLY_BUDGET_KRW` (default: `200000`)
 
 ## Automation Rules
 - Start at daily publish limit 12

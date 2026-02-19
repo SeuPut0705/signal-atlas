@@ -10,10 +10,11 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import datetime
+from html.parser import HTMLParser
 from typing import Callable
 
 from .constants import ALL_VERTICALS, DEFAULT_CATEGORY, VERTICAL_AI_TECH, VERTICAL_FINANCE, VERTICAL_LIFESTYLE_POP
-from .models import TopicCandidate
+from .models import SourceMeta, TopicCandidate
 from .utils import isoformat, stable_hash
 
 GOOGLE_NEWS_TEMPLATE = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
@@ -57,6 +58,32 @@ FALLBACK_TOPICS = {
 _strip_html = re.compile(r"<[^>]+>")
 
 
+class _MetaParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.meta: dict[str, str] = {}
+        self._capture_title = False
+        self.page_title = ""
+
+    def handle_starttag(self, tag: str, attrs):
+        attrs_dict = {str(k).lower(): str(v) for k, v in attrs if k and v}
+        if tag.lower() == "meta":
+            key = (attrs_dict.get("property") or attrs_dict.get("name") or "").lower()
+            content = attrs_dict.get("content", "")
+            if key and content and key not in self.meta:
+                self.meta[key] = content.strip()
+        elif tag.lower() == "title":
+            self._capture_title = True
+
+    def handle_data(self, data: str):
+        if self._capture_title and not self.page_title:
+            self.page_title = data.strip()
+
+    def handle_endtag(self, tag: str):
+        if tag.lower() == "title":
+            self._capture_title = False
+
+
 @dataclass
 class IngestMeta:
     source_failures: int
@@ -65,6 +92,52 @@ class IngestMeta:
 
 def _clean_html_text(text: str) -> str:
     return re.sub(r"\s+", " ", _strip_html.sub(" ", html.unescape(text or ""))).strip()
+
+
+def _fetch_source_meta(url: str, timeout_sec: int = 6) -> SourceMeta:
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (SignalAtlas/1.0)",
+            "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout_sec) as resp:
+            raw = resp.read(220_000)
+    except Exception:
+        return SourceMeta(url=url)
+
+    text = raw.decode("utf-8", errors="ignore")
+    parser = _MetaParser()
+    try:
+        parser.feed(text)
+    except Exception:
+        return SourceMeta(url=url)
+
+    meta = parser.meta
+    title = meta.get("og:title") or meta.get("twitter:title") or parser.page_title
+    description = meta.get("og:description") or meta.get("description") or meta.get("twitter:description") or ""
+    image = meta.get("og:image") or meta.get("twitter:image") or ""
+    site_name = meta.get("og:site_name") or ""
+    return SourceMeta(
+        url=url,
+        title=_clean_html_text(title),
+        description=_clean_html_text(description),
+        image=image.strip(),
+        site_name=_clean_html_text(site_name),
+    )
+
+
+def _candidate_source_urls(rows: list[dict], current_url: str, max_urls: int = 5) -> list[str]:
+    ordered = [current_url] if current_url else []
+    for row in rows:
+        url = str(row.get("url") or "").strip()
+        if url and url not in ordered:
+            ordered.append(url)
+        if len(ordered) >= max_urls:
+            break
+    return ordered
 
 
 def fetch_google_news_query(query: str, timeout_sec: int = 8) -> list[dict]:
@@ -120,6 +193,7 @@ class Ingestor:
         failures = 0
         used_fallback = False
         seen: set[str] = set()
+        source_meta_cache: dict[str, SourceMeta] = {}
         candidates: list[TopicCandidate] = []
 
         for query in VERTICAL_QUERIES[vertical]:
@@ -140,9 +214,14 @@ class Ingestor:
                     continue
                 seen.add(candidate_id)
 
-                source_urls = [url] if url else []
+                source_urls = _candidate_source_urls(rows, url, max_urls=5)
                 discovered_at = isoformat(now)
                 snippet = str(row.get("snippet") or "").strip()
+                source_meta: list[SourceMeta] = []
+                for one_url in source_urls[:3]:
+                    if one_url not in source_meta_cache:
+                        source_meta_cache[one_url] = _fetch_source_meta(one_url)
+                    source_meta.append(source_meta_cache[one_url])
 
                 candidates.append(
                     TopicCandidate(
@@ -153,6 +232,7 @@ class Ingestor:
                         discovered_at=discovered_at,
                         category=DEFAULT_CATEGORY,
                         snippet=snippet,
+                        source_meta=source_meta,
                     )
                 )
                 if len(candidates) >= max_candidates:
@@ -171,10 +251,23 @@ class Ingestor:
                         id=candidate_id,
                         vertical=vertical,
                         title=title,
-                        source_urls=[f"https://example.com/fallback/{vertical}/{idx}"],
+                        source_urls=[
+                            f"https://example.com/fallback/{vertical}/{idx}",
+                            f"https://news.google.com/rss/search?q={urllib.parse.quote_plus(title)}",
+                            f"https://www.bing.com/news/search?q={urllib.parse.quote_plus(title)}",
+                        ],
                         discovered_at=isoformat(now),
                         category=DEFAULT_CATEGORY,
                         snippet="Fallback topic used due to temporary source instability.",
+                        source_meta=[
+                            SourceMeta(
+                                url=f"https://example.com/fallback/{vertical}/{idx}",
+                                title=title,
+                                description="Fallback source used due to temporary ingestion issues.",
+                                image="",
+                                site_name="Signal Atlas Fallback",
+                            )
+                        ],
                     )
                 )
                 if len(candidates) >= max_candidates:

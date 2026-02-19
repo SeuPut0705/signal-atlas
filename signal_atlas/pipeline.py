@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -22,6 +23,10 @@ from .publish import StaticSitePublisher
 from .rank import approve_topics
 from .state import append_metrics, load_state, maybe_scale_publish_limit, save_state, trim_published_history, upsert_daily_history
 from .utils import ensure_dir, isoformat, write_json
+
+BUDGET_ALERT_RATIO = 0.85
+PREMIUM_EST_KRW = 220.0
+BALANCED_EST_KRW = 120.0
 
 
 class Pipeline:
@@ -48,13 +53,25 @@ class Pipeline:
         vertical: str,
         max_publish: int | None,
         mode: str,
+        generation_engine: str | None = None,
+        quality_tier: str | None = None,
         now: datetime | None = None,
     ) -> dict:
         now = now or datetime.now().astimezone()
         now_iso = isoformat(now)
+        generation_engine_requested = self._normalize_generation_engine(
+            generation_engine or os.getenv("GENERATION_ENGINE") or "gemini"
+        )
+        quality_tier_requested = self._normalize_quality_tier(
+            quality_tier or os.getenv("QUALITY_TIER") or "premium"
+        )
+        gemini_model = (os.getenv("GEMINI_MODEL") or "gemini-2.5-pro").strip() or "gemini-2.5-pro"
+        budget_limit_krw = max(1, int(float(os.getenv("MONTHLY_BUDGET_KRW") or 200000)))
 
         state = load_state(self.state_file, now_iso=now_iso)
         self._migrate_published_category(state)
+        budget = self._load_budget_state(state, now)
+        budget["limit_krw"] = budget_limit_krw
         disabled = set(state.get("disabled_verticals") or [])
 
         requested_verticals = self._resolve_verticals(vertical)
@@ -72,6 +89,7 @@ class Pipeline:
 
         per_vertical: dict[str, dict] = {}
         source_failures: dict[str, int] = {}
+        generation_counts: dict[str, int] = defaultdict(int)
 
         for one_vertical in active_verticals:
             candidates, ingest_meta = self.ingestor.collect(
@@ -85,7 +103,28 @@ class Pipeline:
                 max_count=quotas[one_vertical],
             )
 
-            generated = [build_generated_brief(topic) for topic in approved]
+            generated = []
+            vertical_generation_counts: dict[str, int] = defaultdict(int)
+            for topic in approved:
+                effective_engine, effective_quality = self._choose_generation_mode(
+                    requested_engine=generation_engine_requested,
+                    requested_quality=quality_tier_requested,
+                    budget=budget,
+                )
+
+                brief = build_generated_brief(
+                    topic,
+                    generation_engine=effective_engine,
+                    quality_tier=effective_quality,
+                    gemini_model=gemini_model,
+                )
+                generated.append(brief)
+
+                engine_used = str(brief.payload.get("generation_engine") or effective_engine)
+                generation_counts[engine_used] += 1
+                vertical_generation_counts[engine_used] += 1
+                self._apply_generation_cost_to_budget(budget, brief.payload)
+
             all_generated.extend(generated)
 
             existing_history.extend(
@@ -113,6 +152,7 @@ class Pipeline:
                 "generated_count": len(generated),
                 "source_failures": ingest_meta.source_failures,
                 "used_fallback": ingest_meta.used_fallback,
+                "generation_usage": dict(vertical_generation_counts),
             }
 
         run_artifacts = self._write_artifacts(all_generated, now=now, mode=mode)
@@ -167,6 +207,7 @@ class Pipeline:
                 disabled.add(vertical_name)
 
         state["disabled_verticals"] = sorted(disabled)
+        self._save_budget_state(state, budget)
 
         total_publish = sum(publish_counts.values())
         ops_metrics = build_ops_metrics(
@@ -211,6 +252,10 @@ class Pipeline:
             "source_failures": source_failures,
             "deploy_attempts": deploy_attempts,
             "deploy_error": deploy_error,
+            "generation_engine_requested": generation_engine_requested,
+            "quality_tier_requested": quality_tier_requested,
+            "generation_usage": dict(generation_counts),
+            "budget": state.get("budget") or {},
             "metrics": ops_metrics.to_dict(),
             "artifacts": run_artifacts,
             "state_file": self.state_file,
@@ -284,6 +329,94 @@ class Pipeline:
         rows = list(merged.values())
         rows.sort(key=lambda x: str(x.get("published_at") or ""), reverse=True)
         return rows
+
+    def _normalize_generation_engine(self, value: str) -> str:
+        value = str(value or "").strip().lower()
+        if value not in {"gemini", "template"}:
+            return "gemini"
+        return value
+
+    def _normalize_quality_tier(self, value: str) -> str:
+        value = str(value or "").strip().lower()
+        if value not in {"premium", "balanced"}:
+            return "premium"
+        return value
+
+    def _load_budget_state(self, state: dict, now: datetime) -> dict:
+        month = now.strftime("%Y-%m")
+        budget = state.get("budget")
+        if not isinstance(budget, dict) or budget.get("month") != month:
+            budget = {
+                "month": month,
+                "spent_krw": 0.0,
+                "limit_krw": max(1, int(float(os.getenv("MONTHLY_BUDGET_KRW") or 200000))),
+                "last_engine": "gemini",
+                "last_quality_tier": "premium",
+            }
+        budget["month"] = month
+        budget["spent_krw"] = round(float(budget.get("spent_krw") or 0.0), 2)
+        budget["limit_krw"] = max(1, int(float(budget.get("limit_krw") or 200000)))
+        return budget
+
+    def _save_budget_state(self, state: dict, budget: dict) -> None:
+        spent = round(float(budget.get("spent_krw") or 0.0), 2)
+        limit_krw = max(1, int(float(budget.get("limit_krw") or 200000)))
+        budget["spent_krw"] = spent
+        budget["limit_krw"] = limit_krw
+        budget["alert_ratio"] = BUDGET_ALERT_RATIO
+        budget["capped"] = spent >= limit_krw
+        state["budget"] = budget
+
+        usage = state.get("budget_usage")
+        if not isinstance(usage, dict):
+            usage = {}
+        usage[str(budget.get("month") or "")] = spent
+        if len(usage) > 24:
+            keep = sorted(usage.keys())[-24:]
+            usage = {k: usage[k] for k in keep}
+        state["budget_usage"] = usage
+
+    def _choose_generation_mode(self, *, requested_engine: str, requested_quality: str, budget: dict) -> tuple[str, str]:
+        if requested_engine == "template":
+            budget["last_engine"] = "template"
+            budget["last_quality_tier"] = "balanced"
+            return "template", "balanced"
+
+        spent = float(budget.get("spent_krw") or 0.0)
+        limit_krw = max(1.0, float(budget.get("limit_krw") or 1.0))
+        remaining = limit_krw - spent
+        quality = requested_quality
+
+        if remaining <= 0:
+            budget["last_engine"] = "template"
+            budget["last_quality_tier"] = "balanced"
+            return "template", "balanced"
+
+        if spent >= limit_krw * BUDGET_ALERT_RATIO and quality == "premium":
+            quality = "balanced"
+
+        est_cost = PREMIUM_EST_KRW if quality == "premium" else BALANCED_EST_KRW
+        if remaining < est_cost:
+            if quality == "premium" and remaining >= BALANCED_EST_KRW:
+                quality = "balanced"
+            elif remaining < BALANCED_EST_KRW:
+                budget["last_engine"] = "template"
+                budget["last_quality_tier"] = "balanced"
+                return "template", "balanced"
+
+        budget["last_engine"] = "gemini"
+        budget["last_quality_tier"] = quality
+        return "gemini", quality
+
+    def _apply_generation_cost_to_budget(self, budget: dict, payload: dict) -> None:
+        engine = str(payload.get("generation_engine") or "")
+        if not engine.startswith("gemini"):
+            return
+        try:
+            cost = max(0.0, float(payload.get("generation_cost_krw") or 0.0))
+        except (TypeError, ValueError):
+            cost = 0.0
+        budget["spent_krw"] = round(float(budget.get("spent_krw") or 0.0) + cost, 2)
 
     def _migrate_published_category(self, state: dict) -> None:
         """Normalize legacy paths into single-level category paths."""

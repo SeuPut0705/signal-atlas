@@ -7,6 +7,18 @@ from typing import Any
 
 
 @dataclass
+class SourceMeta:
+    url: str
+    title: str = ""
+    description: str = ""
+    image: str = ""
+    site_name: str = ""
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
 class TopicCandidate:
     id: str
     vertical: str
@@ -15,9 +27,12 @@ class TopicCandidate:
     discovered_at: str
     category: str = "general"
     snippet: str = ""
+    source_meta: list[SourceMeta] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        data = asdict(self)
+        data["source_meta"] = [meta.to_dict() for meta in self.source_meta]
+        return data
 
 
 @dataclass
@@ -33,9 +48,12 @@ class ApprovedTopic:
     category: str = "general"
     policy_flags: list[str] = field(default_factory=list)
     snippet: str = ""
+    source_meta: list[SourceMeta] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        data = asdict(self)
+        data["source_meta"] = [meta.to_dict() for meta in self.source_meta]
+        return data
 
 
 @dataclass
@@ -50,6 +68,9 @@ class PublishedBrief:
     dedupe_hash: str
     path: str
     category: str = "general"
+    primary_image: str = ""
+    seo_title: str = ""
+    meta_description: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

@@ -115,6 +115,7 @@ def approve_topics(
                 category=category,
                 policy_flags=policy.flags,
                 snippet=candidate.snippet,
+                source_meta=candidate.source_meta,
             )
         )
         history_titles.append(candidate.title)

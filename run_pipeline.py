@@ -16,6 +16,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--vertical", choices=["all", *ALL_VERTICALS], default="all")
     parser.add_argument("--max-publish", type=int, default=None)
     parser.add_argument("--mode", choices=["production", "dry-run"], default="production")
+    parser.add_argument("--generation-engine", choices=["gemini", "template"], default="gemini")
+    parser.add_argument("--quality-tier", choices=["premium", "balanced"], default="premium")
     parser.add_argument("--state-file", default="state/pipeline_state.json")
     parser.add_argument("--metrics-file", default="state/ops_metrics.jsonl")
     parser.add_argument("--artifacts-dir", default="artifacts")
@@ -37,6 +39,8 @@ def main() -> int:
         vertical=args.vertical,
         max_publish=args.max_publish,
         mode=args.mode,
+        generation_engine=args.generation_engine,
+        quality_tier=args.quality_tier,
     )
     print(json.dumps(summary, indent=2, ensure_ascii=False))
     return 0
