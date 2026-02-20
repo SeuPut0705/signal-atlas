@@ -7,6 +7,7 @@ import json
 import os
 import shutil
 import urllib.parse
+import urllib.request
 from datetime import datetime
 from pathlib import Path
 from typing import Iterable
@@ -86,9 +87,13 @@ class StaticSitePublisher:
                 seo_title=str(brief.payload.get("seo_title") or brief.topic.title),
                 meta_description=str(brief.payload.get("meta_description") or PROJECT_TAGLINE),
             )
+            published.primary_image = self._localize_primary_image(published, staging)
+            brief.payload["hero_image_url"] = published.primary_image
             new_posts.append(published)
 
         all_posts = self._merge_posts(existing_posts, new_posts)
+        for post in all_posts:
+            post.primary_image = self._localize_primary_image(post, staging)
         all_posts.sort(key=lambda p: str(p.published_at), reverse=True)
 
         # Render post pages for new content.
@@ -165,6 +170,65 @@ class StaticSitePublisher:
             old_dir = root / vertical
             if old_dir.exists():
                 shutil.rmtree(old_dir, ignore_errors=True)
+
+    def _guess_image_ext(self, url: str, content_type: str = "") -> str:
+        mime_map = {
+            "image/jpeg": ".jpg",
+            "image/jpg": ".jpg",
+            "image/png": ".png",
+            "image/webp": ".webp",
+            "image/gif": ".gif",
+            "image/avif": ".avif",
+        }
+        if content_type in mime_map:
+            return mime_map[content_type]
+        path = urllib.parse.urlparse(url).path.lower()
+        for ext in (".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"):
+            if path.endswith(ext):
+                return ".jpg" if ext == ".jpeg" else ext
+        return ".jpg"
+
+    def _localize_primary_image(self, post: PublishedBrief, root: Path) -> str:
+        fallback = f"/assets/covers/{post.category}.svg"
+        current = str(post.primary_image or "").strip()
+        if not current:
+            return fallback
+        if current.startswith("/"):
+            return current
+        if not (current.startswith("http://") or current.startswith("https://")):
+            return fallback
+
+        images_dir = root / "assets" / "images"
+        ensure_dir(images_dir)
+
+        existing_ext = self._guess_image_ext(current)
+        existing_name = f"{post.slug}{existing_ext}"
+        existing_path = images_dir / existing_name
+        if existing_path.exists():
+            return f"/assets/images/{existing_name}"
+
+        try:
+            req = urllib.request.Request(
+                current,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (SignalAtlas/1.0)",
+                    "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+                },
+            )
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                content_type = (resp.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+                if not content_type.startswith("image/"):
+                    return fallback
+                blob = resp.read(2_500_001)
+            if not blob or len(blob) > 2_500_000:
+                return fallback
+            ext = self._guess_image_ext(current, content_type)
+            filename = f"{post.slug}{ext}"
+            out_path = images_dir / filename
+            out_path.write_bytes(blob)
+            return f"/assets/images/{filename}"
+        except Exception:
+            return fallback
 
     def _write_shared_assets(self, root: Path) -> None:
         css_dir = root / "assets"
@@ -469,7 +533,7 @@ nav.categories a {
     def _render_post_html(self, brief: GeneratedBrief, published: PublishedBrief, internal_links: list[PublishedBrief]) -> str:
         payload = brief.payload
         category_label = CATEGORY_LABELS.get(brief.topic.category, brief.topic.category)
-        hero = str(payload.get("hero_image_url") or published.primary_image or f"/assets/covers/{brief.topic.category}.svg")
+        hero = str(published.primary_image or payload.get("hero_image_url") or f"/assets/covers/{brief.topic.category}.svg")
         hero_src = self._href(hero) if hero.startswith("/") else hero
 
         key_points = "".join([f"<li>{html.escape(one)}</li>" for one in payload.get("key_points") or []])
@@ -480,7 +544,7 @@ nav.categories a {
         )
         src_items = "".join(
             [
-                f"<li><a href=\"{html.escape(url)}\" target=\"_blank\" rel=\"noopener\">{html.escape(url)}</a></li>"
+                f"<li><code>{html.escape(url)}</code></li>"
                 for url in payload.get("source_urls") or []
             ]
         )

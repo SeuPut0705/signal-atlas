@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 from signal_atlas.content import build_generated_brief
-from signal_atlas.models import ApprovedTopic
+from signal_atlas.models import ApprovedTopic, SourceMeta
 from signal_atlas.publish import StaticSitePublisher
 
 
@@ -23,6 +23,15 @@ class PublishBasePathUnitTests(unittest.TestCase):
             dedupe_hash="abc123",
             policy_flags=[],
             snippet="Test snippet",
+            source_meta=[
+                SourceMeta(
+                    url="https://example.com/a",
+                    title="External source",
+                    description="External source description",
+                    image="https://example.com/test-image.jpg",
+                    site_name="Example",
+                )
+            ],
         )
         generated = build_generated_brief(topic)
 
@@ -40,6 +49,11 @@ class PublishBasePathUnitTests(unittest.TestCase):
             self.assertIn('href="/signal-atlas/category/ai/signal-atlas-test-headline.html"', index_html)
             self.assertIn('<script type="application/ld+json">{"@context":"https://schema.org"', index_html)
             self.assertNotIn("&quot;@context&quot;", index_html)
+
+            article_html = (site_dir / "category" / "ai" / "signal-atlas-test-headline.html").read_text(encoding="utf-8")
+            self.assertIn("<code>https://example.com/a</code>", article_html)
+            self.assertNotIn('href="https://example.com/a"', article_html)
+            self.assertNotIn('src="https://example.com/test-image.jpg"', article_html)
 
 
 if __name__ == "__main__":
