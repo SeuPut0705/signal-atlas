@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-20T06:14:39+00:00",
+  "updated_at": "2026-02-20T09:10:53+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -1968,6 +1968,262 @@
       "template_version": "magazine-v2"
     },
     {
+      "slug": "ai-pioneer-fei-fei-li-s-startup-world-labs-raises-1-billion-bloomberg",
+      "vertical": "ai_tech",
+      "title": "AI Pioneer Fei-Fei Li’s Startup World Labs Raises $1 Billion - Bloomberg",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1074,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxOc3ZsZEJtQlA0QmVhWDN3WV9lanI1dHFfM1JVNjIwckxVd2JpQ1FqNWpyRnFTZzYyckJyZVNhRGpsYU9PQXhiR3kyZ0ZWeDUyd1AwNVRlaVpiU1k3c1lLTlNMMmc4UDg2eXFhS3BhUEdQeXl2SmJoelA4WE1KQVlnQzloa1Z3YlphZDJ6Ums3QXV1dTNEc2pXRUo4akJ0QmV1ODh4ZEJhSjE3M2loZFJZ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEhleXJQbzI2Q2pYY3dfWmRJNzhtUlVJWUxKLTRsSHNyMFF1RnNlaElYdEljN1VuMGxmUUVTYk1ad2FVNkZrN2R4MlRCQ2xpSHpjZm1ZS25NbXhVa0RKS1UybEtFYkNhNUhwd3JSRmtNbjNwQlBSVTNjVDF3Zmd6QzZIT1R5S1B1Wnl0dmJNS0tBTGFDei1sTzd5ZzVCelVEeFJjcXF5QjJEVjFYTHVJ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "505055fbd59fa7e37d02a597",
+      "path": "/stories/ai/ai-pioneer-fei-fei-li-s-startup-world-labs-raises-1-billion-bloomberg.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Fei-Fei Li's World Labs Secures $1B to Build AI for the Physical World",
+      "meta_description": "AI pioneer Fei-Fei Li's new startup, World Labs, raises $1 billion to develop 'embodied AI' that can see, reason, and act in the real world, moving beyond LLMs.",
+      "legacy_paths": [
+        "/category/ai/ai-pioneer-fei-fei-li-s-startup-world-labs-raises-1-billion-bloomberg.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "ai-pioneer-fei-fei-li-s-world-labs-raises-1-billion-in-funding-reuters",
+      "vertical": "ai_tech",
+      "title": "AI pioneer Fei-Fei Li's World Labs raises $1 billion in funding - Reuters",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1063,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa3E1QUhtd21WaHM3clhWY3hUWXluUHdLQXZJZ05HWHlQWUpnQkJYakF6cll2T05pR2VpYWwwOENjQVdYZ3gzajlCdzBrbFdxOHota01PVVRaZVZwUzZpYVBrY3Y2QXV3Zkt3TVpvU3gwSkhaa0I4dUFKQWpCeGVYM21fOWpsUEd5bFNNcm5aUU15Z2VSSDY2SUZhNDNJMzNqVXNvbVVR?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEhleXJQbzI2Q2pYY3dfWmRJNzhtUlVJWUxKLTRsSHNyMFF1RnNlaElYdEljN1VuMGxmUUVTYk1ad2FVNkZrN2R4MlRCQ2xpSHpjZm1ZS25NbXhVa0RKS1UybEtFYkNhNUhwd3JSRmtNbjNwQlBSVTNjVDF3Zmd6QzZIT1R5S1B1Wnl0dmJNS0tBTGFDei1sTzd5ZzVCelVEeFJjcXF5QjJEVjFYTHVJ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "6788fa12ee3f219b253bc708",
+      "path": "/stories/ai/ai-pioneer-fei-fei-li-s-world-labs-raises-1-billion-in-funding-reuters.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Fei-Fei Li's World Labs Secures $1B to Steer AI Towards Public Good",
+      "meta_description": "AI pioneer Fei-Fei Li launches World Labs, a non-profit with nearly $1B in funding to tackle grand challenges in healthcare, brain science, and AI safety.",
+      "legacy_paths": [
+        "/category/ai/ai-pioneer-fei-fei-li-s-world-labs-raises-1-billion-in-funding-reuters.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "modi-khosla-discuss-ai-and-startups-in-new-delhi-diya-tv",
+      "vertical": "ai_tech",
+      "title": "Modi, Khosla discuss AI and startups in New Delhi - Diya TV",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1071,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMie0FVX3lxTFBJaC1fN0lYTUMxNkZJbDhVX2RqVHBpQmhiRmJuZm9zT1NLWnJRMERBbmt6Nk5pb3UxVjg1bTR2MnVvekc4UEFDa1pyVU4wZkJlU255eGVIVlRKMkFMbV9ndTU2RjBieEpORzEwbUYzbXlPcHpfX0hkZmRCWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEhleXJQbzI2Q2pYY3dfWmRJNzhtUlVJWUxKLTRsSHNyMFF1RnNlaElYdEljN1VuMGxmUUVTYk1ad2FVNkZrN2R4MlRCQ2xpSHpjZm1ZS25NbXhVa0RKS1UybEtFYkNhNUhwd3JSRmtNbjNwQlBSVTNjVDF3Zmd6QzZIT1R5S1B1Wnl0dmJNS0tBTGFDei1sTzd5ZzVCelVEeFJjcXF5QjJEVjFYTHVJ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "48ed0120d9a462a258f51b48",
+      "path": "/stories/ai/modi-khosla-discuss-ai-and-startups-in-new-delhi-diya-tv.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Modi and Khosla's AI Vision: Charting India's Tech Startup Future",
+      "meta_description": "A high-level meeting between Indian PM Narendra Modi and VC Vinod Khosla signals a major push for AI and startups, leveraging India's digital infrastructure.",
+      "legacy_paths": [
+        "/category/ai/modi-khosla-discuss-ai-and-startups-in-new-delhi-diya-tv.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "chipagents-secures-50m-in-funding-to-accelerate-agentic-chip-design-siliconangle",
+      "vertical": "ai_tech",
+      "title": "ChipAgents secures $50M in funding to accelerate agentic chip design - SiliconANGLE",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1047,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxNQmJjTmZUUnI0TXdNRkRoQS1ILVMyVWpGb2NINGxMSXlGTklqT1lCdWFtSnF4T1ZRTEpnMFhhdjdwWnplQjFCbnBJVEFzV1JscjFBanZFT3VfZkRyMW1FM2Z5cXlnbEt5Wkg3VVhhUTBRSVRfVFpTRUpxT1ZVN3E5MFVsZUNGajRTbFJOMEhXTVhQUVJrcHVaZUJoMDRzZ0E?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEhleXJQbzI2Q2pYY3dfWmRJNzhtUlVJWUxKLTRsSHNyMFF1RnNlaElYdEljN1VuMGxmUUVTYk1ad2FVNkZrN2R4MlRCQ2xpSHpjZm1ZS25NbXhVa0RKS1UybEtFYkNhNUhwd3JSRmtNbjNwQlBSVTNjVDF3Zmd6QzZIT1R5S1B1Wnl0dmJNS0tBTGFDei1sTzd5ZzVCelVEeFJjcXF5QjJEVjFYTHVJ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "dbd0beca9d9044de2cd429c2",
+      "path": "/stories/ai/chipagents-secures-50m-in-funding-to-accelerate-agentic-chip-design-siliconangle.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "ChipAgents' $50M Funding Fuels AI Agent Revolution in Semiconductor Design",
+      "meta_description": "ChipAgents secures a $50M Series A to advance its agentic AI platform, which uses collaborative AI agents to slash semiconductor design times and costs.",
+      "legacy_paths": [
+        "/category/ai/chipagents-secures-50m-in-funding-to-accelerate-agentic-chip-design-siliconangle.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "central-bank-policy-seen-as-less-supportive-of-us-equity-market-returns-as-uncer",
+      "vertical": "finance",
+      "title": "Central bank policy seen as less supportive of US equity market returns as uncertainty over the inflation outlook persists - S&P Global",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1254,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiggJBVV95cUxPdWpBQWNDZ2tnbExuYWg5U3ZrelFteGlfWGkyS1A3YU4yZUZrQXlJSlQ4TjFGYlVNaldrQ2xjQ3daZUtJVHFEb2l2Nm5SOUdIVC1KRGl2UjdYYjNkUlRXZE5nb1ptbmYwRVF6V0xVYldxMlVTTENMLVhWYnhYVmktelotVllLX3d6VjB5Uy1mM2lzTkFIbS1jNDVxRDJJYmpQbEZxQ2FMck9hZUVpUG9BN3JjQlhKM2djS0VhV2QyTDhCUkxobnd3dzAwTGwwMlB2dHAxQV83LVpBN3MtU1lCWHVMNjFRVS02TDJTVEJhRnFBVG5lMDJpcS0tYTlnRzFNcWc?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUVRpWnpzel9vdWlfUTRyMGZwLVhXN2dmVDBNclBHRzhhNWx4MnVDSFBZNl8wZmxuZzlpZjZPTC0zMTZMRU9Udl9zWTB1X0FFR2ZBMGFQaWgydTVSY21qTzBkUWoyaTlGUHFJeVZybVZnb3d3YWoyRkZHeDVyLWszMmFPLUNZUmh0WUh3UG9ZejBFanRudmt5VV9YNmVSa1hmeWp2TE1CUWgtdw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "fae2e5405e643ab062df9090",
+      "path": "/stories/ai/central-bank-policy-seen-as-less-supportive-of-us-equity-market-returns-as-uncer.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "The End of an Era: How Inflation Uncertainty and Shifting Central Bank Policy Are Reshaping US Equity Returns",
+      "meta_description": "Discover why central bank policy is becoming a headwind for US stocks. Persistent inflation uncertainty is forcing a strategic pivot, impacting market dynamics.",
+      "legacy_paths": [
+        "/category/ai/central-bank-policy-seen-as-less-supportive-of-us-equity-market-returns-as-uncer.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "2026-banking-and-capital-markets-outlook-deloitte",
+      "vertical": "finance",
+      "title": "2026 banking and capital markets outlook - Deloitte",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1221,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMXJ6LXdSdVFkOGFjTWtGRHFRZFdMZUh0Qnd5ZWhkaGRtc2RSbnRoYXJPdmRDNFc4WkhmVGtmeFJDbmQ4andYNDRoTS1UNWV2YUg5a2pCY0N2V2c5Vkd3aEtSR1BGcTAtS0lncGZnNFd0STFJa18tZWVVZ0JRZmhIOXNocGVSa240bVlsdWhPTEJXMkxJZW9iSkc4SmJVOVlnTGFhRU16dENLaFRzc21IaWNnX0VrNER1TTA5Rko2Q2Foek5MMExBdDRwanpOQlE?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUVRpWnpzel9vdWlfUTRyMGZwLVhXN2dmVDBNclBHRzhhNWx4MnVDSFBZNl8wZmxuZzlpZjZPTC0zMTZMRU9Udl9zWTB1X0FFR2ZBMGFQaWgydTVSY21qTzBkUWoyaTlGUHFJeVZybVZnb3d3YWoyRkZHeDVyLWszMmFPLUNZUmh0WUh3UG9ZejBFanRudmt5VV9YNmVSa1hmeWp2TE1CUWgtdw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "ca60d4ec585a1d3b222e8af4",
+      "path": "/stories/tech/2026-banking-and-capital-markets-outlook-deloitte.html",
+      "category": "tech",
+      "primary_image": "/assets/covers/tech.svg",
+      "seo_title": "The 2026 Banking Horizon: AI, Risk, and the Race to Modernize",
+      "meta_description": "Deloitte's outlook reveals the forces shaping banking towards 2026. Explore how generative AI, economic headwinds, and regulatory pressures demand a total rein.",
+      "legacy_paths": [
+        "/category/tech/2026-banking-and-capital-markets-outlook-deloitte.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "creativity-predictions-100-top-execs-on-8-themes-to-watch-in-2026-ad-age",
+      "vertical": "lifestyle_pop",
+      "title": "Creativity predictions—100 top execs on 8 themes to watch in 2026 - Ad Age",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1259,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaFo4RmltSXRiYzhjdnlVU2VkR2IxemFSb0JZVjl3Qm5NSERfSW02bEpCTUpTd2s1R010T2RjeVBhV2pHQ0Rsb2RQVTZkODFHWTNsRngyQ0pQZ1U1MU1XQkpJOEtzQnQweXcxdE4wM2hDUlBGRzRJcWdDMmlOZWItTFc0TjdlMDlUSGRieFRVWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbVRFVUtSVUxZNkVfNFkwWTZKMG93ZGtPTm1zdjFDWm54RnItZlFVc3EwSXFtWWVGQjkzRTdfa2RfSTlaa1NjTmFxYUpWcUJUWXl0X0hRN1k0aUxRckdvSTR6M1V5d0twWFEzSTVhSWZCNWxlU0J2U0xTZkpsX0hVU0xEemdNVGhGWkNSV1NIc056LU1uMDM5bnZKQlZSM2xvSGc?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "8a5ec22a3274139f62f0c0a4",
+      "path": "/stories/general/creativity-predictions-100-top-execs-on-8-themes-to-watch-in-2026-ad-age.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "The Future of Creativity: 8 Trends for 2026 According to 100 Top Executives",
+      "meta_description": "An in-depth analysis of the 8 creative themes set to dominate 2026, based on insights from 100 industry leaders. Explore the impact of AI, immersive worlds, an.",
+      "legacy_paths": [
+        "/category/general/creativity-predictions-100-top-execs-on-8-themes-to-watch-in-2026-ad-age.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "top-100-media-trends-in-2024-trend-hunter",
+      "vertical": "lifestyle_pop",
+      "title": "Top 100 Media Trends in 2024 - Trend Hunter",
+      "published_at": "2026-02-20T09:10:53+00:00",
+      "word_count": 1202,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9QaFNYLTlkY3dKNE1nS3JpQ1dNVmZOYWVVMmJBQ0JoTm5EOE1FY3ZvUjVfTUgwTmhGNmRnVEFxc0tod2tGY1IxSHlobHpwX09Ka3BZbl9lNE5GNTNxTDJxdlRkb1Z6Z9IBa0FVX3lxTE81TmhUZ011V1FpWkQweWNOUlAyclpfLWlaeWFnZXQ1S2lqMjJjTTBMd3ZWT05Yd3BtODdYaWprdktLVWNBbGxDbjRaeWN2THpKMDQ3MWlYV1RnMlRYTHAyLUZPbUFZNFotTDg0?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbVRFVUtSVUxZNkVfNFkwWTZKMG93ZGtPTm1zdjFDWm54RnItZlFVc3EwSXFtWWVGQjkzRTdfa2RfSTlaa1NjTmFxYUpWcUJUWXl0X0hRN1k0aUxRckdvSTR6M1V5d0twWFEzSTVhSWZCNWxlU0J2U0xTZkpsX0hVU0xEemdNVGhGWkNSV1NIc056LU1uMDM5bnZKQlZSM2xvSGc?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "bff63e5821b4e8f76a0646a4",
+      "path": "/stories/general/top-100-media-trends-in-2024-trend-hunter.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "AI Avatars & Digital Nostalgia: Decoding Trend Hunter's 2024 Media Landscape",
+      "meta_description": "Explore Trend Hunter's 2024 media trends. Discover how AI-generated content, from influencers to news, is reshaping media alongside a surge in nostalgia.",
+      "legacy_paths": [
+        "/category/general/top-100-media-trends-in-2024-trend-hunter.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
       "slug": "agentic-finance-automation-startup-stacks-raises-23m-in-funding-siliconangle",
       "vertical": "ai_tech",
       "title": "Agentic finance automation startup Stacks raises $23M in funding - SiliconANGLE",
@@ -2363,16 +2619,16 @@
     },
     {
       "date": "2026-02-20",
-      "duplicate_rate": 0.3167,
+      "duplicate_rate": 0.85,
       "policy_flag_rate": 0.0,
-      "indexed_rate": 0.1698,
-      "rpm_estimate": 6.167,
-      "publish_count": 12
+      "indexed_rate": 0.0,
+      "rpm_estimate": 6.125,
+      "publish_count": 8
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 2096.15,
+    "spent_krw": 3535.93,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -2380,7 +2636,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 2096.15
+    "2026-02": 3535.93
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
