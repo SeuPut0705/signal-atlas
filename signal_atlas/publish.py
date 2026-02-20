@@ -401,8 +401,84 @@ nav.categories a {
   border-radius: var(--radius);
   overflow: hidden;
 }
-.featured-media { position: relative; aspect-ratio: 16 / 9; background: #cbd5e1; }
-.featured-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.featured-media, .story-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+.featured-media-text, .story-media-text {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  color: #f8fafc;
+  padding: .95rem;
+  background: linear-gradient(140deg, #334155 0%, #0f172a 100%);
+}
+.featured-media-text:hover, .story-media-text:hover { text-decoration: none; }
+.featured-media-text::before, .story-media-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(480px 220px at 92% 8%, rgba(255,255,255,.20) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(15,23,42,.08) 0%, rgba(15,23,42,.68) 100%);
+}
+.featured-media-inner, .story-media-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: .34rem;
+  max-width: 94%;
+}
+.cover-chip {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: .2rem .56rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.92);
+  color: #0f172a;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.featured-media .cover-title {
+  margin: 0;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.16rem, 2.1vw, 1.7rem);
+  line-height: 1.12;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.story-media .cover-title {
+  margin: 0;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.15;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.featured-media .cover-desc, .story-media .cover-desc {
+  font-size: .88rem;
+  line-height: 1.35;
+  color: rgba(248,250,252,.92);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.featured-media-text[data-category="ai"], .story-media-text[data-category="ai"] { background: linear-gradient(140deg, #0284c7 0%, #0f172a 100%); }
+.featured-media-text[data-category="tech"], .story-media-text[data-category="tech"] { background: linear-gradient(140deg, #16a34a 0%, #14532d 100%); }
+.featured-media-text[data-category="finance"], .story-media-text[data-category="finance"] { background: linear-gradient(140deg, #d97706 0%, #78350f 100%); }
+.featured-media-text[data-category="healthcare"], .story-media-text[data-category="healthcare"] { background: linear-gradient(140deg, #dc2626 0%, #7f1d1d 100%); }
+.featured-media-text[data-category="stocks"], .story-media-text[data-category="stocks"] { background: linear-gradient(140deg, #9333ea 0%, #4c1d95 100%); }
+.featured-media-text[data-category="startup"], .story-media-text[data-category="startup"] { background: linear-gradient(140deg, #0d9488 0%, #134e4a 100%); }
+.featured-media-text[data-category="general"], .story-media-text[data-category="general"] { background: linear-gradient(140deg, #475569 0%, #1e293b 100%); }
 .featured-body { padding: 1rem 1.1rem 1.1rem; }
 .featured h2 {
   font-family: 'Newsreader', Georgia, serif;
@@ -436,8 +512,6 @@ nav.categories a {
   overflow: hidden;
   min-height: 100%;
 }
-.story-media { aspect-ratio: 16 / 9; background: #e2e8f0; }
-.story-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .story-body { padding: .84rem .9rem 1rem; }
 .story-title {
   margin: 0 0 .32rem;
@@ -623,12 +697,16 @@ nav.categories a {
 """
 
     def _post_card(self, post: PublishedBrief) -> str:
-        image = self._thumbnail_relpath(post)
         category_label = CATEGORY_LABELS.get(post.category, post.category)
+        cover_desc = post.meta_description or PROJECT_TAGLINE
         return f"""
 <article class=\"story-card\">
-  <a class=\"story-media\" href=\"{html.escape(self._href(post.path))}\">
-    <img src=\"{html.escape(self._href(image) if image.startswith('/') else image)}\" alt=\"\" loading=\"lazy\" width=\"640\" height=\"360\" />
+  <a class=\"story-media story-media-text\" data-category=\"{html.escape(post.category)}\" href=\"{html.escape(self._href(post.path))}\">
+    <span class=\"story-media-inner\">
+      <span class=\"cover-chip\">{html.escape(category_label)}</span>
+      <strong class=\"cover-title\">{html.escape(post.title)}</strong>
+      <span class=\"cover-desc\">{html.escape(cover_desc)}</span>
+    </span>
   </a>
   <div class=\"story-body\">
     <h3 class=\"story-title\"><a href=\"{html.escape(self._href(post.path))}\">{html.escape(post.title)}</a></h3>
@@ -746,11 +824,16 @@ nav.categories a {
         )
 
         if featured:
-            featured_image = self._thumbnail_relpath(featured)
+            featured_category = CATEGORY_LABELS.get(featured.category, featured.category)
+            featured_cover_desc = featured.meta_description or PROJECT_TAGLINE
             featured_html = f"""
 <article class=\"featured\">
-  <a class=\"featured-media\" href=\"{html.escape(self._href(featured.path))}\">
-    <img src=\"{html.escape(self._href(featured_image) if featured_image.startswith('/') else featured_image)}\" alt=\"\" loading=\"eager\" width=\"1200\" height=\"675\" />
+  <a class=\"featured-media featured-media-text\" data-category=\"{html.escape(featured.category)}\" href=\"{html.escape(self._href(featured.path))}\">
+    <span class=\"featured-media-inner\">
+      <span class=\"cover-chip\">{html.escape(featured_category)}</span>
+      <strong class=\"cover-title\">{html.escape(featured.title)}</strong>
+      <span class=\"cover-desc\">{html.escape(featured_cover_desc)}</span>
+    </span>
   </a>
   <div class=\"featured-body\">
     <span class=\"header-kicker\">Featured</span>

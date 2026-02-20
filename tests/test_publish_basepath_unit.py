@@ -47,7 +47,9 @@ class PublishBasePathUnitTests(unittest.TestCase):
             self.assertIn('href="/signal-atlas/assets/site.css"', index_html)
             self.assertIn('href="/signal-atlas/category/ai/index.html"', index_html)
             self.assertIn('href="/signal-atlas/category/ai/signal-atlas-test-headline.html"', index_html)
-            self.assertIn('src="/signal-atlas/assets/thumbs/signal-atlas-test-headline.svg"', index_html)
+            self.assertIn('class="featured-media featured-media-text"', index_html)
+            self.assertIn('class="cover-chip">AI</span>', index_html)
+            self.assertNotIn('/signal-atlas/assets/thumbs/signal-atlas-test-headline.svg', index_html)
             self.assertIn('<script type="application/ld+json">{"@context":"https://schema.org"', index_html)
             self.assertNotIn("&quot;@context&quot;", index_html)
 
