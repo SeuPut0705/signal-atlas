@@ -1,0 +1,27 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675' role='img' aria-label='Anthropic AI startup now valued at $380 billion following $30 billion Series G funding round - Shacknews'>
+<defs>
+  <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+    <stop offset='0%' stop-color='#14b8a6'/>
+    <stop offset='100%' stop-color='#0f766e'/>
+  </linearGradient>
+  <linearGradient id='mask' x1='0' y1='0' x2='0' y2='1'>
+    <stop offset='0%' stop-color='rgba(15,23,42,.1)'/>
+    <stop offset='100%' stop-color='rgba(15,23,42,.76)'/>
+  </linearGradient>
+</defs>
+<rect width='1200' height='675' fill='url(#g)'/>
+<rect width='1200' height='675' fill='url(#mask)'/>
+<circle cx='1070' cy='110' r='170' fill='rgba(255,255,255,.16)'/>
+<circle cx='105' cy='600' r='210' fill='rgba(255,255,255,.1)'/>
+<rect x='64' y='78' width='800' height='520' rx='28' fill='rgba(2,6,23,.62)' stroke='rgba(255,255,255,.17)' stroke-width='2'/>
+<rect x='96' y='112' width='240' height='44' rx='22' fill='rgba(255,255,255,.94)'/>
+<text x='216' y='141' text-anchor='middle' fill='#0f172a' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='24' font-weight='700' letter-spacing='1'>STARTUP</text>
+<text x='96' y='238' fill='#f8fafc' font-family='Newsreader,Georgia,serif' font-size='58' font-weight='700' letter-spacing='.2'>
+  <tspan x='96' y='238'>Anthropic AI startup now valued at</tspan><tspan x='96' y='306'>$380 billion following $30 billion</tspan><tspan x='96' y='374'>Series G funding round - Shacknews</tspan>
+</text>
+<text x='96' y='470' fill='rgba(241,245,249,.95)' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='30' font-weight='600'>
+  <tspan x='96' y='470'>Clear trend signals across AI, Tech, Finance,</tspan><tspan x='96' y='508'>and more.</tspan>
+</text>
+<text x='96' y='560' fill='rgba(226,232,240,.95)' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='24'>Published 2026-02-19</text>
+<text x='1112' y='620' text-anchor='end' fill='rgba(241,245,249,.94)' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='26' letter-spacing='2'>SIGNAL ATLAS</text>
+</svg>

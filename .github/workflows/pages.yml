@@ -74,11 +74,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add state/pipeline_state.json
+          git add -f site
           if git diff --cached --quiet; then
-            echo "No pipeline state changes to commit."
+            echo "No pipeline/site changes to commit."
             exit 0
           fi
-          git commit -m "chore: update pipeline state"
+          git commit -m "chore: update pipeline state and site snapshot"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
 
