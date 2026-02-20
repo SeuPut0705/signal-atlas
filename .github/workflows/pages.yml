@@ -2,11 +2,17 @@ name: Build and Deploy Signal Atlas
 
 on:
   workflow_dispatch:
+    inputs:
+      publish_new:
+        description: "Publish new posts (true) or redeploy existing archive only (false)"
+        required: false
+        default: false
+        type: boolean
   schedule:
     - cron: "0 */3 * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -34,6 +40,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Decide Publish Mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.publish_new }}" = "true" ]; then
+            echo "publish_new=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish_new=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Build Site
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -46,8 +61,26 @@ jobs:
         run: |
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
           export SIGNAL_ATLAS_SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}"
-          python run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
+          if [ "${{ steps.mode.outputs.publish_new }}" = "true" ]; then
+            python run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
+          else
+            python render_site_from_state.py --state-file state/pipeline_state.json --site-dir site
+          fi
           touch site/.nojekyll
+
+      - name: Persist Pipeline State
+        if: ${{ steps.mode.outputs.publish_new == 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/pipeline_state.json
+          if git diff --cached --quiet; then
+            echo "No pipeline state changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update pipeline state"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3

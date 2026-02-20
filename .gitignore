@@ -4,6 +4,7 @@ __pycache__/
 
 state/*
 !state/.gitkeep
+!state/pipeline_state.json
 
 site/*
 !site/.gitkeep

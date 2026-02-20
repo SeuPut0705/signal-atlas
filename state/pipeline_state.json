@@ -1,0 +1,1301 @@
+{
+  "version": 1,
+  "timezone": "Asia/Seoul",
+  "created_at": "2026-02-19T14:12:14+09:00",
+  "updated_at": "2026-02-20T12:38:30+09:00",
+  "publish_limit": 12,
+  "disabled_verticals": [],
+  "vertical_deploy_failures": {
+    "ai_tech": 0,
+    "finance": 0,
+    "lifestyle_pop": 0
+  },
+  "published": [
+    {
+      "slug": "nvidia-is-in-talks-to-invest-up-to-30-billion-in-openai-source-says-cnbc",
+      "vertical": "ai_tech",
+      "title": "Nvidia is in talks to invest up to $30 billion in OpenAI, source says - CNBC",
+      "published_at": "2026-02-20T12:38:30+09:00",
+      "word_count": 962,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEhleXJQbzI2Q2pYY3dfWmRJNzhtUlVJWUxKLTRsSHNyMFF1RnNlaElYdEljN1VuMGxmUUVTYk1ad2FVNkZrN2R4MlRCQ2xpSHpjZm1ZS25NbXhVa0RKS1UybEtFYkNhNUhwd3JSRmtNbjNwQlBSVTNjVDF3Zmd6QzZIT1R5S1B1Wnl0dmJNS0tBTGFDei1sTzd5ZzVCelVEeFJjcXF5QjJEVjFYTHVJ?oc=5",
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZHhQWDRCYTJCYW5yVkZNc3djb0I4WEV4LWQxUUluWGF5MnYwZzd0V3RpZkZ6OGFTVmsxTm1zcURYdkpHVjdfRXRQV3gtbjBBdU9udTZMbElsTVRhcW5NX3p3WV9KUzMzQW5fVVN0YWMxR0NqUk5ZSWU5ZldPYVo5akM5Umg3SE8tMGs3U25GSDRpMEszMXRr?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ed86cd7e63d84063b3da4ce9",
+      "path": "/category/ai/nvidia-is-in-talks-to-invest-up-to-30-billion-in-openai-source-says-cnbc.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Nvidia is in talks to invest up to $30 billion in OpenAI, source says - CNBC | Signal Atlas",
+      "meta_description": "Nvidia is in talks to invest up to $30 billion in OpenAI, source says - CNBC signals a meaningful shift in AI. This briefing explains what changed, why the sig."
+    },
+    {
+      "slug": "global-inflation-forecast-2026-the-rise-of-regional-cross-currents-j-p-morgan",
+      "vertical": "finance",
+      "title": "Global inflation forecast 2026: The rise of regional cross-currents - J.P. Morgan",
+      "published_at": "2026-02-20T12:38:30+09:00",
+      "word_count": 958,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSHFDRnZWbENnUUEwRzVTbGxGMkdlT3R6dVVjZFoyZEVXR1lmUHhUajJUNnhmN043ZDVJbllBXzJ6MnZQWUZ4OFVfalpyWEhfamVwT0hYYXF4V1lNOUtMRWQ4bTRvelc4TlNsQnFZUE5iZV9oTXBkYXEtcXFVNGpGLXJ5MGdvYV8zTW14ZmQtZHhNSl9LRFVXM0VFNGNsMURpVlhKM0k1T3c0eDJUOVIzdzJNM29NZjAzbEVMNWI4RENGS2NNZkRqaS1yZkE?oc=5",
+        "https://news.google.com/rss/articles/CBMigAJBVV95cUxNVlN5NnpBaFV1VUhtYjFKWFU1QlBnTW5fUGxiRVYzUnZYS1BmQmNTVHhMc0l2Y2QxSjJlWTM3MXB3WEozRjUtUFdmSlpwNWFTdGpRdDFpWHZCamFxcUt4YzVobnZ2elJfVHg1cjVsQUJpaFhDWWV6N0hzTmpJQlZFSVhGc0ZXLWd2TF9EX1dJTDdUZlVZcVFMMF9seFFkaTNGUmZKLVpVZHFUaVIzbkgyYkM1bUJqaTB1RnBzWnBjbjlEUlRXNkR0LXhyNGVISkoyb3R1ampFVFBBV25zbmVPVjhTLWVaVW52T0g4QTdKZUpMNnBHR2tQMzI3dG0xXzRW0gGGAkFVX3lxTE1wV2pUSURpOE91T3Q5WXBzZkpWUy1FWHQ0VTNMOHZkX2U1VzBIaE1kUWJJVzY1di0wTlZmSG9iZjVyWG9TOU5nVWFHZE1tSm1EdHo1N1Nva21uQUhsYTRzLVVNdzNCQnVaZm5GX0RHTTJWLXNUVmk5VFdYalI3QVMwcm1EVE1VSmlsUjB4aTczcHdMYlktSklNT1ZOYl9JcXRfbUVwc0RhOWJtOHl6clZUaGFWRGR2Z25mM09fN2Fhc0w1NTdCTHpPdVVhanREcDdKWWRqYVZ1NV96Y0VmcVpxTy13RUlZQ0NzUTFxNGtRbHNRUGl0MC1Sbi11QWx6bWJwVHNrLWc?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "26f7ac4dd39ff5fd12054eea",
+      "path": "/category/finance/global-inflation-forecast-2026-the-rise-of-regional-cross-currents-j-p-morgan.html",
+      "category": "finance",
+      "primary_image": "/assets/covers/finance.svg",
+      "seo_title": "Global inflation forecast 2026: The rise of regional cross-currents - J.P. Morgan | Signal Atlas",
+      "meta_description": "Global inflation forecast 2026: The rise of regional cross-currents - J.P. Morgan signals a meaningful shift in Finance. This briefing explains what changed, w."
+    },
+    {
+      "slug": "2025-culture-trends-report-archives-media-play-news",
+      "vertical": "lifestyle_pop",
+      "title": "2025 Culture & Trends Report Archives - Media Play News",
+      "published_at": "2026-02-20T12:38:30+09:00",
+      "word_count": 956,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMk5ZWVdTdzdxeUZHeDZzeVliMmtqMl8xdGo2RXdFMV82VlpLVTZTSm1jcUxQd3BRN1lGd3ZYRWJNRTltSTUtVGIzSnI0MU5admhwanJJZUh6MzdqWkJPcEFjVXVBZUNIZHRBcFhwVUkxNE5jQTZGZG5XNEJOakppa1VGWQ?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWEFGTGVXd0xEN3RRVk9uTmRYbnM2WkZlTWRHRDgxem5aUm1UODQtSHR3R1FROUlmZHRQU1RBNl9UNGQ5MnlkSGtWaEZlMG1nTVJEQkE4SWNDOXp6VEVaMnByRkVGaWJNRmtGYk9aR2Z4TVZITXdDQjdMV0U2cFNCRw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "8a15826599b4927a4dfead31",
+      "path": "/category/general/2025-culture-trends-report-archives-media-play-news.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "2025 Culture & Trends Report Archives - Media Play News | Signal Atlas",
+      "meta_description": "2025 Culture & Trends Report Archives - Media Play News signals a meaningful shift in General. This briefing explains what changed, why the signal matters now."
+    },
+    {
+      "slug": "ai-startup-cursor-raises-2-3-billion-funding-round-at-29-3-billion-valuation-cnb",
+      "vertical": "ai_tech",
+      "title": "AI startup Cursor raises $2.3 billion funding round at $29.3 billion valuation - CNBC",
+      "published_at": "2026-02-19T14:36:21+09:00",
+      "word_count": 145,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeGpHRGdTQ3NTSlBZWHIzWFBRRElRQzh6bnFsTG1Od0RYS0NfU2JCMzFMaWZuSXQtc01vRlY0dFV3bjRPV05mMjR4MWhTMU55d3VTVkRSTU16SnJFdGpPZkVyR21KTVZIZFpTVjFTY3ZsOUc0cnc5R3NCNlFBeC12MFdTX0fSAYoBQVVfeXFMT2pWYURVLXZGR2J5RnkxVWlaakVpZWtMdlFvY0I2MW4xTHZWZ3pZQmwxVjdUbVlsdW1iSHhaRk94cVhvdkx6TmNHYllYQUwtQ054NTlTYWdiMloxTldPcW56WFk3em42cFVLSVE5d2ZVcWpJMWRPbjRVUTFOLTdad2VLVnhxU0ZmMWt3?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "8a838bccd8266bce39429315",
+      "path": "/category/ai/ai-startup-cursor-raises-2-3-billion-funding-round-at-29-3-billion-valuation-cnb.html",
+      "category": "ai"
+    },
+    {
+      "slug": "most-popular-streaming-service-statistics-biggest-streaming-services-by-market-s",
+      "vertical": "lifestyle_pop",
+      "title": "Most Popular Streaming Service Statistics: Biggest Streaming Services by Market share - Forbes",
+      "published_at": "2026-02-19T14:30:01+09:00",
+      "word_count": 144,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE04THROQnFTU196cnVvUmpoT3RUUFdobmdnN1NUNDNKZXRnc0ZfcDBvNjF1cUZZVk5McDh5dXM4dEpIUnZLbHFWNERDZXBSZ3lYeXB4Y2tWZ2FQSlI0aVZ5OGg3VlFiVnZZajRJYXdWck9XQW8?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "e9616b51ae5475905f1e3a8e",
+      "path": "/category/tech/most-popular-streaming-service-statistics-biggest-streaming-services-by-market-s.html",
+      "category": "tech"
+    },
+    {
+      "slug": "ai-agent-reliability-startup-temporal-raises-300m-in-funding-siliconangle",
+      "vertical": "ai_tech",
+      "title": "AI agent reliability startup Temporal raises $300M in funding - SiliconANGLE",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 145,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMF9vdnNjbUVYc3ppeC1SQlZxNnMyZzJac2NiOXk1TUpnOEUzSDJSYmxjbjh1UGItYXEwcXUxYlh1OHdSREZKQTFjbE4tZGRWX2xYR0FpQjNZMGZlUUhRcTBkeHpRZEVTazZnTVJ5aXF4OHRGbmlEQWl0SVV6VERaODJtMXpxZHpmdnRDc19KbkJudExxTzNwZVVB?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "63ccccf5b69c2b4ef40fce42",
+      "path": "/category/startup/ai-agent-reliability-startup-temporal-raises-300m-in-funding-siliconangle.html",
+      "category": "startup"
+    },
+    {
+      "slug": "nvidia-is-partnering-with-major-indian-vc-firms-in-search-for-the-country-s-next",
+      "vertical": "ai_tech",
+      "title": "Nvidia is partnering with major Indian VC firms in search for the country's next AI start-ups - CNBC",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 157,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiggFBVV95cUxPbXFlZlZkenNIXzVoMXNJQ3d2RlA0Rmd2MHM0YnNCRTRRdERrOFhtX3UwMEJuY0o1d1V3bU5tNUctWHE3SGdwVTJCZHk2NXFrbnFJVGR2Q0lsSEhhR253ZFUtYml4ZDVpUmdWYUEzOFB0dW9EWmdPaEZSYl9aa1JlYlR30gGHAUFVX3lxTE1ONjVLLWRUT0YyMk5YMV9ETVdjODBiQXQ1UVZHbW0tMkZMQmcyVm5kX2xseFp2OTVTNURsSGM3MnR5U1FxUVhYYnVlbUdjX1NXaFp4UlJUVjRIRGtzT3I1WHZQTGtNV3pyc0x1VWc5V01NbmJES1A4d2ZVSjVlcFVFdURKTy1Ubw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "8baa66eeaf4a83f5330b8463",
+      "path": "/category/general/nvidia-is-partnering-with-major-indian-vc-firms-in-search-for-the-country-s-next.html",
+      "category": "general"
+    },
+    {
+      "slug": "the-week-s-10-biggest-funding-rounds-a-big-week-for-ai-and-drone-delivery-crunch",
+      "vertical": "ai_tech",
+      "title": "The Week’s 10 Biggest Funding Rounds: A Big Week For AI And Drone Delivery - Crunchbase News",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 157,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxPT1BHUkVPOVZMcUptcEZrRUgtVUhlaFhJdmdhbHVmTGRaVVozY0o0bDE3Z2RHQ0MwT1F6R2xzTnpmTFV5VHNkOUVBOVFObDJQNGQtU1RwU0dGcXdhRGpST0Uyd084OEdNT0s2ZWp6Vk5iUmphZXFaSUlvamZ6SFJjdGxpam9SLVk?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "a8786d6b35648af39a8fcd70",
+      "path": "/category/startup/the-week-s-10-biggest-funding-rounds-a-big-week-for-ai-and-drone-delivery-crunch.html",
+      "category": "startup"
+    },
+    {
+      "slug": "braintrust-lands-80m-funding-round-to-become-the-observability-layer-for-ai-sili",
+      "vertical": "ai_tech",
+      "title": "Braintrust lands $80M funding round to become the observability layer for AI - SiliconANGLE",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcmtNSkhiU00zUWdJMm1jQTdoSVU0bkJIRGJEVWJIMWlvUE8tbEVFa2RBXzRHNmFLVmduNHZCenp0R3RTa3FmQ01aOElsTGZaTGY5OTQ5b0RBQVhTR1RvYTFTX2M2NjVYU19kODR5SW51cUVXWjAzWk5HUkJlTFBqYW15ejl4XzRqRlNsTncxNzlyaGdrZENyYl92eEJsNUdLQTNBS0Rsb01VSGllVVlz?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "f80e9b89276f335eefe6fd8f",
+      "path": "/category/startup/braintrust-lands-80m-funding-round-to-become-the-observability-layer-for-ai-sili.html",
+      "category": "startup"
+    },
+    {
+      "slug": "the-federal-reserve-the-new-administration-and-the-outlook-for-the-economy-and-m",
+      "vertical": "finance",
+      "title": "The Federal Reserve, the new administration, and the outlook for the economy and monetary policy - CEPR",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 173,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQczRpMFhId284X2VEaFJzbnpDa2k3eWQxeDJaMXByeUxGaDNTZVZEcEZLNFZsZS1zVEhWd3BaQk5YYzJqaC0zMFpkaTNLaURjeWxzeHRSSTRuV3huTkh1dEp5bHVjbndfUUMyX0JhVDZFT3pfRXVMVW52ang2dENrOWNuUC0wcjVtb2JpQWJsWDJ2dmNiblJkcUVWLW1jNUpnT1dSSFNhWHE?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "221c4fd5647ee23058988a34",
+      "path": "/category/finance/the-federal-reserve-the-new-administration-and-the-outlook-for-the-economy-and-m.html",
+      "category": "finance"
+    },
+    {
+      "slug": "what-s-happening-this-week-in-economics-deloitte",
+      "vertical": "finance",
+      "title": "What’s happening this week in economics? - Deloitte",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "9d09ecf6cb8c3840ca0149f0",
+      "path": "/category/general/what-s-happening-this-week-in-economics-deloitte.html",
+      "category": "general"
+    },
+    {
+      "slug": "india-economic-outlook-january-2026-deloitte",
+      "vertical": "finance",
+      "title": "India economic outlook, January 2026 - Deloitte",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbVNEUF9teW9VSlNOTVBOOXNjbVkybkFnOTVDNkljbWpGTld4Z1BhS243VUhJcHJqMjh3UWJDRkQwYlhTam9fMzQwTTRuejFnMlJrUjNteUVmZE5LeUc4ODVPRHhFYVlQNGU4S3RwX1dKc01XTTB4VTR0STVNbVVMN0F5WndKRnNiSlpUcUlCV2pIY2ZiVUdBb09XMA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "2ef2b83d0cd33ce36010c572",
+      "path": "/category/general/india-economic-outlook-january-2026-deloitte.html",
+      "category": "general"
+    },
+    {
+      "slug": "mid-year-market-outlook-2025-a-broad-spectrum-of-potential-outcomes-j-p-morgan",
+      "vertical": "finance",
+      "title": "Mid-year market outlook 2025: A broad spectrum of potential outcomes - J.P. Morgan",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 165,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE1xV3ZaeTQ1UlM4Z1IwNGtzOUJhNFl4b0wzNnhVbE1oNUpoaU53a1ZwYVFLUXdYbUNxekpoZ1I2dVVnUy1GR3NLbkRvT25Geml4WjQ3bDVNRHNYdGI5SzhtdTJFVHJIRVN1Vmg3ZG1zNDdXYjVERDJNbnJVM1AzVzQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "4897d8e88e3857bad7884662",
+      "path": "/category/finance/mid-year-market-outlook-2025-a-broad-spectrum-of-potential-outcomes-j-p-morgan.html",
+      "category": "finance"
+    },
+    {
+      "slug": "the-future-of-streaming-trends-shaping-tv-and-movies-meer-english-edition",
+      "vertical": "lifestyle_pop",
+      "title": "The future of streaming: trends shaping TV and movies - Meer | English edition",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNbGw0Y0R4VUc3N0xpOWRsaUZ2UWcxUzBUTjhfbnAwUllkQVdHQnpKTURPLWFoNE5KaHJPU3RVaXo3NWM2Q3R6cGMzN3FnUWxsQWU2Ym5XSENpaDhaVEh1U05qZkFEUS15NTVUSEhtZXZkaDV2RVZpdExhLUZRbGhzdzBaaE5ERVhKcFE?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "9d0807c263f13680e1075f0d",
+      "path": "/category/tech/the-future-of-streaming-trends-shaping-tv-and-movies-meer-english-edition.html",
+      "category": "tech"
+    },
+    {
+      "slug": "songs-as-cultural-moments-and-why-tiktok-trends-are-so-appealing-midia-research",
+      "vertical": "lifestyle_pop",
+      "title": "Songs as cultural moments (and why TikTok trends are so appealing) - MIDiA Research",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 150,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQXk5TXo1T1FYY1l3MEl0SUdJUUE4WVdnN0haSU9PTW5KcW00b0JpYXhObHdld1c2RTI1YnlKSW5fS1J3aWh1bzlyTTdobjFEdXpzY1JJOW1TYVNGSTB2RDdPRzMtMS1LZWVFWXVNTnBoOFc3OXB3Y2dtX05wMTA1MVlLOGVQM3dWZnA0VEN1eVNuUFpGdHljWXdVd3pEWnYy?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "96a3e5f7d59b89318de35ede",
+      "path": "/category/tech/songs-as-cultural-moments-and-why-tiktok-trends-are-so-appealing-midia-research.html",
+      "category": "tech"
+    },
+    {
+      "slug": "why-youtube-is-the-ultimate-destination-for-football-culture-all-year-long-youtu",
+      "vertical": "lifestyle_pop",
+      "title": "Why YouTube is the ultimate destination for football culture all year long - YouTube Official Blog",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 154,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE85bjZpNk9sUXhPNkk1S2xOV2haWTZmdVpScFduNFZ3RlY5bnBWSnJIQ3VMOW1tSHZhRlNmNFhJcENsbUdCOThTaFdhaGxqUDZvSlFkOXBuR2xiZC1raTQtajdPRVFVTkw3b1JURE5zZXFSM0VwQVhjUA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "117dae2e7c1bb9d05055d177",
+      "path": "/category/tech/why-youtube-is-the-ultimate-destination-for-football-culture-all-year-long-youtu.html",
+      "category": "tech"
+    },
+    {
+      "slug": "trends-in-music-consumption-what-s-next-vocal-media",
+      "vertical": "lifestyle_pop",
+      "title": "Trends in Music Consumption: What’s Next? - vocal.media",
+      "published_at": "2026-02-19T14:21:54+09:00",
+      "word_count": 138,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE81d2x3TTRjR3hXcnRYUTMxTFpVaVpQSHViWUVWZ2hKeHE0NTlmajBmNGNUZzUtY2xzSGVfNURFRkx1U0dWZmVSYW44VTZCenJpWTZndDdZZ2U0TTB4aEVObnhVV1dMdUZXQktJT2ZxNHU?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "8a8d86b0178ad38c5dc1d4f9",
+      "path": "/category/general/trends-in-music-consumption-what-s-next-vocal-media.html",
+      "category": "general"
+    },
+    {
+      "slug": "ai-share-of-india-s-vc-funding-triples-to-12-percent-since-2020-idta-report-forb",
+      "vertical": "ai_tech",
+      "title": "AI share of India’s VC funding triples to 12 percent since 2020: IDTA Report - Forbes India",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 157,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxQMm5RRXVQR2xxaGtLck1oTERjaGQ0LXRiY1FGdHR3WTRZcVF1ZjZfYTVLek4yT2MxQWZDWTVneDhKbW5neWYtLVk3MEdfamNTcGpMelQ5dDBNTG1oN0ZfZHVYNHd6bld5TE9lUU5fcl83N3AwNC05TlQ0bFVRQzBoZjhuZTNreW15d1NPeUdhNjhHbWVnQzMwcl9uQU9SaFFMZmFlYy1vbkRYWV9yUkZyaGE0MUVsUno4Tm9mMEd5SWoyd2xPdFpSUVJDZ9IB0AFBVV95cUxNNm1iTmJhQlY0RTYzbVBjNlNpSFpNSUZ0UTlGSGhrcGdfRlp3YVhtUVBxOWcxMFdpNTFPem80R3Fmekl2Z3E5SHl2SnlmMnI3cWtDOF9nTG5ySkdWMV9BQ3hjQlFLUUU3MFhsSl9oOGpuWG42NHNpYlZPMnVVS1pFenlHMTUwSjM5b0pBcEI1U3F6cHFnQWs4eXZYSDR6eEQwTlRtc0Y5ZTRqaTRQN1JBZ19EVUtaZExEOUtPYzF5SEQ2aWVlS0VqNThiOXNCMnh6?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "82f20a685c22bbfc5d05f40a",
+      "path": "/category/startup/ai-share-of-india-s-vc-funding-triples-to-12-percent-since-2020-idta-report-forb.html",
+      "category": "startup"
+    },
+    {
+      "slug": "japan-s-dic-expands-venture-strategy-with-62m-physical-ai-fund-asiatechdaily",
+      "vertical": "ai_tech",
+      "title": "Japan’s DIC Expands Venture Strategy with $62M Physical AI Fund - AsiaTechDaily",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 147,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPdlpCVkZGOWJPMmVjazc1VWtZbjE2MHNYS0lnU3FUblFKZUtoREFWNHdsMEw5OGtJcGF4bG1YWUFzVS1IVTRPZnNNaGFCVjE2QWZHZllFU2ZTbFhORmhSa1A0ZVVETGJaSDA0d3dnU3ZkUHRlay1nWno5bEhwSkZqX1hjMDVNZ0VKbkxqbUdvYzhEUQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "655559caa20cb519e811231c",
+      "path": "/category/startup/japan-s-dic-expands-venture-strategy-with-62m-physical-ai-fund-asiatechdaily.html",
+      "category": "startup"
+    },
+    {
+      "slug": "google-cloud-s-vp-for-startups-on-reading-your-check-engine-light-before-it-s-to",
+      "vertical": "ai_tech",
+      "title": "Google Cloud’s VP for startups on reading your ‘check engine light’ before it’s too late - TechCrunch",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 157,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNc2c3TlZxaXI5dFUzYl9MUEU3Ulh5ek5fOFFjZkRNdEVOMDNYbmhFUW16SXB4YWVxWWM1eVV5aDhuUS10dHM2SXA0U0MxYnhQVXQ2ME0xTzFqdjhDTUh2OXROZ244RFQtbjFIS000TzctbXdGOHVvNy04eVpDemtxSGJiTkVoN0R2ME5rWWFncDVPR3d3V1U4RFE1MFRRMU9NSGtlRndBQ0xsZldvbGtuYUFRb196bTQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "9c459be30ce1e4b0d34ceb29",
+      "path": "/category/startup/google-cloud-s-vp-for-startups-on-reading-your-check-engine-light-before-it-s-to.html",
+      "category": "startup"
+    },
+    {
+      "slug": "anthropic-ai-startup-now-valued-at-380-billion-following-30-billion-series-g-fun",
+      "vertical": "ai_tech",
+      "title": "Anthropic AI startup now valued at $380 billion following $30 billion Series G funding round - Shacknews",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 157,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNlhnZGtrdjNyNWZJQ2p5ZmtUZ1BOcTJERDVYR09sSTRMQjZ3Q3c3S2ZubXRsajlHaUctWVNPcTNrSk55RTN6d1ppWmpicFltM25BRDBndTNlSzg2U2Rjd3ZfRXVyRWlZb2lNamFWY2VyOF9pWkw3c0RRWkFSU0JLVFZIRFFTNG52eGfSAZcBQVVfeXFMUHBWemlnZkJGeHhKS2hmR0MzQ3RyZWNmcVRwM0lEUkUyVk1yV2YwV3Zpbm1hWE1wOWdaTkE3ZlJCNW9YbENpUWxycmVzS21jZnpucjlIUE52c3drVzRkVHh1QmtDRUFyQnU1cTR2YVBnb1Y0QklIemVLQWdTX1J0WmhoVm9xZDBFWWRiZ192R2xKR2N6OWVMOA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "bdf29102d4962506dc4b495f",
+      "path": "/category/startup/anthropic-ai-startup-now-valued-at-380-billion-following-30-billion-series-g-fun.html",
+      "category": "startup"
+    },
+    {
+      "slug": "market-know-how-1q-2026-goldman-sachs-asset-management",
+      "vertical": "finance",
+      "title": "Market Know-How 1Q 2026 - Goldman Sachs Asset Management",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 155,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yeGxvaEV3QWFCVy1FcjVQN3ZwUXhuczd1ZDI2cDBYVlN0ZU01clJMNUdSWGpKa3Z5ZldFR2d4blcyaU9aYTdDZnZDNUxSc21qMHFvb1hGTHlMSWdJV1Y1QWxDOW53alJZS0owc0Z4a18tX2c?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "6850aac925715eb6572cf468",
+      "path": "/category/general/market-know-how-1q-2026-goldman-sachs-asset-management.html",
+      "category": "general"
+    },
+    {
+      "slug": "global-economic-outlook-slowing-amid-persistent-supply-shocks-ey",
+      "vertical": "finance",
+      "title": "Global Economic Outlook: slowing amid persistent supply shocks - EY",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 157,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMidEFVX3lxTE1BWDZOV3dxSzh5TVpZanFlWklUY3ZKZjRSRzIzdURVb0V4Z3NnbzZjdk1iX2N6MGhLUkh1XzQyZUhJNnFlRE1LaEpaNUFvOFFFVld4ZnZ4M2syTTlkSFpucGVURFZNYWtfVlF3T29BZkJ2VnVq?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "792d90a02c0cb723201cf90f",
+      "path": "/category/general/global-economic-outlook-slowing-amid-persistent-supply-shocks-ey.html",
+      "category": "general"
+    },
+    {
+      "slug": "markets-2026-watch-list-fed-succession-political-risk-and-ai-of-course-reuters",
+      "vertical": "finance",
+      "title": "Markets' 2026 watch list: Fed succession, political risk and AI of course - Reuters",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 167,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWTB0WC1hQmlVZVFLODhLX243UEoyODdSYlZ2M0tyUHJGalBONEc2Z2hjYWRaSmxMNmhoRzFtUHdqS0hORHJtTHREVTlXVEtqUEE4Um8zM3k1Mm1pb2FzWXh4aFRkd1otUzZzbXJkRkttenNKYlZ1TGtra29xWDUzQw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ec63d2feb486ac2a5a6c8c17",
+      "path": "/category/finance/markets-2026-watch-list-fed-succession-political-risk-and-ai-of-course-reuters.html",
+      "category": "finance"
+    },
+    {
+      "slug": "in-the-rear-view-how-did-our-2025-themes-pan-out-j-p-morgan",
+      "vertical": "finance",
+      "title": "In the Rear View: How Did Our 2025 Themes Pan Out? - J.P. Morgan",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 165,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxPMExDejczMndMeVBSZlJuQWo2c1JnQ1E5YTJRNElfdkRpb3VCVnh5WExqd25wOU1BM3BqQmhkVWlvc3ZwY0E2aGVYV3Znc1hEdzN4Mm9GdlR2RmRGWW8tVlV3OUdMRHF4WWZkT0pJaG90TmdqaXVTQks2WEtoVF9ROUREUWtiYVVxZlYzNmJpZXpZTmp5M0lFSUpNOEg5RVFRaXVfamlKSzYtcm42WEdVRGxaYkd1Q0pWX1M0UWtwVHlHcmtScWc?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ce6beeeadb0f9aab8254cc63",
+      "path": "/category/general/in-the-rear-view-how-did-our-2025-themes-pan-out-j-p-morgan.html",
+      "category": "general"
+    },
+    {
+      "slug": "the-youtube-videos-that-changed-the-way-we-think-about-ourselves-bbc",
+      "vertical": "lifestyle_pop",
+      "title": "The YouTube videos that changed the way we think about ourselves - BBC",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 148,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQenFWNl9haG1yUld3TkoybXBsX3FDazdacHZGclFQYmpHUFpqS1VWQWs4VE9hdUdVdFd1eGxteUNsYnJhYm8xSXgyc3BGZURoNWJtMmhYYWdRU3pza21lOW5xVWR2cGRWWXpidGYzbElnTU13MXY0NFFtLV9OVDF5QlpFRFNTT0VtLVdxd0ltXzNMZzFYSU9rWjEwZnlzeG9lTk0tdVZrVU45QQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "3c348d68196cef516a87cd08",
+      "path": "/category/tech/the-youtube-videos-that-changed-the-way-we-think-about-ourselves-bbc.html",
+      "category": "tech"
+    },
+    {
+      "slug": "the-impact-of-streaming-platforms-on-the-music-industry-how-spotify-apple-music",
+      "vertical": "lifestyle_pop",
+      "title": "The Impact of Streaming Platforms on the Music Industry: How Spotify, Apple Music, and Others Have Changed the Game - Illustrate Magazine",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 167,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNSWhOQzVOVzJtYjdKanRqY0h1Q05YRG95aTUzS20teGc2ZmtiRGJQUFBEeEpSQVY3QXNGMHRyNzlBQW9wS2NoRXIwU0xWR3ZiTmVJVFY3RFJiOF8wWm9xazZ3WTJBMlh0aVprbW5CejdMUlVBbUZGeWFVc0dvSHU3Z0x5RmI0R05Cdmg5UVpBa0ppMnM5ZVdMdjVlZmctdWs4aVdEWXVnVzdxTXE0UDlSUGRYWWZsLWhJWUw1bTdPSHJnU3MtR3ViSWVZRUhIMWl2b09BcmFUbHIyVzUx?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "a093a60914625ace19339ea8",
+      "path": "/category/tech/the-impact-of-streaming-platforms-on-the-music-industry-how-spotify-apple-music.html",
+      "category": "tech"
+    },
+    {
+      "slug": "2024-s-biggest-pop-culture-moments-expressvpn",
+      "vertical": "lifestyle_pop",
+      "title": "2024’s Biggest Pop Culture Moments - ExpressVPN",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 135,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9fWnlsLWhQY0pZMDZES1BvQ21IXzRmN1dtYzVJUjk1c203Y2F6Z3FpUl81MGJVd19obVdCODl5dl9Odm5KeTAzYW9VQ2FVZ0o5NUxpUzNkbWdxRDJ1VEJrZWRmcW84WDFK?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "aaae9aa8ac327169b5310c11",
+      "path": "/category/general/2024-s-biggest-pop-culture-moments-expressvpn.html",
+      "category": "general"
+    },
+    {
+      "slug": "7-social-media-trends-you-need-to-know-in-2026-sprout-social",
+      "vertical": "lifestyle_pop",
+      "title": "7 social media trends you need to know in 2026 - Sprout Social",
+      "published_at": "2026-02-19T14:21:23+09:00",
+      "word_count": 148,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBQcUVqbDNVS2UxU1pKb1JQcS0wcjVEbDlINFpjd1Yza2ZUX25CR1ZoTGhOT3hXb0pfUGVrc3RXN1k5R25hczlWb01aNWhtNU9fXzBOUFpxR3FTY1AyS2N4VjZKSlHSAWpBVV95cUxQX3JjRUw2UmVxSnZaa1Izc1hBQ3R5OXJPUnJubjRDelRwc0duZEVCbXRmcmlKc1RtXy1TcHduRlROb3NfaGh4T3VnZUpFMWd1a0dmVUtGblRobGRNZ09EWFNsRFNFbExXeHVn?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "28d97f659700f339dd799376",
+      "path": "/category/general/7-social-media-trends-you-need-to-know-in-2026-sprout-social.html",
+      "category": "general"
+    },
+    {
+      "slug": "berlin-ai-startup-sylo-raises-270k-pre-seed-for-european-expansion-markets-busin",
+      "vertical": "ai_tech",
+      "title": "Berlin AI Startup SYLO Raises €270K Pre-Seed for European Expansion - markets.businessinsider.com",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 147,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOTTVoY2E4Tk1XMEJ2R3J1SU5IVWFiSGRKc0QweW83OTdra19UaXZwbWF0eDZpSURMRWlyeU5BekkxUjlBcnktTUR5TEtKbEZPWlFiN0QxZmE1THdNc2UzWm55ZzNrOV9LM0xwUVpLRk9mX1BPSW5IMzFQTTJzSUNPRGd3UmtpbTRqU3lJNjRCWVZvUHVnZ0VDMDNfelNwYXZveHYtd0ZPZzZXYXBjbVduZkRKa21TVW54SjdIdEdLY3I2eTRNVnBaYg?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ae4ba3706c14575d33cf1faa",
+      "path": "/category/startup/berlin-ai-startup-sylo-raises-270k-pre-seed-for-european-expansion-markets-busin.html",
+      "category": "startup"
+    },
+    {
+      "slug": "aggressive-hunt-a16z-s-2-3m-bet-on-swedish-ai-startup-dentio-signals-new-era-for",
+      "vertical": "ai_tech",
+      "title": "Aggressive Hunt: a16z’s $2.3M Bet on Swedish AI Startup Dentio Signals New Era for European Unicorns - CryptoRank",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 159,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTFBNVk02dE4zX013aldzSU5IdHo4MzMxc0RVbzliMlB3RzloUV9FRGpNRDRkdjZrZW41bF8tU1h6YkNWVGkwVUpOYUhfbzZ2bU9KVVJoWi1VaWlERkZJdW9HS3V2UVdHcWZUODQ2eW9VWVJpRTZuT0o4?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "3e3a1e4c0213c6cc9fb6f7c9",
+      "path": "/category/startup/aggressive-hunt-a16z-s-2-3m-bet-on-swedish-ai-startup-dentio-signals-new-era-for.html",
+      "category": "startup"
+    },
+    {
+      "slug": "san-francisco-ai-startup-sets-up-shop-in-boston-s-financial-district-the-busines",
+      "vertical": "ai_tech",
+      "title": "San Francisco AI startup sets up shop in Boston's Financial District - The Business Journals",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQR25WZ3pUbTUwSkxYUmtOcVpRZ3RXZXo2N2tzMl9nRXBfc0FtYndZQ0Q0aF9OVXJudnd5RmlRYXlKcXVhNHpPbGtZdWk5TDNtVWlUaV81YkJYR0JjNlkwUG45NDI1SW0wUU5GYTBnLW5FNXJGVGd1X2I1T0tEV3VIbUtqaXFxX0d0THJDbzBJRzYxOG5nMXN3Vk9xZEdWdG9uOWdn?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "43e5623753d7d505de30ba96",
+      "path": "/category/startup/san-francisco-ai-startup-sets-up-shop-in-boston-s-financial-district-the-busines.html",
+      "category": "startup"
+    },
+    {
+      "slug": "robotics-ai-energy-the-biggest-funding-news-in-austin-in-2025-austin-american-st",
+      "vertical": "ai_tech",
+      "title": "Robotics, AI, energy: The biggest funding news in Austin in 2025 - Austin American-Statesman",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWkdFd05DcUxveGJRUHdsbnI5MjlpUzNuX1JJSXdJT01vQjNhQV9kb3Jrd0kwMlpRQ09wODQ3cUhLa2ktdFZUU1U5bzB5VGYzV1V0c3RRbDJTUTJUX3VaeE0zRC1Xb1J1bDdseHlQUDBWM3REVHRLNHZQcmJWVlZheGlPcm1nMk1rbHdoald1cTY3dVJ0Zlh3dg?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "d4b2ba0d71aad1e03e5daf5a",
+      "path": "/category/startup/robotics-ai-energy-the-biggest-funding-news-in-austin-in-2025-austin-american-st.html",
+      "category": "startup"
+    },
+    {
+      "slug": "roberts-global-monetary-policy-is-diversified-and-china-s-economic-structure-aff",
+      "vertical": "finance",
+      "title": "Roberts: \"Global Monetary Policy is Diversified, and China's Economic Structure Affects Global Investment\" - Monmouth University",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 171,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxOempGeXFwYzRSTG5CbzVtLWlkYURCZVg1Mkw1NHdKTWZBOWxjOFhaQ1NGVjNjMWxrTmYzY2dNYkw2SEdjT0pKTUtJd3hfeFlSRG5ZWlhubWpHTUszeF83NlJFYjBET1dVSWpJZ25la1duT3R1VndNM1l3RmpkeEhsU2JQdDUtcEg1NjN6S3BWWHRxYUpfNkxBQ1pXQlZjS2FQY09BX3VPUWZLeEx3SHpFUzFTQjgyX25Gc1hCRDNWNlMtQXlMLTBMOXprQ1E?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "1d5931997215731183993414",
+      "path": "/category/finance/roberts-global-monetary-policy-is-diversified-and-china-s-economic-structure-aff.html",
+      "category": "finance"
+    },
+    {
+      "slug": "supply-shocks-and-inflation-timely-insights-from-financial-markets-cepr",
+      "vertical": "finance",
+      "title": "Supply shocks and inflation: Timely insights from financial markets - CEPR",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 161,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZEJUcWV4WFlUMEZpQ1RiWG1tRzBBQmgyUjh1dUlEMG9hN1gwVzlIYWZ6TXlQWElXSkEyTTd0Uml6d2hPb0l3ZHVNaXF6N3hGQnUxOEc0NmV4Q01RbHlua3cxUWlPc0FsU2Nfbk13RGFwN1UzcTlNbldUYkJ2Mmc4T1pkYzJmWDBPb0hCVUIzUHNpMUhBTmlB?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "88c28c817607fa48a37d59a7",
+      "path": "/category/finance/supply-shocks-and-inflation-timely-insights-from-financial-markets-cepr.html",
+      "category": "finance"
+    },
+    {
+      "slug": "current-monetary-policy-trends-and-challenges-for-euro-area-capital-markets-omfi",
+      "vertical": "finance",
+      "title": "Current monetary policy trends and challenges for euro area capital markets - OMFIF",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 165,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNVmU4VEFhNXVPb3RIN3dhcmRHdk9PanpiVmE2Z3NNNGhya0dhZndnVkFpVFhHbVYtakNkX3V3NVZwNXVXdVItWG51eUx5MC1WbXlTX1FwTlF2N1I2aGEzTTkzWkhHVUd2YkR0MmJxdkZrUWJpdFIwR2FUdGdFdlo0NnVSWUlCRXNQb1FieHF5Z01CclByWkMwLXRtck5HWHpTel9UVzEtSk51V05RRjZDdXZkejFwNmRpc2sxTE9nSVMydw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "0c1e4f37441631d3c5fc3256",
+      "path": "/category/finance/current-monetary-policy-trends-and-challenges-for-euro-area-capital-markets-omfi.html",
+      "category": "finance"
+    },
+    {
+      "slug": "steering-through-the-fog-the-art-and-science-of-monetary-policy-in-emerging-mark",
+      "vertical": "finance",
+      "title": "Steering through the Fog: The Art and Science of Monetary Policy in Emerging Markets - International Monetary Fund | IMF",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 179,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTnI3dHd1S1NqWnUxdkc5MHpRcnBENDdwZUxPb3F3Yjg2cFU3cldiSEl1TWFfUUdRdUc1Y1ZpVWhFbjZoT2tSZkVlcjZMMkpZaUtOT1RkaXVuRFlpNUVSTkhVdXFyQmZudnFDZUxucWpDUGxYQklMcHR2cG80UndfWElVdWdkUXZtN05MTzZxWnh3RFN1N3kyb1FrYWoyTDZSU2FQdk53S0M0eVB4bFRSNUVNQnJNNlNT?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "97bc4d71c159f7cecadc41e2",
+      "path": "/category/finance/steering-through-the-fog-the-art-and-science-of-monetary-policy-in-emerging-mark.html",
+      "category": "finance"
+    },
+    {
+      "slug": "culture-next-2024-the-major-gen-z-trends-that-are-shaping-audio-streaming-spotif",
+      "vertical": "lifestyle_pop",
+      "title": "Culture Next 2024: The Major Gen Z Trends That Are Shaping Audio Streaming - Spotify",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxQSkoxaXlfVkZidkppVC1jRTZMeWFOWE9hQnZ1cDRBaUJQZy0zN0t0cDNNMTdDc1BBYzJCdmw2QjFydDJpNVJ2MzdRdGVJSC1DMDZuaS1sVzlSU0JyZzV6TXhzazFqUnRaRl8tU3VySXd2c2ZNMVJYbHpYb0tFV3YwYTFxeU5ROXhtc3JYeGk0SVdGSHM3T2FSaURLVWZKUThYaFlTcEJfTG1ESlF4dkx6SEowSEg?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "5dcc6f828a9e2a9c75ead4fb",
+      "path": "/category/tech/culture-next-2024-the-major-gen-z-trends-that-are-shaping-audio-streaming-spotif.html",
+      "category": "tech"
+    },
+    {
+      "slug": "will-more-artists-release-full-songs-to-social-media-in-2025-midia-research",
+      "vertical": "lifestyle_pop",
+      "title": "Will more artists release full songs to social media in 2025? - MIDiA Research",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 149,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPQlBhNE1PVGRQbUVRM0xkZWNva0VYOW9FYkV5QkhtVVVrWnJ1TEZ4bG1JSTJxcFJGWXdRTF9FRkZJd2F3NUxheEJKRklycW1IMmkwd2NQMlU4ZHpWU2wzNmFuWTNOQUlDSlBZSjdKUVpUSkpMblAzd3JwTXk4T2Rfa0tLRXdRSk02Vmt4SFltcE5UejRhR1Y3STZyOA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "d149b3e008666c79d8985a6a",
+      "path": "/category/general/will-more-artists-release-full-songs-to-social-media-in-2025-midia-research.html",
+      "category": "general"
+    },
+    {
+      "slug": "from-the-youtube-ceo-our-big-bets-for-2025-youtube-official-blog",
+      "vertical": "lifestyle_pop",
+      "title": "From the YouTube CEO: Our big bets for 2025 - YouTube Official Blog",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 148,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiakFVX3lxTFAxUV9pTFo5b0FaQ1NWRHJaYmlXV2lFVzc2c2Uzb3Jhc0dMUGtoNHo2cTZnVUdXU3hOS1k2dE9HMUlqSmZjQmJ6cDhzUHBQQzItdHJHNXRNWmlSV3BMTnVPLWh6cEY5emhjRlE?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "0a9c27749bc323cfbdeb2a56",
+      "path": "/category/tech/from-the-youtube-ceo-our-big-bets-for-2025-youtube-official-blog.html",
+      "category": "tech"
+    },
+    {
+      "slug": "the-top-pop-culture-trends-impacting-travel-in-2025-travelage-west",
+      "vertical": "lifestyle_pop",
+      "title": "The Top Pop Culture Trends Impacting Travel in 2025 - TravelAge West",
+      "published_at": "2026-02-19T14:20:13+09:00",
+      "word_count": 146,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbVRFVUtSVUxZNkVfNFkwWTZKMG93ZGtPTm1zdjFDWm54RnItZlFVc3EwSXFtWWVGQjkzRTdfa2RfSTlaa1NjTmFxYUpWcUJUWXl0X0hRN1k0aUxRckdvSTR6M1V5d0twWFEzSTVhSWZCNWxlU0J2U0xTZkpsX0hVU0xEemdNVGhGWkNSV1NIc056LU1uMDM5bnZKQlZSM2xvSGc?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "12b5a9b6c917bb24e1f85f3d",
+      "path": "/category/general/the-top-pop-culture-trends-impacting-travel-in-2025-travelage-west.html",
+      "category": "general"
+    },
+    {
+      "slug": "ex-deepmind-researcher-launches-ai-startup-targeting-1bn-funding-in-london-capac",
+      "vertical": "ai_tech",
+      "title": "Ex-DeepMind researcher launches AI startup, targeting $1bn funding in London - capacityglobal.com",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 143,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPOTJLeFR6YWNOTURvU3RxN0RxMG1OTlEzZmwzU3U3SW0yLWg5VTNYejVTNmlBcGVOY1c1cUtYcUE1SF9NeW5SVmd1SEo4cExYN2h1Z0twSlJaNFc5am9jaGdKUDdtamprckw2T1Bmc09IZVVZZlhTODljYUotY0l2aWVOWGNlcHVMUTFON1VLUUd1RzZQb29PcUZuSlhFajRHMUJFOERTb0dzbGc?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "8d093b9f07d5ca590653ace6",
+      "path": "/category/general/ex-deepmind-researcher-launches-ai-startup-targeting-1bn-funding-in-london-capac.html",
+      "category": "general"
+    },
+    {
+      "slug": "avantos-raises-25m-series-a-to-expand-ai-financial-platform-ventureburn",
+      "vertical": "ai_tech",
+      "title": "Avantos Raises $25M Series A to Expand AI Financial Platform - Ventureburn",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 143,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSEJFaVZZYTVac2E2cEpvMlE0c1ZZUTJYOGxUY2E5TW5XODJyODQ4RHVacGtvUjM2RE9JaXl4a29MYVpXYWRqTWloRzRzUXdIUGg3b0dVUGUwRm1rbDRDQ0Z5aXlzcDVtSDhaS2dvb3o5cFNTNlpGc2JjcHFIUmYzS1BCYmUySU4xU253Z9IBjAFBVV95cUxNSEJFaVZZYTVac2E2cEpvMlE0c1ZZUTJYOGxUY2E5TW5XODJyODQ4RHVacGtvUjM2RE9JaXl4a29MYVpXYWRqTWloRzRzUXdIUGg3b0dVUGUwRm1rbDRDQ0Z5aXlzcDVtSDhaS2dvb3o5cFNTNlpGc2JjcHFIUmYzS1BCYmUySU4xU253Zw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "b883cce2f6b2f51348e7c2f2",
+      "path": "/category/general/avantos-raises-25m-series-a-to-expand-ai-financial-platform-ventureburn.html",
+      "category": "general"
+    },
+    {
+      "slug": "ai-defense-startup-breaker-raises-6-million-in-seed-funding-the-wall-street-jour",
+      "vertical": "ai_tech",
+      "title": "AI Defense Startup Breaker Raises $6 Million in Seed Funding - The Wall Street Journal",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 149,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinANBVV95cUxPRzJxeEctWlE4MTVVbGZFeTlDUi01RTh0eW1UX00wMm5hSmtDbm5LSGNYYXVOUmJpbnFxTm5oUlBCaWRmSFQyZ2ZQbm5fekQzbVFkNGR1b280clZmRVpmZmF6SUpnQkZ4cUI3eV80bkJyeUtkSU9kblNNdzNXNmNQazZnWmd1UWRwRG1kTV9JQTU5a1ZJSXlpTnlHa1p2ekc4WWNLdXhVZXpTMWlpZ245c3BTd1poMjByYjJJSkNTblc2ZGNHbU1JeXBBYmtyS0lvbFFNVVFMNGdNVW1GUEdHTllZcmlHS2pIUG5TVE0zWjFiU0tJbTR3QjdlTFVfU0ZBRjFjMWVmbWFxVTNBQ0xERExpWFRLcEpwbDduSHp5SlRIMi1YRU5Pc1BBY1JMZU1XNXhoamdfTzlXZWpmZU5Ha2wtZFRQRkQtTW10dHppdktPTmNHLUczR0pHekcyYm1GVFkyZVVpcFZwTXBldXBQSExucWYxVkdVY0NXNHB0X1NybDZ4ZXNzMnRiNVFON2QxRENwdGdRQ1FKQlJs?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "3f1023fd099e6afb05a0c984",
+      "path": "/category/general/ai-defense-startup-breaker-raises-6-million-in-seed-funding-the-wall-street-jour.html",
+      "category": "general"
+    },
+    {
+      "slug": "only-2-states-saw-their-share-of-us-venture-funding-rise-last-year-crunchbase-ne",
+      "vertical": "ai_tech",
+      "title": "Only 2 States Saw Their Share Of US Venture Funding Rise Last Year - Crunchbase News",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQaFRGRXZvbHNlQ1JVek1ySnBmNmsza29IUjBCY2FGT1lYQnlIZ3JrdU83eDlCS19FLU5TY2lYQjNGb05hQjFXdThfU3dQTEY0ejhxRnlHYnhVSExraFAwSEV0RUp4TnpGTFB5ZG00YUgyVGw1REhEMHh2YWVud0tRcA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "0ef3fae22aabd44d6b261f9a",
+      "path": "/category/general/only-2-states-saw-their-share-of-us-venture-funding-rise-last-year-crunchbase-ne.html",
+      "category": "general"
+    },
+    {
+      "slug": "global-monetary-policy-tracker-council-on-foreign-relations",
+      "vertical": "finance",
+      "title": "Global Monetary Policy Tracker - Council on Foreign Relations",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LVzA0b01HYXNMTlR5VTdHVkFVTkkyR2dUbFF1NXhCZmFoR1JFLVo1YURqRnkzUm9iX2tIdEFQaXVmUFhaMVJQQmtuNGVEeGs1V2tMQXBFRWpVQTEzbGprMjdkRDY2a0R1V00w?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "f07a2f9597f7dfddd2f61e3e",
+      "path": "/category/general/global-monetary-policy-tracker-council-on-foreign-relations.html",
+      "category": "general"
+    },
+    {
+      "slug": "us-economic-forecast-2026-2030-deloitte",
+      "vertical": "finance",
+      "title": "US Economic Forecast 2026-2030 - Deloitte",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 145,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxPenRYbVVidzhLTkVVbXN2VHd4VjY3ZGlZWjBFa0NCQ2xPcEhneHlWZVhud3p2cUVMcWNsdkEzLTlpcmVxREZBbDBkOGFEa0wySEx4YkdoMkdzT3N6NXRnQ19waFNqM3BCdkE1bmczY1pHNVNxQkxoRnpkMk15cERnSklGLTc0ZlZvMzFxeEEtalR1UWF3R0VWNjZCWXFqMUk0VERZWHdpaHplWTdFdmlldQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "e22d77e745d068add841b241",
+      "path": "/category/general/us-economic-forecast-2026-2030-deloitte.html",
+      "category": "general"
+    },
+    {
+      "slug": "navigating-fed-monetary-policy-uncertainty-and-the-markets-invesco-com",
+      "vertical": "finance",
+      "title": "Navigating Fed monetary policy uncertainty and the markets - invesco.com",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxORzhpdkoxQVZNZ05ETmZoeE1EbV83T0kxN1VyYUdDVzc0eXE3MTVnTElnZC1PS2pYLU9ZTnVVc19QOHU4VlpWLXlHVUxCZ2toWUZ2Wm4yTDFtOVMtTHAwcmR3ZFM2N05RUmJMc2t4SWRWcnBjZVV6Qm1BTlg1SmpGSXFmWGNSNEsxQnFLMl9HeDdYbnRNdDgtcEFB?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "f5a39ad9298d5f2e8e872efb",
+      "path": "/category/general/navigating-fed-monetary-policy-uncertainty-and-the-markets-invesco-com.html",
+      "category": "general"
+    },
+    {
+      "slug": "the-labour-market-data-hole-that-threatens-to-skew-monetary-policy-the-world-eco",
+      "vertical": "finance",
+      "title": "The labour-market data hole that threatens to skew monetary policy - The World Economic Forum",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 163,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWDlkRVlTRTNBa3RabEcwaThKUjJ1NWhPZmp3MFUwZkZ2NWFpaDFCVnNMMG1Vck5iLVItbng3UUVLakZFVjM4QldYQ0ZTRzFUMDN0UXNsVng3dlk5bE5iVUlWWnh6ZnJHNi1qb1llTVBFWTBwSmZuSVVqcUNpc2t6Mg?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "0e14ba701a58b21b3ae61736",
+      "path": "/category/general/the-labour-market-data-hole-that-threatens-to-skew-monetary-policy-the-world-eco.html",
+      "category": "general"
+    },
+    {
+      "slug": "physical-media-is-cool-again-streaming-services-have-themselves-to-blame-rolling",
+      "vertical": "lifestyle_pop",
+      "title": "Physical Media Is Cool Again. Streaming Services Have Themselves to Blame - Rolling Stone",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 147,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTm5lYkFGSEl0eVFma3lEUE1laGFvZW02RVFYNjJ2U0FfVkdsTHZGYTV6aHRJTHdKQk5FZXp1dGc5Z2ZtQWd4MmlvbGlNLUxBbjZpRVJBSGc5eGhKd1FIcXdGMm55ZlVPSXJrOERFTzdRRnJzTHFKMFJ5NmFIUk5WeHI4enZrTTV3eFJNT1JlQjRCbG55V2x1U015TjREM1paRDB6NjU5Y0RpM0ZxOWtxclFpQQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "854980cccb035ab344c76014",
+      "path": "/category/general/physical-media-is-cool-again-streaming-services-have-themselves-to-blame-rolling.html",
+      "category": "general"
+    },
+    {
+      "slug": "the-18-social-media-trends-to-shape-your-2026-strategy-hootsuite",
+      "vertical": "lifestyle_pop",
+      "title": "The 18 social media trends to shape your 2026 strategy - Hootsuite",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 143,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBPdmtOZnhxM2IyekNXc2lBeEFaMFJ0NnNvX1RWSGJyT2QxRzcwbUdsX2lqS3BVYi1KS0x2VDBPdUU2RkFFeG5jZ2xFUVBTZHJWbmFtODM1TW5oQzQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "defef58fe5b599a0bea91d8c",
+      "path": "/category/general/the-18-social-media-trends-to-shape-your-2026-strategy-hootsuite.html",
+      "category": "general"
+    },
+    {
+      "slug": "the-disappearance-of-pop-culture-futurist-speaker",
+      "vertical": "lifestyle_pop",
+      "title": "The Disappearance of Pop Culture - Futurist Speaker",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 135,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWEFGTGVXd0xEN3RRVk9uTmRYbnM2WkZlTWRHRDgxem5aUm1UODQtSHR3R1FROUlmZHRQU1RBNl9UNGQ5MnlkSGtWaEZlMG1nTVJEQkE4SWNDOXp6VEVaMnByRkVGaWJNRmtGYk9aR2Z4TVZITXdDQjdMV0U2cFNCRw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "d26bc36f2cee9362eb8911cd",
+      "path": "/category/general/the-disappearance-of-pop-culture-futurist-speaker.html",
+      "category": "general"
+    },
+    {
+      "slug": "inside-netflix-innovation-originals-and-cultural-phenomena-quartr",
+      "vertical": "lifestyle_pop",
+      "title": "Inside Netflix: Innovation, Originals, and Cultural Phenomena - Quartr",
+      "published_at": "2026-02-19T14:12:35+09:00",
+      "word_count": 137,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxOa2NaR1puN1hTVGxmNGhENjlSdXRVR2U2eUxPdVJfaUhVUk4zNUFMU2JpZUVRTjZCaEZhN2dnZ1l2S0dMaEN3YXJncVh2MXRSdWNBTHY3dEdra1Z5MmJ6a191NlJFNmxvOXdHZll0TFdrMnBSR3owUlFRWnlHS0w1NnR5TjQ4dWdXSTR5Q2lGYW9ocWd5WFE?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "1cb7387a550813ead97ea343",
+      "path": "/category/general/inside-netflix-innovation-originals-and-cultural-phenomena-quartr.html",
+      "category": "general"
+    },
+    {
+      "slug": "flexible-agentic-marketing-startup-kana-intelligence-scores-15m-in-seed-funding",
+      "vertical": "ai_tech",
+      "title": "Flexible agentic marketing startup Kana Intelligence scores $15M in seed funding - SiliconANGLE",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 145,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOakpIeU9Ka3g5Zkxpd3QyZnV3ZnRBMU9pdFViWkVSNWhPdzBxa0REU0hNM3N2M2JqdGJxcWZ1SERYSjJLbHh1OE5XYUNiVVdlS2R6Qk1RWTV3RE1vWnktRDRPMWlZXzhUVTYzWnpqdXA3Vy15Tl9NcEhzQ2tlSzc0QWU4SUhBUXBfNVlScDk3MlRDSG5zU0dGaVdNWDl2cFNWMUJYclQzTk8yOWw4Z002TjRiaw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ff4c0d511982731bec492594",
+      "path": "/category/general/flexible-agentic-marketing-startup-kana-intelligence-scores-15m-in-seed-funding.html",
+      "category": "general"
+    },
+    {
+      "slug": "here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026-tech",
+      "vertical": "ai_tech",
+      "title": "Here are the 17 US-based AI companies that have raised $100M or more in 2026 - TechCrunch",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaEhleXJQbzI2Q2pYY3dfWmRJNzhtUlVJWUxKLTRsSHNyMFF1RnNlaElYdEljN1VuMGxmUUVTYk1ad2FVNkZrN2R4MlRCQ2xpSHpjZm1ZS25NbXhVa0RKS1UybEtFYkNhNUhwd3JSRmtNbjNwQlBSVTNjVDF3Zmd6QzZIT1R5S1B1Wnl0dmJNS0tBTGFDei1sTzd5ZzVCelVEeFJjcXF5QjJEVjFYTHVJ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "2655b2961f1b8be5c62a67e1",
+      "path": "/category/general/here-are-the-17-us-based-ai-companies-that-have-raised-100m-or-more-in-2026-tech.html",
+      "category": "general"
+    },
+    {
+      "slug": "vanguard-sei-back-25m-funding-round-in-wealth-ai-startup-avantos-the-daily-upsid",
+      "vertical": "ai_tech",
+      "title": "Vanguard, SEI Back $25M Funding Round in Wealth AI Startup Avantos - The Daily Upside",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 149,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxOa0RLeHBMYWh1MWF5TG5MUjZFMlFBc3MwNHhmd21HQU5WQl83dmhubDRfbFUzQ2Y3YmNnZHk0aW1zMVpldnFuS292ZzdqUHBrSUFPdE8xZGtaME1pS05pNFAtY1gtZEUzZlprRE9uTWRtQ1dMMHdJTUtFODBYeHhkTFNLMm5fNkNGS2lCMXhQeEE0bzhpM1BmWUJ1NVVFbDBwMFFuVzVWSkhPemxlOGZiSFRSRUI0Zw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "341d768bfaba304198a4c775",
+      "path": "/category/general/vanguard-sei-back-25m-funding-round-in-wealth-ai-startup-avantos-the-daily-upsid.html",
+      "category": "general"
+    },
+    {
+      "slug": "cloud-startup-render-raises-funding-at-1-5-billion-valuation-as-ai-built-apps-bo",
+      "vertical": "ai_tech",
+      "title": "Cloud startup Render raises funding at $1.5 billion valuation as AI-built apps boom - CNBC",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 149,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPQ0tNTlJuWXJJbEJ0V1FWZy1vMFlaeEhNckFpNFZ4NXdTNTNWOGY1dzNXYmZrMEt5SXlFRUFidVR0NnhaTlJBQXJnTGNLeTZpQ29hYk5ZbGRpRXcwVnpTdEYtcWdRQTYyem84REpQSTh6SzVPajdIQTJoMGVoTkhnWHU4c25sbjg4MVEyVmw4YzZmVlI3WGfSAZsBQVVfeXFMTmVpdUxjMXRDdmlSQ3UxcWVoSEhCdWgzaU1BaERYUWxWejJEWWdadlJROXU5SXltRnVqeWhWOE1ZZU9TN0dBV2lFUjVpQVpmTThZbno2X1BMMnh1QUtacGlpdkVrbGhFVWJKcFB1cmJtUl9vSDBXV0RkcTVncERzZlVWd2ZqRWdUSmsxbGVoa2xRci05TUJEWnJSTlU?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "33d911e63ea12e813502521d",
+      "path": "/category/general/cloud-startup-render-raises-funding-at-1-5-billion-valuation-as-ai-built-apps-bo.html",
+      "category": "general"
+    },
+    {
+      "slug": "global-markets-watch-geneva-peace-talks-inflation-data-during-holiday-lull-fine",
+      "vertical": "finance",
+      "title": "Global Markets Watch Geneva Peace Talks, Inflation Data During Holiday Lull - Fine Day 102.3",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 163,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxNSHFDRnZWbENnUUEwRzVTbGxGMkdlT3R6dVVjZFoyZEVXR1lmUHhUajJUNnhmN043ZDVJbllBXzJ6MnZQWUZ4OFVfalpyWEhfamVwT0hYYXF4V1lNOUtMRWQ4bTRvelc4TlNsQnFZUE5iZV9oTXBkYXEtcXFVNGpGLXJ5MGdvYV8zTW14ZmQtZHhNSl9LRFVXM0VFNGNsMURpVlhKM0k1T3c0eDJUOVIzdzJNM29NZjAzbEVMNWI4RENGS2NNZkRqaS1yZkE?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ee5d36a4d264be54b8eb7fcb",
+      "path": "/category/general/global-markets-watch-geneva-peace-talks-inflation-data-during-holiday-lull-fine.html",
+      "category": "general"
+    },
+    {
+      "slug": "federal-reserve-calibrates-interest-rate-policy-amid-softer-hiring-and-lingering",
+      "vertical": "finance",
+      "title": "Federal Reserve Calibrates Interest Rate Policy Amid Softer Hiring and Lingering Inflation - U.S. Bank",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 163,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "dffcfb3af0162b5e2db6e894",
+      "path": "/category/general/federal-reserve-calibrates-interest-rate-policy-amid-softer-hiring-and-lingering.html",
+      "category": "general"
+    },
+    {
+      "slug": "policy-and-markets-2025-policy-inflation-ai-impact-on-markets-bnp-paribas-cib",
+      "vertical": "finance",
+      "title": "Policy and markets 2025: Policy, inflation & AI impact on markets - BNP Paribas CIB",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 163,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMmlhcVpaWjQyYVlFYkxJTk5OdEF6RnhHZUxaLXdFR192cHNlS04yR28yZHVFdGxSTVB5MDRRVkRtZ0NIZFh0SXh0QWs2cXJEZXJTY1ZQM2xwbEkwdDk4VTlwREgxYUFjaUR5MjdJZEM5UmI1TXJhRHVjYmFUcWg4RzlsZmM?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "b98036271a4a3c58329893a6",
+      "path": "/category/general/policy-and-markets-2025-policy-inflation-ai-impact-on-markets-bnp-paribas-cib.html",
+      "category": "general"
+    },
+    {
+      "slug": "2026-market-outlook-a-multidimensional-polarization-j-p-morgan",
+      "vertical": "finance",
+      "title": "2026 market outlook: A multidimensional polarization - J.P. Morgan",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 151,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTE9keHZKTjBMa0NLZXBaV2pjNG0tUm5jZjZ6Ukd3bHRVNDExZmJmcWtOaFlMbmNmSXFiaWVRQU9xTWhrZHJJdzhZcXRybVVnSnhpNldjUU9mVktnVFZLeE1LQ0pBX0kxN2ZaMGNIYmRXVzZNbkJwR09wM3V4Z2g?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "3b9600df49740502819e0464",
+      "path": "/category/general/2026-market-outlook-a-multidimensional-polarization-j-p-morgan.html",
+      "category": "general"
+    },
+    {
+      "slug": "entertainment-and-streaming-trends-in-mobile-app-development-los-angeles-vocal-m",
+      "vertical": "lifestyle_pop",
+      "title": "Entertainment and Streaming Trends in Mobile App Development Los Angeles - vocal.media",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 143,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "ced807758c1fc88531ea3011",
+      "path": "/category/general/entertainment-and-streaming-trends-in-mobile-app-development-los-angeles-vocal-m.html",
+      "category": "general"
+    },
+    {
+      "slug": "united-states-anime-market-trends-forecast-report-globenewswire",
+      "vertical": "lifestyle_pop",
+      "title": "United States Anime Market Trends & Forecast Report - GlobeNewswire",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 139,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "627a702e1ad7fb81dbd19995",
+      "path": "/category/general/united-states-anime-market-trends-forecast-report-globenewswire.html",
+      "category": "general"
+    },
+    {
+      "slug": "netflix-s-squid-game-kpop-demon-hunters-top-youtube-2025-culture-trends-report-m",
+      "vertical": "lifestyle_pop",
+      "title": "Netflix’s ‘Squid Game,’ ‘KPop Demon Hunters’ Top YouTube 2025 Culture & Trends Report - Media Play News",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxOdjZibEpqSGxKQldqRkgwRWRiRXRVWk1vV1ZZWVpKejRrZy1lNjgzVU9raWNyVGRoXzNPbzNRQS1feGhDTE1BWWJ4dU9kOEZuX2x0dlZyUHA2bi1VekF5bXEwODN6cEpZdkZ6NkI3VGhvMXl1TnJ4RDE0LUFyYkVGUHl1ZUJRWDVtYXRlSnlJTWh5VjZwZzFQczlsQkxFaGh2dWVuWmVReTFlaVZJ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "56c49e0ccd59722437bdcdb9",
+      "path": "/category/general/netflix-s-squid-game-kpop-demon-hunters-top-youtube-2025-culture-trends-report-m.html",
+      "category": "general"
+    },
+    {
+      "slug": "2025-digital-media-trends-social-platforms-are-becoming-a-dominant-force-in-medi",
+      "vertical": "lifestyle_pop",
+      "title": "2025 Digital Media Trends: Social platforms are becoming a dominant force in media and entertainment - Deloitte",
+      "published_at": "2026-02-19T14:12:14+09:00",
+      "word_count": 153,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "footer"
+      ],
+      "dedupe_hash": "a64f610aeb3d236bd22f9a46",
+      "path": "/category/general/2025-digital-media-trends-social-platforms-are-becoming-a-dominant-force-in-medi.html",
+      "category": "general"
+    }
+  ],
+  "daily_history": [
+    {
+      "date": "2026-02-19",
+      "duplicate_rate": 0.339,
+      "policy_flag_rate": 0.0,
+      "indexed_rate": 0.1576,
+      "rpm_estimate": 9.0,
+      "publish_count": 12
+    },
+    {
+      "date": "2026-02-20",
+      "duplicate_rate": 0.05,
+      "policy_flag_rate": 0.0,
+      "indexed_rate": 0.2535,
+      "rpm_estimate": 11.347,
+      "publish_count": 3
+    }
+  ],
+  "budget": {
+    "month": "2026-02",
+    "spent_krw": 0.0,
+    "limit_krw": 200000,
+    "last_engine": "template",
+    "last_quality_tier": "balanced",
+    "alert_ratio": 0.85,
+    "capped": false
+  },
+  "budget_usage": {
+    "2026-02": 0.0
+  }
+}
