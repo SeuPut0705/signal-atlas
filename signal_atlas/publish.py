@@ -357,6 +357,8 @@ class StaticSitePublisher:
 
     def _refresh_existing_post_layouts(self, root: Path, posts: list[PublishedBrief]) -> None:
         hero_pattern = re.compile(r'<img class="hero-image"[^>]*?>', re.IGNORECASE)
+        topbar_pattern = re.compile(r'<header class="site-topbar">.*?</header>', re.IGNORECASE | re.DOTALL)
+        skip_link_markup = '  <a class="skip-link" href="#main-content">Skip to content</a>'
         for post in posts:
             post_file = root / post.path.lstrip("/")
             if not post_file.exists():
@@ -365,15 +367,36 @@ class StaticSitePublisher:
                 blob = post_file.read_text(encoding="utf-8")
             except OSError:
                 continue
-            if 'class="hero-image"' not in blob:
-                continue
-            replacement = self._article_cover_block(
-                category=post.category,
-                title=post.title,
-                description=post.meta_description or PROJECT_TAGLINE,
-            )
-            rewritten, count = hero_pattern.subn(replacement, blob, count=1)
-            if count:
+            rewritten = blob
+            if 'class="hero-image"' in rewritten:
+                replacement = self._article_cover_block(
+                    category=post.category,
+                    title=post.title,
+                    description=post.meta_description or PROJECT_TAGLINE,
+                )
+                rewritten = hero_pattern.sub(replacement, rewritten, count=1)
+
+            if "<h2>Sources</h2>" in rewritten:
+                rewritten = rewritten.replace("<h2>Sources</h2>\n  <ul>", '<h2>Sources</h2>\n  <ul class="source-list">', 1)
+                rewritten = rewritten.replace("<li><code>", '<li class="source-item"><code>')
+
+            topbar_html = self._render_topbar(canonical_path=post.path).strip()
+            if '<header class="site-topbar">' in rewritten:
+                rewritten = topbar_pattern.sub(topbar_html, rewritten, count=1)
+            elif "<body>" in rewritten:
+                rewritten = rewritten.replace("<body>", f"<body>\n{topbar_html}", 1)
+
+            if 'class="skip-link"' not in rewritten and "<body>" in rewritten:
+                rewritten = rewritten.replace("<body>", f"<body>\n{skip_link_markup}", 1)
+            if '<main id="main-content">' not in rewritten:
+                rewritten = rewritten.replace("<main>", '<main id="main-content">', 1)
+
+            # Normalize legacy absolute URLs and root-relative links for current deployment base path.
+            if "https://signal-atlas.example.com" in rewritten:
+                rewritten = rewritten.replace("https://signal-atlas.example.com", self.site_url)
+            rewritten = self._rewrite_root_relative_links(rewritten)
+
+            if rewritten != blob:
                 post_file.write_text(rewritten, encoding="utf-8")
 
     def _write_shared_assets(self, root: Path) -> None:
@@ -402,6 +425,21 @@ body {
     radial-gradient(900px 450px at 110% -15%, #fde68a 0%, transparent 60%),
     var(--bg);
   color: var(--text);
+}
+.skip-link {
+  position: absolute;
+  left: .75rem;
+  top: -3rem;
+  z-index: 99;
+  background: #0f172a;
+  color: #fff;
+  padding: .45rem .7rem;
+  border-radius: .5rem;
+  border: 1px solid #334155;
+}
+.skip-link:focus {
+  top: .75rem;
+  text-decoration: none;
 }
 .site-topbar {
   position: sticky;
@@ -457,6 +495,11 @@ body {
   text-decoration: none;
   background: #f1f5f9;
   border-color: #dbe2ec;
+}
+.site-topnav a.is-active {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  color: #0f172a;
 }
 main { max-width: 1160px; margin: 0 auto; padding: 1.2rem 1rem 3rem; }
 a { color: #0b3ea6; text-decoration: none; }
@@ -738,6 +781,21 @@ nav.categories a {
         normalized = path if path.startswith("/") else f"/{path}"
         return f"{self.base_path}{normalized}" if self.base_path else normalized
 
+    def _rewrite_root_relative_links(self, blob: str) -> str:
+        if not self.base_path:
+            return blob
+        base_prefix = self.base_path.lstrip("/") + "/"
+        pattern = re.compile(r'(\b(?:href|src)\s*=\s*")/(?!(?:/))([^"]*)', re.IGNORECASE)
+
+        def _inject(match: re.Match[str]) -> str:
+            attr = match.group(1)
+            rest = match.group(2)
+            if rest.startswith(base_prefix):
+                return f'{attr}/{rest}'
+            return f'{attr}{self.base_path}/{rest}'
+
+        return pattern.sub(_inject, blob)
+
     def _public_url(self, path: str) -> str:
         if path.startswith("http://") or path.startswith("https://"):
             return path
@@ -769,9 +827,13 @@ nav.categories a {
 
         return f"""
   <meta name=\"description\" content=\"{html.escape(description)}\" />
+  <meta name=\"robots\" content=\"index, follow, max-image-preview:large\" />
+  <meta name=\"theme-color\" content=\"#0f172a\" />
   <link rel=\"canonical\" href=\"{html.escape(canonical_url)}\" />
   <link rel=\"alternate\" hreflang=\"en\" href=\"{html.escape(canonical_url)}\" />
+  <link rel=\"alternate\" type=\"application/rss+xml\" title=\"{html.escape(PROJECT_TITLE)} RSS\" href=\"{html.escape(self._href('/rss.xml'))}\" />
   <meta property=\"og:type\" content=\"{html.escape(og_type)}\" />
+  <meta property=\"og:site_name\" content=\"{html.escape(PROJECT_TITLE)}\" />
   <meta property=\"og:title\" content=\"{html.escape(title)}\" />
   <meta property=\"og:description\" content=\"{html.escape(description)}\" />
   <meta property=\"og:url\" content=\"{html.escape(canonical_url)}\" />
@@ -785,6 +847,31 @@ nav.categories a {
   <link href=\"https://fonts.googleapis.com/css2?family=Newsreader:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap\" rel=\"stylesheet\" />
   {json_ld}
 """
+
+    def _render_topbar(self, *, canonical_path: str) -> str:
+        nav_links = [("/index.html", "Home")] + [
+            (f"/category/{category}/index.html", CATEGORY_LABELS.get(category, category)) for category in ALL_CATEGORIES
+        ]
+        link_tags: list[str] = []
+        for href, label in nav_links:
+            is_active = canonical_path == href or (
+                href != "/index.html" and canonical_path.startswith(href.removesuffix("index.html"))
+            )
+            class_attr = ' class="is-active"' if is_active else ""
+            aria = ' aria-current="page"' if is_active else ""
+            link_tags.append(
+                f'<a{class_attr} href="{html.escape(self._href(href))}"{aria}>{html.escape(label)}</a>'
+            )
+        links_html = "".join(link_tags)
+        return f"""
+  <header class=\"site-topbar\">
+    <div class=\"site-topbar-inner\">
+      <a class=\"site-brand\" href=\"{self._href('/index.html')}\"><span class=\"site-brand-dot\" aria-hidden=\"true\"></span>{html.escape(PROJECT_TITLE)}</a>
+      <nav class=\"site-topnav\" aria-label=\"Primary\">
+        {links_html}
+      </nav>
+    </div>
+  </header>"""
 
     def _html_page(
         self,
@@ -817,19 +904,9 @@ nav.categories a {
   <script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={html.escape(self.adsense_client)}\" crossorigin=\"anonymous\"></script>
 </head>
 <body>
-  <header class=\"site-topbar\">
-    <div class=\"site-topbar-inner\">
-      <a class=\"site-brand\" href=\"{self._href('/index.html')}\"><span class=\"site-brand-dot\" aria-hidden=\"true\"></span>{html.escape(PROJECT_TITLE)}</a>
-      <nav class=\"site-topnav\" aria-label=\"Primary\">
-        <a href=\"{self._href('/index.html')}\">Home</a>
-        <a href=\"{self._href('/category/ai/index.html')}\">AI</a>
-        <a href=\"{self._href('/category/tech/index.html')}\">Tech</a>
-        <a href=\"{self._href('/category/finance/index.html')}\">Finance</a>
-        <a href=\"{self._href('/category/stocks/index.html')}\">Stocks</a>
-      </nav>
-    </div>
-  </header>
-  <main>
+  <a class=\"skip-link\" href=\"#main-content\">Skip to content</a>
+  {self._render_topbar(canonical_path=canonical_path)}
+  <main id=\"main-content\">
     {body}
     <p class=\"footer-note\">{html.escape(PROJECT_TITLE)} · {html.escape(PROJECT_TAGLINE)}</p>
   </main>
@@ -1011,7 +1088,7 @@ nav.categories a {
 
         body = f"""
 <header class=\"hero\">
-  <span class=\"header-kicker\">Automated Trend Media</span>
+  <span class=\"header-kicker\">Daily Trend Signals</span>
   <h1>{html.escape(PROJECT_TITLE)}</h1>
   <p>{html.escape(PROJECT_TAGLINE)}</p>
 </header>
