@@ -23,7 +23,7 @@ PUBLISH_STAGES = (12, 18, 24)
 
 TARGET_TIMEZONE = "Asia/Seoul"
 PROJECT_TITLE = "Signal Atlas"
-PROJECT_TAGLINE = "Automated English trend briefings for ad-funded media"
+PROJECT_TAGLINE = "Clear trend signals across AI, Tech, Finance, and more."
 
 ADSENSE_SLOTS = ("top-banner", "inline-1", "inline-2", "footer")
 

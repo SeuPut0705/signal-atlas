@@ -47,13 +47,23 @@ class PublishBasePathUnitTests(unittest.TestCase):
             self.assertIn('href="/signal-atlas/assets/site.css"', index_html)
             self.assertIn('href="/signal-atlas/category/ai/index.html"', index_html)
             self.assertIn('href="/signal-atlas/category/ai/signal-atlas-test-headline.html"', index_html)
+            self.assertIn('src="/signal-atlas/assets/thumbs/signal-atlas-test-headline.svg"', index_html)
             self.assertIn('<script type="application/ld+json">{"@context":"https://schema.org"', index_html)
             self.assertNotIn("&quot;@context&quot;", index_html)
+
+            thumb_svg = (site_dir / "assets" / "thumbs" / "signal-atlas-test-headline.svg").read_text(encoding="utf-8")
+            self.assertIn("Signal Atlas test headline", thumb_svg)
+            self.assertIn(">AI<", thumb_svg)
+            self.assertIn("meaningful shift in AI", thumb_svg)
 
             article_html = (site_dir / "category" / "ai" / "signal-atlas-test-headline.html").read_text(encoding="utf-8")
             self.assertIn("<code>https://example.com/a</code>", article_html)
             self.assertNotIn('href="https://example.com/a"', article_html)
             self.assertNotIn('src="https://example.com/test-image.jpg"', article_html)
+            self.assertIn(
+                'property="og:image" content="https://foo.github.io/signal-atlas/assets/thumbs/signal-atlas-test-headline.svg"',
+                article_html,
+            )
 
 
 if __name__ == "__main__":

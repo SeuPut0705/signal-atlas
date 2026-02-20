@@ -167,7 +167,7 @@ def _schema_prompt(
         for meta in topic.source_meta[:8]
     )
     return f"""
-You are a senior editorial analyst writing high-quality English trend briefings for an ad-funded media site.
+You are a senior editorial analyst writing high-quality English trend briefings for a modern digital trend magazine.
 
 Constraints:
 - Quality tier: {quality_tier}

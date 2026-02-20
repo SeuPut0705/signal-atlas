@@ -94,6 +94,7 @@ class StaticSitePublisher:
         all_posts = self._merge_posts(existing_posts, new_posts)
         for post in all_posts:
             post.primary_image = self._localize_primary_image(post, staging)
+            self._ensure_post_thumbnail(post, staging)
         all_posts.sort(key=lambda p: str(p.published_at), reverse=True)
 
         # Render post pages for new content.
@@ -229,6 +230,113 @@ class StaticSitePublisher:
             return f"/assets/images/{filename}"
         except Exception:
             return fallback
+
+    def _thumbnail_relpath(self, post: PublishedBrief) -> str:
+        return f"/assets/thumbs/{post.slug}.svg"
+
+    def _split_lines(self, text: str, *, max_chars: int, max_lines: int) -> list[str]:
+        compact = " ".join(str(text or "").split()).strip()
+        if not compact:
+            return []
+        words = compact.split(" ")
+        lines: list[str] = []
+        current = ""
+        truncated = False
+
+        for word in words:
+            if len(word) > max_chars:
+                if current:
+                    lines.append(current)
+                    current = ""
+                    if len(lines) >= max_lines:
+                        truncated = True
+                        break
+                lines.append(word[: max_chars - 3].rstrip() + "...")
+                if len(lines) >= max_lines:
+                    truncated = True
+                    break
+                continue
+
+            candidate = word if not current else f"{current} {word}"
+            if len(candidate) <= max_chars:
+                current = candidate
+                continue
+
+            lines.append(current)
+            if len(lines) >= max_lines:
+                truncated = True
+                break
+            current = word
+
+        if not truncated and current:
+            if len(lines) < max_lines:
+                lines.append(current)
+            else:
+                truncated = True
+
+        if truncated and lines and not lines[-1].endswith("..."):
+            lines[-1] = lines[-1][: max(1, max_chars - 3)].rstrip() + "..."
+        return lines[:max_lines]
+
+    def _build_post_thumbnail_svg(self, post: PublishedBrief) -> str:
+        c1, c2 = _COVER_COLORS.get(post.category, _COVER_COLORS["general"])
+        category_label = CATEGORY_LABELS.get(post.category, post.category).upper()
+        title_lines = self._split_lines(post.title, max_chars=34, max_lines=3) or ["Signal Atlas Brief"]
+        desc_seed = post.meta_description or PROJECT_TAGLINE
+        desc_lines = self._split_lines(desc_seed, max_chars=46, max_lines=2)
+
+        title_y = 238
+        title_line_height = 68
+        desc_y = title_y + title_line_height * len(title_lines) + 28
+        desc_line_height = 38
+
+        title_tspans = "".join(
+            [
+                f"<tspan x='96' y='{title_y + idx * title_line_height}'>{html.escape(line)}</tspan>"
+                for idx, line in enumerate(title_lines)
+            ]
+        )
+        desc_tspans = "".join(
+            [
+                f"<tspan x='96' y='{desc_y + idx * desc_line_height}'>{html.escape(line)}</tspan>"
+                for idx, line in enumerate(desc_lines)
+            ]
+        )
+        published = html.escape(str(post.published_at)[:10])
+
+        return f"""<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675' role='img' aria-label='{html.escape(post.title)}'>
+<defs>
+  <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+    <stop offset='0%' stop-color='{c1}'/>
+    <stop offset='100%' stop-color='{c2}'/>
+  </linearGradient>
+  <linearGradient id='mask' x1='0' y1='0' x2='0' y2='1'>
+    <stop offset='0%' stop-color='rgba(15,23,42,.1)'/>
+    <stop offset='100%' stop-color='rgba(15,23,42,.76)'/>
+  </linearGradient>
+</defs>
+<rect width='1200' height='675' fill='url(#g)'/>
+<rect width='1200' height='675' fill='url(#mask)'/>
+<circle cx='1070' cy='110' r='170' fill='rgba(255,255,255,.16)'/>
+<circle cx='105' cy='600' r='210' fill='rgba(255,255,255,.1)'/>
+<rect x='64' y='78' width='800' height='520' rx='28' fill='rgba(2,6,23,.62)' stroke='rgba(255,255,255,.17)' stroke-width='2'/>
+<rect x='96' y='112' width='240' height='44' rx='22' fill='rgba(255,255,255,.94)'/>
+<text x='216' y='141' text-anchor='middle' fill='#0f172a' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='24' font-weight='700' letter-spacing='1'>{html.escape(category_label)}</text>
+<text x='96' y='{title_y}' fill='#f8fafc' font-family='Newsreader,Georgia,serif' font-size='58' font-weight='700' letter-spacing='.2'>
+  {title_tspans}
+</text>
+<text x='96' y='{desc_y}' fill='rgba(241,245,249,.95)' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='30' font-weight='600'>
+  {desc_tspans}
+</text>
+<text x='96' y='560' fill='rgba(226,232,240,.95)' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='24'>Published {published}</text>
+<text x='1112' y='620' text-anchor='end' fill='rgba(241,245,249,.94)' font-family='Source Sans 3,Segoe UI,sans-serif' font-size='26' letter-spacing='2'>SIGNAL ATLAS</text>
+</svg>"""
+
+    def _ensure_post_thumbnail(self, post: PublishedBrief, root: Path) -> None:
+        thumbs_dir = root / "assets" / "thumbs"
+        ensure_dir(thumbs_dir)
+        thumb_path = thumbs_dir / f"{post.slug}.svg"
+        thumb_path.write_text(self._build_post_thumbnail_svg(post), encoding="utf-8")
 
     def _write_shared_assets(self, root: Path) -> None:
         css_dir = root / "assets"
@@ -515,7 +623,7 @@ nav.categories a {
 """
 
     def _post_card(self, post: PublishedBrief) -> str:
-        image = post.primary_image or f"/assets/covers/{post.category}.svg"
+        image = self._thumbnail_relpath(post)
         category_label = CATEGORY_LABELS.get(post.category, post.category)
         return f"""
 <article class=\"story-card\">
@@ -534,6 +642,7 @@ nav.categories a {
         payload = brief.payload
         category_label = CATEGORY_LABELS.get(brief.topic.category, brief.topic.category)
         hero = str(published.primary_image or payload.get("hero_image_url") or f"/assets/covers/{brief.topic.category}.svg")
+        thumb = self._thumbnail_relpath(published)
         hero_src = self._href(hero) if hero.startswith("/") else hero
 
         key_points = "".join([f"<li>{html.escape(one)}</li>" for one in payload.get("key_points") or []])
@@ -620,7 +729,7 @@ nav.categories a {
             canonical_path=published.path,
             body=body,
             og_type="article",
-            og_image=hero,
+            og_image=thumb,
             json_ld_objects=[article_schema, breadcrumb_schema],
         )
 
@@ -637,7 +746,7 @@ nav.categories a {
         )
 
         if featured:
-            featured_image = featured.primary_image or f"/assets/covers/{featured.category}.svg"
+            featured_image = self._thumbnail_relpath(featured)
             featured_html = f"""
 <article class=\"featured\">
   <a class=\"featured-media\" href=\"{html.escape(self._href(featured.path))}\">

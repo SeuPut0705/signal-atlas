@@ -1,6 +1,6 @@
 # Signal Atlas
 
-Automated English trend briefing media engine for ad-funded passive income.
+An English trend briefing engine focused on clear, practical signals.
 
 ## Goals
 - Fully automated ingest -> approve -> generate -> publish pipeline
