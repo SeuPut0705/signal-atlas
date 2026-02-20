@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-20T18:08:34+00:00",
+  "updated_at": "2026-02-20T21:03:25+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,102 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "nvidia-deepens-early-stage-push-into-india-s-ai-startup-ecosystem-techcrunch",
+      "vertical": "ai_tech",
+      "title": "Nvidia deepens early-stage push into India’s AI startup ecosystem - TechCrunch",
+      "published_at": "2026-02-20T21:03:25+00:00",
+      "word_count": 1088,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcGdQbWxrMlZCOUJPS3RmMlpOand3akZTR0phVEgzZk5VcUJYM2NkbmhKdkktWUwwSl9fTWpYLUd4dXYtT202NHJST0ZHOGwtaUFRTWxLckFMN2ZITHI3MXBtNHRONFRDSnNRMzlSWWVvT0Mtb2Rfd1lsbFpNOUFvZVdhS3NEeUxZSXFmbEgzREdvODg2RlJETGF2eGJ2enNi?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWswMUUtUnZkRHlrUVI5NWdWeG1zdjBqdlFLM1FsYXRJMFRyeGFnNG1vSmNtS3IxQ0xXR0ZicUpjdW5sQnhVZFk4X0RPZUx0elJKV0g3eEg3SWd5M0ZzMFlodklHeW5GRUdZZTdPdFFvLTBkbWJ4a0NXekIyOFBFNDhHRWFtM3VaX0dsclF3NA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "b712d92aa0150fb7f1bd4b45",
+      "path": "/stories/ai/nvidia-deepens-early-stage-push-into-india-s-ai-startup-ecosystem-techcrunch.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Nvidia's Full-Stack AI Play in India: From Startups to Supercomputers",
+      "meta_description": "Nvidia is executing a major strategic push into India, partnering with giants like Reliance and Tata for AI infrastructure while nurturing a new wave of startu.",
+      "legacy_paths": [
+        "/category/ai/nvidia-deepens-early-stage-push-into-india-s-ai-startup-ecosystem-techcrunch.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "5-startup-sectors-seeing-big-funding-growth-crunchbase-news",
+      "vertical": "ai_tech",
+      "title": "5 Startup Sectors Seeing Big Funding Growth - Crunchbase News",
+      "published_at": "2026-02-20T21:03:25+00:00",
+      "word_count": 1210,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxQSjN5TExuOUdGYzhwczEzd01OQVdxM2R6aklVNFZfd3hFVTNMS3NVeUlyMm0ydkJFRndCY1c1bGsyMENZWHBRZU40ODRTdFBJd3NYTUExNGg0V19lN3ItcHBqcXBnelRlQ3g1Z3JaUFRjSFY4UzJaaHc1VVFYUzRqdzVvekpJTXBYdDhGYUYyTV9Fd1pDbktfaQ?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWswMUUtUnZkRHlrUVI5NWdWeG1zdjBqdlFLM1FsYXRJMFRyeGFnNG1vSmNtS3IxQ0xXR0ZicUpjdW5sQnhVZFk4X0RPZUx0elJKV0g3eEg3SWd5M0ZzMFlodklHeW5GRUdZZTdPdFFvLTBkbWJ4a0NXekIyOFBFNDhHRWFtM3VaX0dsclF3NA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "66eba0b37f1d3fc1c9715cd4",
+      "path": "/stories/startup/5-startup-sectors-seeing-big-funding-growth-crunchbase-news.html",
+      "category": "startup",
+      "primary_image": "/assets/covers/startup.svg",
+      "seo_title": "Analysis: The 5 Startup Sectors Attracting Billions in a Tough Market",
+      "meta_description": "A deep dive into the five key startup sectors—AI, health care, fintech, sustainability, and transportation—that defied the 2023 venture capital downturn.",
+      "legacy_paths": [
+        "/category/startup/5-startup-sectors-seeing-big-funding-growth-crunchbase-news.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "q3-streaming-trends-why-spotify-s-growth-in-the-global-south-matters-for-the-mus",
+      "vertical": "lifestyle_pop",
+      "title": "Q3 streaming trends: Why Spotify’s growth in the Global South matters for the music industry - MIDiA Research",
+      "published_at": "2026-02-20T21:03:25+00:00",
+      "word_count": 1038,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQelNCNzZIMGRrMmhkT2RyMlhHa0l5YTFUV0E1Rk16U2hPTzVSeUNoUHNfMnloT2VkWnBOYktPUWV5dl9ZMUNCNk16UnZQVi0tLV9VU0lfb29oajV3ZTdhM1hfNGJvc21mc1RYQjRvVVk5a0hxYXhJT3lCTlY2aWNSeW9mVEVKTDRvVUUyZXNTd0lnU1EtRmNnQXBzdXhBRTBmYWwyWDV0dXF6QkloZkJPTHlkQWhWYkRwR2JwSDgxdGtfUm8?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMk5ZWVdTdzdxeUZHeDZzeVliMmtqMl8xdGo2RXdFMV82VlpLVTZTSm1jcUxQd3BRN1lGd3ZYRWJNRTltSTUtVGIzSnI0MU5admhwanJJZUh6MzdqWkJPcEFjVXVBZUNIZHRBcFhwVUkxNE5jQTZGZG5XNEJOakppa1VGWQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "0bcffeff1f197034e3746b34",
+      "path": "/stories/general/q3-streaming-trends-why-spotify-s-growth-in-the-global-south-matters-for-the-mus.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "Spotify's Global South Surge: The New Frontier for Music Streaming",
+      "meta_description": "Q3 2023 data reveals Spotify's growth is now dominated by the Global South. This geographic shift presents massive opportunities and monetization challenges.",
+      "legacy_paths": [
+        "/category/general/q3-streaming-trends-why-spotify-s-growth-in-the-global-south-matters-for-the-mus.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "ai-seed-trends-more-multimedia-backend-automation-agentic-security-and-yes-robot",
       "vertical": "ai_tech",
@@ -3259,16 +3355,16 @@
     },
     {
       "date": "2026-02-20",
-      "duplicate_rate": 0.6833,
+      "duplicate_rate": 0.95,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 5.714,
-      "publish_count": 7
+      "rpm_estimate": 5.167,
+      "publish_count": 3
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 7086.14,
+    "spent_krw": 7555.69,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -3276,7 +3372,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 7086.14
+    "2026-02": 7555.69
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
