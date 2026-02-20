@@ -273,6 +273,15 @@ nav.categories a {
   line-height: 1.45;
   padding: .5rem .62rem;
 }
+/* Legacy article compatibility: old source markup lacks source-list/source-item classes. */
+.article ul li code {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
+}
 .article-cover {
   margin: .8rem 0 1rem;
   border-radius: calc(var(--radius) - 4px);
