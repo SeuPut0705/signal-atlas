@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-20T12:04:52+00:00",
+  "updated_at": "2026-02-20T15:12:05+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,134 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "exclusive-peter-thiel-backed-industrial-ai-startup-emerges-from-stealth-with-fun",
+      "vertical": "ai_tech",
+      "title": "Exclusive: Peter Thiel–backed industrial AI startup emerges from stealth with funding from a16z - Fortune",
+      "published_at": "2026-02-20T15:12:05+00:00",
+      "word_count": 1101,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxOejdpMXpGdGJVMUV2N2tsYWpwTnFtSjl2dzQzeGFVYnBuU2puXzJhWFU2Vkw2N0FPT1NLeVo3X3hLVFd2dnYzYWlCVVF2WVNSc29xNVhKSWxteHJ2dkdQaGVkYUtQeEROcmhpV2ZmZDFZS2ZyMlpuNWFoMkRRZUowaDQ5ZWkteTJ1aXE4NEFCMV82UzhNVTVaMVp6NUFZNXkwSTkxTnp2bEZrclIwNE1xTXhhU2FLZ2s?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "e9403d8f0262b0b7a02975e9",
+      "path": "/stories/ai/exclusive-peter-thiel-backed-industrial-ai-startup-emerges-from-stealth-with-fun.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Hadrian AI: The Thiel-Backed Startup Automating America's Industrial Future",
+      "meta_description": "An exclusive look at Hadrian, the industrial AI startup backed by Peter Thiel and a16z, emerging from stealth with $101M to fix the defense supply chain.",
+      "legacy_paths": [
+        "/category/ai/exclusive-peter-thiel-backed-industrial-ai-startup-emerges-from-stealth-with-fun.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "rbi-mpc-minutes-persistent-volatility-in-global-markets-contrasts-with-india-s-r",
+      "vertical": "finance",
+      "title": "RBI MPC minutes: Persistent volatility in global markets contrasts with India's resilient economic momentum - Business Today",
+      "published_at": "2026-02-20T15:12:05+00:00",
+      "word_count": 1208,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigwJBVV95cUxNSklKay1wZk9MeGZicjN0OXpFajc2a2ZYV21NSlItVFBBLWpod2ZSM0pDampDZWJmb3NyTHN5cmRYVDV6OXZVc1lrTFVoeVFmcmE3MWlPME5HZ0E0cmhoLTNnb1k3TV9TN0JfRUpma0ZBVW1jeGliajNMNmNSMHNmb1BBenZEanFlNGQzQ1NLUDFCNjFtN2wtbXpLUVExcVY5MmdIM2lWdmY4Qk8wa25WMk1IMlRuLV9xR1lTVk5nNmJyT1A4T2JOblNKLW84N0FIWjM3OG9EMkxldzVLY0dpSzdOWGVpYWpPekN3WHV5OW9pc2s1cG42NldISzhGdFgwQkxF0gGIAkFVX3lxTE1GNmstSUg0eFFRdTk2VlRpbFVadXpqWkdXM19qWmdUa2s2aEVUNVNmbVFXeTIzVGI4TGg5c1lVVGhKQzFqTWpvWUZjYTd4cmlvbkVsb204UDNqbEppSlp4X1UySnlfbl84R3VaX3FLOUxtOEUxTWhtRWJZVlRMVDZYZDFITVF1UlpIczM3UTRPLTBTYm0xOXJtNzhVT0FXbFpFZVNvMnFrbUlHellNbkpuT0NtaTRIM19KUGw4SmhuY1paZ2FWT3VzUUoyQjhqTF84Vng5QlA5RU9iV3N3YnVvV0dtUHl3bTR3M1JIbER5ZEtGMWZsWTBBVmNOaUtjWEYzbG1oVEZOag?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMmlhcVpaWjQyYVlFYkxJTk5OdEF6RnhHZUxaLXdFR192cHNlS04yR28yZHVFdGxSTVB5MDRRVkRtZ0NIZFh0SXh0QWs2cXJEZXJTY1ZQM2xwbEkwdDk4VTlwREgxYUFjaUR5MjdJZEM5UmI1TXJhRHVjYmFUcWg4RzlsZmM?oc=5",
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LVzA0b01HYXNMTlR5VTdHVkFVTkkyR2dUbFF1NXhCZmFoR1JFLVo1YURqRnkzUm9iX2tIdEFQaXVmUFhaMVJQQmtuNGVEeGs1V2tMQXBFRWpVQTEzbGprMjdkRDY2a0R1V00w?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "d218a33e2bd66454029f954e",
+      "path": "/stories/general/rbi-mpc-minutes-persistent-volatility-in-global-markets-contrasts-with-india-s-r.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "RBI MPC Minutes: India's Economic Resilience Amidst Global Volatility",
+      "meta_description": "RBI's MPC holds repo rate at 6.5%, citing India's strong growth momentum as a buffer against global market volatility and persistent food inflation.",
+      "legacy_paths": [
+        "/category/general/rbi-mpc-minutes-persistent-volatility-in-global-markets-contrasts-with-india-s-r.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "how-viral-entertainment-trends-reshape-global-pop-culture-today-latest-news-from",
+      "vertical": "lifestyle_pop",
+      "title": "How viral entertainment trends reshape global pop culture today - Latest news from Azerbaijan",
+      "published_at": "2026-02-20T15:12:05+00:00",
+      "word_count": 958,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNM1F2bW50Q09WNDkxQkJOb2doM0dQcXRNVmY2UUlYcFhsUmh0TmJyS0o2V2M5SXc3WmhJR0ZjS0FpTXRRZ2hHTXRsUmNiRDlFMWpETG1CUGFfeFhLVGlfa0RPWkh5NmdpWWQwWjNBWVAtalNDbnNXMXhwZDZQUnl4Qk9PRllRWEtmZnc0Qw?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "6834e201177b28bd99681542",
+      "path": "/stories/ai/how-viral-entertainment-trends-reshape-global-pop-culture-today-latest-news-from.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "AI's New Beat: How an Azerbaijani Startup is Composing the Future of Pop Culture",
+      "meta_description": "An Azerbaijani AI startup's success with a new music generation platform signals a major shift in entertainment, democratizing creativity and reshaping pop cul.",
+      "legacy_paths": [
+        "/category/ai/how-viral-entertainment-trends-reshape-global-pop-culture-today-latest-news-from.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "the-sound-of-diversity-how-local-music-is-reshaping-the-charts-wipo",
+      "vertical": "lifestyle_pop",
+      "title": "The Sound of Diversity: How Local Music is Reshaping the Charts - WIPO",
+      "published_at": "2026-02-20T15:12:05+00:00",
+      "word_count": 1259,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxQYWY5eTFoNG9udmJfUVVObVQ5Z0VZWUJtT0J3VHUzdXd3SUIzSWZhdlVFX1pjbnV2VzRzNEdPbWFKRmo0bTZNLWRVbVZwX1NzWkdMWWRJek50UWpUT2s2dmpCby0yUkNhU0hjQlRfblF3ZFBLTlFQWGJ5aUZhZVc3SnBrUG9KcWs?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "6579c9002d4cd457d1e12076",
+      "path": "/stories/stocks/the-sound-of-diversity-how-local-music-is-reshaping-the-charts-wipo.html",
+      "category": "stocks",
+      "primary_image": "/assets/covers/stocks.svg",
+      "seo_title": "Global Charts, Local Beats: How Diverse Music Impacts Music Stocks",
+      "meta_description": "A WIPO report reveals a seismic shift in the music industry as local artists dominate global charts. Explore the impact on streaming platforms and major labels.",
+      "legacy_paths": [
+        "/category/stocks/the-sound-of-diversity-how-local-music-is-reshaping-the-charts-wipo.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "global-inflation-forecast-2026-the-rise-of-regional-cross-currents-j-p-morgan",
       "vertical": "finance",
@@ -2907,16 +3035,16 @@
     },
     {
       "date": "2026-02-20",
-      "duplicate_rate": 0.8167,
+      "duplicate_rate": 0.9333,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 5.222,
-      "publish_count": 9
+      "rpm_estimate": 5.5,
+      "publish_count": 4
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 5199.5,
+    "spent_krw": 5935.04,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -2924,7 +3052,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 5199.5
+    "2026-02": 5935.04
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
