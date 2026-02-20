@@ -71,6 +71,9 @@ class PublishedBrief:
     primary_image: str = ""
     seo_title: str = ""
     meta_description: str = ""
+    legacy_paths: list[str] = field(default_factory=list)
+    url_schema: str = "v2"
+    template_version: str = "magazine-v2"
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

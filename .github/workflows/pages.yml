@@ -56,15 +56,17 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-2.5-pro
           MONTHLY_BUDGET_KRW: "200000"
+          URL_SCHEMA: v2
+          THEME_VARIANT: magazine-v2
           GENERATION_ENGINE: gemini
           QUALITY_TIER: premium
         run: |
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
           export SIGNAL_ATLAS_SITE_URL="https://${GITHUB_REPOSITORY_OWNER}.github.io/${REPO_NAME}"
           if [ "${{ steps.mode.outputs.publish_new }}" = "true" ]; then
-            python run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
+            python run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium --url-schema v2 --theme-variant magazine-v2
           else
-            python render_site_from_state.py --state-file state/pipeline_state.json --site-dir site
+            python render_site_from_state.py --state-file state/pipeline_state.json --site-dir site --url-schema v2 --theme-variant magazine-v2
           fi
           touch site/.nojekyll
 

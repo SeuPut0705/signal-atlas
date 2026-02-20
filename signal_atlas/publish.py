@@ -13,8 +13,20 @@ from datetime import datetime
 from pathlib import Path
 from typing import Iterable
 
-from .constants import ADSENSE_SLOTS, ALL_CATEGORIES, ALL_VERTICALS, CATEGORY_LABELS, PROJECT_TAGLINE, PROJECT_TITLE
-from .models import GeneratedBrief, PublishedBrief
+from .constants import (
+    ADSENSE_SLOTS,
+    ALL_CATEGORIES,
+    ALL_VERTICALS,
+    CATEGORY_LABELS,
+    DEFAULT_URL_SCHEMA,
+    PROJECT_TAGLINE,
+    PROJECT_TITLE,
+    STORY_PATH_PATTERN_V2,
+    THEME_MAGAZINE_V2,
+    TOPIC_PATH_PATTERN_V2,
+    URL_SCHEMA_V2,
+)
+from .models import ApprovedTopic, GeneratedBrief, PublishedBrief
 from .utils import ensure_dir
 
 _COVER_COLORS = {
@@ -28,12 +40,26 @@ _COVER_COLORS = {
 }
 
 
+def build_story_path(category: str, slug: str, schema: str = DEFAULT_URL_SCHEMA) -> str:
+    if schema == URL_SCHEMA_V2:
+        return STORY_PATH_PATTERN_V2.format(category=category, slug=slug)
+    return f"/category/{category}/{slug}.html"
+
+
+def build_category_path(category: str, schema: str = DEFAULT_URL_SCHEMA) -> str:
+    if schema == URL_SCHEMA_V2:
+        return TOPIC_PATH_PATTERN_V2.format(category=category)
+    return f"/category/{category}/index.html"
+
+
 class StaticSitePublisher:
     def __init__(
         self,
         site_dir: str,
         site_url: str | None = None,
         adsense_client: str | None = None,
+        url_schema: str | None = None,
+        theme_variant: str | None = None,
     ):
         self.site_dir = Path(site_dir)
         self.site_url = (
@@ -43,6 +69,8 @@ class StaticSitePublisher:
             or "https://signal-atlas.example.com"
         ).rstrip("/")
         self.adsense_client = adsense_client or os.getenv("ADSENSE_CLIENT_ID") or "ca-pub-REPLACE_ME"
+        self.url_schema = str(url_schema or os.getenv("URL_SCHEMA") or DEFAULT_URL_SCHEMA).strip().lower() or DEFAULT_URL_SCHEMA
+        self.theme_variant = str(theme_variant or os.getenv("THEME_VARIANT") or THEME_MAGAZINE_V2).strip() or THEME_MAGAZINE_V2
         parsed = urllib.parse.urlparse(self.site_url)
         path = (parsed.path or "").rstrip("/")
         self.base_path = "" if path in {"", "/"} else path
@@ -54,6 +82,7 @@ class StaticSitePublisher:
         now_iso: str,
     ) -> list[PublishedBrief]:
         existing_posts = self._load_existing_rows(existing_rows)
+        existing_by_slug = {post.slug: post for post in existing_posts}
         new_posts: list[PublishedBrief] = []
 
         staging = self.site_dir.parent / f"{self.site_dir.name}.staging"
@@ -61,20 +90,40 @@ class StaticSitePublisher:
 
         if staging.exists():
             shutil.rmtree(staging)
-
-        if self.site_dir.exists():
-            shutil.copytree(self.site_dir, staging)
-        else:
-            ensure_dir(staging)
-
+        ensure_dir(staging)
         self._cleanup_legacy_pages(staging)
         self._write_shared_assets(staging)
 
+        generated_by_slug: dict[str, GeneratedBrief] = {}
+        used_paths = {post.path for post in existing_posts}
         for brief in generated_briefs:
-            path = f"/category/{brief.topic.category}/{brief.slug}.html"
+            slug = brief.slug
+            old = existing_by_slug.get(brief.slug)
+            path = build_story_path(brief.topic.category, slug, self.url_schema)
+            if old and old.category == brief.topic.category:
+                path = old.path
+                used_paths.discard(path)
+            else:
+                suffix = 2
+                while path in used_paths:
+                    slug = f"{brief.slug}-{suffix}"
+                    path = build_story_path(brief.topic.category, slug, self.url_schema)
+                    suffix += 1
+            used_paths.add(path)
+            brief.slug = slug
+            brief.payload["slug"] = slug
             primary_image = str(brief.payload.get("hero_image_url") or f"/assets/covers/{brief.topic.category}.svg")
+            legacy_paths: list[str] = []
+            if old:
+                for legacy in [old.path, *old.legacy_paths]:
+                    one = str(legacy or "").strip()
+                    if one and one != path and one not in legacy_paths:
+                        legacy_paths.append(one)
+            default_legacy = f"/category/{brief.topic.category}/{slug}.html"
+            if self.url_schema == URL_SCHEMA_V2 and default_legacy != path and default_legacy not in legacy_paths:
+                legacy_paths.append(default_legacy)
             published = PublishedBrief(
-                slug=brief.slug,
+                slug=slug,
                 vertical=brief.topic.vertical,
                 title=brief.topic.title,
                 published_at=now_iso,
@@ -87,10 +136,14 @@ class StaticSitePublisher:
                 primary_image=primary_image,
                 seo_title=str(brief.payload.get("seo_title") or brief.topic.title),
                 meta_description=str(brief.payload.get("meta_description") or PROJECT_TAGLINE),
+                legacy_paths=legacy_paths,
+                url_schema=self.url_schema,
+                template_version=self.theme_variant,
             )
             published.primary_image = self._localize_primary_image(published, staging)
             brief.payload["hero_image_url"] = published.primary_image
             new_posts.append(published)
+            generated_by_slug[published.slug] = brief
 
         all_posts = self._merge_posts(existing_posts, new_posts)
         for post in all_posts:
@@ -98,22 +151,27 @@ class StaticSitePublisher:
             self._ensure_post_thumbnail(post, staging)
         all_posts.sort(key=lambda p: str(p.published_at), reverse=True)
 
-        # Render post pages for new content.
-        for post, brief in zip(new_posts, generated_briefs):
+        # Render every post page from state + generated payload (no legacy file mutation flow).
+        for post in all_posts:
+            brief = generated_by_slug.get(post.slug) or self._fallback_generated_brief(post, now_iso=now_iso)
             internal_links = [p for p in all_posts if p.category == post.category and p.path != post.path][:6]
             html_body = self._render_post_html(brief, post, internal_links)
-            out_path = staging / "category" / post.category / f"{post.slug}.html"
+            out_path = staging / post.path.lstrip("/")
             ensure_dir(out_path.parent)
             out_path.write_text(html_body, encoding="utf-8")
+            for legacy_path in post.legacy_paths:
+                self.write_redirect_page(staging, legacy_path, post.path)
 
         # Render aggregate pages.
         (staging / "index.html").write_text(self._render_home_html(all_posts), encoding="utf-8")
         for category in ALL_CATEGORIES:
             category_posts = [p for p in all_posts if p.category == category]
-            out_path = staging / "category" / category / "index.html"
+            category_path = build_category_path(category, self.url_schema)
+            out_path = staging / category_path.lstrip("/")
             ensure_dir(out_path.parent)
             out_path.write_text(self._render_category_html(category, category_posts), encoding="utf-8")
-        self._refresh_existing_post_layouts(staging, all_posts)
+            if self.url_schema == URL_SCHEMA_V2:
+                self.write_redirect_page(staging, f"/category/{category}/index.html", category_path)
 
         (staging / "robots.txt").write_text(self._render_robots(), encoding="utf-8")
         (staging / "sitemap.xml").write_text(self._render_sitemap(all_posts), encoding="utf-8")
@@ -151,11 +209,26 @@ class StaticSitePublisher:
                         source_urls=list(row.get("source_urls") or []),
                         ad_slots=list(row.get("ad_slots") or []),
                         dedupe_hash=str(row.get("dedupe_hash") or ""),
-                        path=str(row["path"]),
+                        path=build_story_path(
+                            str(row.get("category") or row.get("subcategory") or "general"),
+                            str(row["slug"]),
+                            self.url_schema,
+                        ),
                         category=str(row.get("category") or row.get("subcategory") or "general"),
                         primary_image=str(row.get("primary_image") or ""),
                         seo_title=str(row.get("seo_title") or row.get("title") or ""),
                         meta_description=str(row.get("meta_description") or PROJECT_TAGLINE),
+                        legacy_paths=[
+                            one
+                            for one in [str(row.get("path") or "")] + [str(item) for item in list(row.get("legacy_paths") or [])]
+                            if one and one != build_story_path(
+                                str(row.get("category") or row.get("subcategory") or "general"),
+                                str(row["slug"]),
+                                self.url_schema,
+                            )
+                        ],
+                        url_schema=str(row.get("url_schema") or self.url_schema),
+                        template_version=str(row.get("template_version") or self.theme_variant),
                     )
                 )
             except (KeyError, TypeError, ValueError):
@@ -165,6 +238,13 @@ class StaticSitePublisher:
     def _merge_posts(self, existing: list[PublishedBrief], new: list[PublishedBrief]) -> list[PublishedBrief]:
         merged: dict[str, PublishedBrief] = {row.path: row for row in existing}
         for row in new:
+            prior = merged.get(row.path)
+            if prior:
+                merged_legacy: list[str] = []
+                for one in [*prior.legacy_paths, *row.legacy_paths]:
+                    if one and one not in merged_legacy and one != row.path:
+                        merged_legacy.append(one)
+                row.legacy_paths = merged_legacy
             merged[row.path] = row
         return list(merged.values())
 
@@ -173,6 +253,123 @@ class StaticSitePublisher:
             old_dir = root / vertical
             if old_dir.exists():
                 shutil.rmtree(old_dir, ignore_errors=True)
+        legacy_category_root = root / "category"
+        if legacy_category_root.exists():
+            shutil.rmtree(legacy_category_root, ignore_errors=True)
+
+    def write_redirect_page(self, root: Path, from_path: str, to_path: str) -> None:
+        src = str(from_path or "").strip()
+        dst = str(to_path or "").strip()
+        if not src or not dst or src == dst:
+            return
+        if not src.startswith("/"):
+            src = f"/{src}"
+        if not dst.startswith("/"):
+            dst = f"/{dst}"
+        out_path = root / src.lstrip("/")
+        ensure_dir(out_path.parent)
+        target = self._href(dst)
+        canonical = self._public_url(dst)
+        out_path.write_text(
+            (
+                "<!doctype html>\n"
+                "<html lang=\"en\"><head>"
+                "<meta charset=\"utf-8\" />"
+                "<meta http-equiv=\"refresh\" content=\"0;url={target}\" />"
+                "<link rel=\"canonical\" href=\"{canonical}\" />"
+                "<meta name=\"robots\" content=\"noindex, follow\" />"
+                "<title>Redirecting...</title>"
+                "</head><body>"
+                "<p>Redirecting to <a href=\"{target}\">{target}</a></p>"
+                "<script>location.replace({target_json});</script>"
+                "</body></html>\n"
+            ).format(
+                target=html.escape(target),
+                canonical=html.escape(canonical),
+                target_json=json.dumps(target),
+            ),
+            encoding="utf-8",
+        )
+
+    def _fallback_generated_brief(self, post: PublishedBrief, *, now_iso: str) -> GeneratedBrief:
+        source_urls = list(post.source_urls or [])
+        if len(source_urls) < 3:
+            source_urls.extend(
+                [
+                    f"https://news.google.com/rss/search?q={urllib.parse.quote_plus(post.title)}",
+                    f"https://www.bing.com/news/search?q={urllib.parse.quote_plus(post.title)}",
+                    f"https://duckduckgo.com/?q={urllib.parse.quote_plus(post.title)}&ia=news",
+                ][: 3 - len(source_urls)]
+            )
+
+        topic = ApprovedTopic(
+            id=f"fallback-{post.slug}",
+            vertical=post.vertical,
+            title=post.title,
+            source_urls=source_urls,
+            discovered_at=post.published_at or now_iso,
+            confidence_score=0.8,
+            policy_score=0.95,
+            dedupe_hash=post.dedupe_hash or f"fallback-{post.slug}",
+            category=post.category,
+            snippet=post.meta_description or PROJECT_TAGLINE,
+        )
+        summary = post.meta_description or f"{post.title} is a trend signal in {CATEGORY_LABELS.get(post.category, post.category)}."
+        payload = {
+            "slug": post.slug,
+            "title": post.title,
+            "vertical": post.vertical,
+            "category": post.category,
+            "category_label": CATEGORY_LABELS.get(post.category, post.category),
+            "seo_title": post.seo_title or f"{post.title} | {PROJECT_TITLE}",
+            "meta_description": post.meta_description or PROJECT_TAGLINE,
+            "summary": summary,
+            "key_points": [
+                "Market attention around this topic has increased across multiple outlets.",
+                "Operators should track follow-up releases and execution evidence.",
+                "The directional signal is useful only when validated with source continuity.",
+                "Short-term hype should be separated from durable demand indicators.",
+            ],
+            "deep_dive": [
+                f"{summary} The operational takeaway is to monitor whether the trend sustains across two or more cycles.",
+                "Teams should validate signal strength through repeated source confirmations and measurable outcomes.",
+            ],
+            "implications": [
+                "Commercially, this can influence roadmap sequencing and go-to-market timing.",
+                "Operationally, this highlights the need for disciplined tracking and evidence-based decisions.",
+            ],
+            "contrarian_view": "A contrarian read is that short-lived momentum can revert quickly without durable adoption.",
+            "faq": [
+                {
+                    "q": "Why does this matter now?",
+                    "a": "The topic appears repeatedly across sources, suggesting actionable timing signals.",
+                },
+                {
+                    "q": "What should teams monitor next?",
+                    "a": "Track follow-up releases, implementation evidence, and consistency in source coverage.",
+                },
+                {
+                    "q": "What is the main risk?",
+                    "a": "The main risk is overreacting to temporary attention spikes.",
+                },
+            ],
+            "source_urls": source_urls,
+            "hero_image_url": post.primary_image or f"/assets/covers/{post.category}.svg",
+            "hero_image_alt": f"{post.title} trend coverage",
+            "disclaimer": "",
+            "ad_slots": list(ADSENSE_SLOTS),
+            "reading_time": max(1, round(max(1, post.word_count) / 220)),
+            "json_ld": {},
+            "generation_engine": "template",
+            "quality_tier": "balanced",
+        }
+        return GeneratedBrief(
+            topic=topic,
+            slug=post.slug,
+            markdown=f"# {post.title}\n\n{summary}\n",
+            payload=payload,
+            word_count=max(900, int(post.word_count or 0)),
+        )
 
     def _guess_image_ext(self, url: str, content_type: str = "") -> str:
         mime_map = {
@@ -849,14 +1046,18 @@ nav.categories a {
 """
 
     def _render_topbar(self, *, canonical_path: str) -> str:
-        nav_links = [("/index.html", "Home")] + [
-            (f"/category/{category}/index.html", CATEGORY_LABELS.get(category, category)) for category in ALL_CATEGORIES
+        nav_links = [("/index.html", "Home", "")] + [
+            (build_category_path(category, self.url_schema), CATEGORY_LABELS.get(category, category), category)
+            for category in ALL_CATEGORIES
         ]
         link_tags: list[str] = []
-        for href, label in nav_links:
-            is_active = canonical_path == href or (
-                href != "/index.html" and canonical_path.startswith(href.removesuffix("index.html"))
-            )
+        for href, label, category in nav_links:
+            is_active = False
+            if href == "/index.html":
+                is_active = canonical_path == "/index.html"
+            else:
+                story_prefix = f"/stories/{category}/"
+                is_active = canonical_path == href or canonical_path.startswith(story_prefix)
             class_attr = ' class="is-active"' if is_active else ""
             aria = ' aria-current="page"' if is_active else ""
             link_tags.append(
@@ -938,6 +1139,7 @@ nav.categories a {
         payload = brief.payload
         category_label = CATEGORY_LABELS.get(brief.topic.category, brief.topic.category)
         thumb = self._thumbnail_relpath(published)
+        word_count = int(payload.get("word_count") or published.word_count or brief.word_count or 0)
 
         key_points = "".join([f"<li>{html.escape(one)}</li>" for one in payload.get("key_points") or []])
         deep_dive = "".join([f"<p>{html.escape(one)}</p>" for one in payload.get("deep_dive") or []])
@@ -956,6 +1158,7 @@ nav.categories a {
         disclaimer = ""
         if payload.get("disclaimer"):
             disclaimer = f"<p><em>{html.escape(str(payload['disclaimer']))}</em></p>"
+        inline_3 = self._ad_slot("inline-3") if word_count >= 1050 else ""
 
         article_schema = payload.get("json_ld") if isinstance(payload.get("json_ld"), dict) else {}
         article_schema = dict(article_schema)
@@ -977,7 +1180,7 @@ nav.categories a {
                     "@type": "ListItem",
                     "position": 2,
                     "name": category_label,
-                    "item": self._public_url(f"/category/{brief.topic.category}/index.html"),
+                    "item": self._public_url(build_category_path(brief.topic.category, self.url_schema)),
                 },
                 {"@type": "ListItem", "position": 3, "name": published.title, "item": self._public_url(published.path)},
             ],
@@ -1006,6 +1209,7 @@ nav.categories a {
   <p>{html.escape(str(payload.get('contrarian_view') or ''))}</p>
   <h2>FAQ</h2>
   <ul>{faq_items}</ul>
+  {inline_3}
   <h2>Sources</h2>
   <ul class="source-list">{src_items}</ul>
   {self._ad_slot('inline-2')}
@@ -1030,11 +1234,11 @@ nav.categories a {
     def _render_home_html(self, posts: list[PublishedBrief]) -> str:
         featured = posts[0] if posts else None
         trending = posts[:5]
-        grid_posts = posts[1:19] if len(posts) > 1 else []
+        grid_posts = posts[1:25] if len(posts) > 1 else []
 
         nav = "".join(
             [
-                f"<a href=\"{html.escape(self._href(f'/category/{category}/index.html'))}\">{html.escape(CATEGORY_LABELS.get(category, category))}</a>"
+                f"<a href=\"{html.escape(self._href(build_category_path(category, self.url_schema)))}\">{html.escape(CATEGORY_LABELS.get(category, category))}</a>"
                 for category in ALL_CATEGORIES
             ]
         )
@@ -1069,7 +1273,8 @@ nav.categories a {
             ]
         )
 
-        cards = "".join([self._post_card(post) for post in grid_posts])
+        cards_primary = "".join([self._post_card(post) for post in grid_posts[:12]])
+        cards_secondary = "".join([self._post_card(post) for post in grid_posts[12:24]])
 
         website_schema = {
             "@context": "https://schema.org",
@@ -1102,7 +1307,11 @@ nav.categories a {
 </div>
 {self._ad_slot('top-banner')}
 <section>
-  <div class=\"story-grid\">{cards or '<p>No briefs yet.</p>'}</div>
+  <div class=\"story-grid\">{cards_primary or '<p>No briefs yet.</p>'}</div>
+</section>
+{self._ad_slot('inline-2')}
+<section>
+  <div class=\"story-grid\">{cards_secondary}</div>
 </section>
 """
 
@@ -1128,7 +1337,7 @@ nav.categories a {
             "@context": "https://schema.org",
             "@type": "CollectionPage",
             "name": f"{category_label} Briefings",
-            "url": self._public_url(f"/category/{category}/index.html"),
+            "url": self._public_url(build_category_path(category, self.url_schema)),
             "isPartOf": self._public_url("/index.html"),
             "inLanguage": "en",
         }
@@ -1149,7 +1358,7 @@ nav.categories a {
         return self._html_page(
             title=f"{category_label} · {PROJECT_TITLE}",
             description=f"Latest {category_label} trend briefings from {PROJECT_TITLE}.",
-            canonical_path=f"/category/{category}/index.html",
+            canonical_path=build_category_path(category, self.url_schema),
             body=body,
             og_image=f"/assets/covers/{category}.svg",
             json_ld_objects=[collection_schema],
@@ -1178,7 +1387,7 @@ nav.categories a {
                 by_category[post.category] = lastmod
 
         for category in ALL_CATEGORIES:
-            rows.append((f"{self.site_url}/category/{category}/index.html", by_category.get(category, "")))
+            rows.append((f"{self.site_url}{build_category_path(category, self.url_schema)}", by_category.get(category, "")))
 
         entries = "\n".join(
             [

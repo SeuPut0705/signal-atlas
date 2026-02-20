@@ -10,11 +10,14 @@ from pathlib import Path
 from .constants import (
     ALL_CATEGORIES,
     ALL_VERTICALS,
+    DEFAULT_URL_SCHEMA,
     DEFAULT_CATEGORY,
     DEFAULT_PUBLISH_LIMIT,
     DEPLOY_FAILURE_DISABLE_COUNT,
     LEGACY_CATEGORY_MAP,
     POLICY_DISABLE_RATE,
+    STORY_PATH_PATTERN_V2,
+    THEME_MAGAZINE_V2,
 )
 from .content import build_generated_brief
 from .ingest import Ingestor
@@ -37,6 +40,8 @@ class Pipeline:
         metrics_file: str,
         artifacts_dir: str,
         site_dir: str,
+        url_schema: str | None = None,
+        theme_variant: str | None = None,
         ingestor: Ingestor | None = None,
         publisher: StaticSitePublisher | None = None,
     ):
@@ -44,8 +49,14 @@ class Pipeline:
         self.metrics_file = metrics_file
         self.artifacts_dir = artifacts_dir
         self.site_dir = site_dir
+        self.url_schema = str(url_schema or os.getenv("URL_SCHEMA") or DEFAULT_URL_SCHEMA)
+        self.theme_variant = str(theme_variant or os.getenv("THEME_VARIANT") or THEME_MAGAZINE_V2)
         self.ingestor = ingestor or Ingestor()
-        self.publisher = publisher or StaticSitePublisher(site_dir=site_dir)
+        self.publisher = publisher or StaticSitePublisher(
+            site_dir=site_dir,
+            url_schema=self.url_schema,
+            theme_variant=self.theme_variant,
+        )
 
     def run(
         self,
@@ -260,6 +271,8 @@ class Pipeline:
             "artifacts": run_artifacts,
             "state_file": self.state_file,
             "metrics_file": self.metrics_file,
+            "url_schema": self.url_schema,
+            "theme_variant": self.theme_variant,
         }
 
     def _resolve_verticals(self, vertical: str) -> list[str]:
@@ -319,12 +332,21 @@ class Pipeline:
             path = str(row.get("path") or "")
             if not path:
                 continue
-            merged[path] = row
+            merged[path] = dict(row)
         for row in new_rows:
             path = str(row.get("path") or "")
             if not path:
                 continue
-            merged[path] = row
+            incoming = dict(row)
+            prior = merged.get(path) or {}
+            legacy = list(prior.get("legacy_paths") or []) + list(incoming.get("legacy_paths") or [])
+            dedup_legacy: list[str] = []
+            for item in legacy:
+                one = str(item or "").strip()
+                if one and one not in dedup_legacy and one != path:
+                    dedup_legacy.append(one)
+            incoming["legacy_paths"] = dedup_legacy
+            merged[path] = incoming
 
         rows = list(merged.values())
         rows.sort(key=lambda x: str(x.get("published_at") or ""), reverse=True)
@@ -419,7 +441,7 @@ class Pipeline:
         budget["spent_krw"] = round(float(budget.get("spent_krw") or 0.0) + cost, 2)
 
     def _migrate_published_category(self, state: dict) -> None:
-        """Normalize legacy paths into single-level category paths."""
+        """Normalize legacy rows into v2 story paths and preserve legacy paths."""
         rows = state.get("published") or []
         if not rows:
             return
@@ -433,6 +455,7 @@ class Pipeline:
             vertical = str(obj.get("vertical") or "")
             category = str(obj.get("category") or obj.get("subcategory") or DEFAULT_CATEGORY)
             path = str(obj.get("path") or "")
+            legacy_paths = list(obj.get("legacy_paths") or [])
 
             if vertical not in ALL_VERTICALS:
                 if path.startswith("/"):
@@ -449,30 +472,43 @@ class Pipeline:
             obj["category"] = category
             obj.pop("subcategory", None)
 
-            # Supported path migrations:
-            # 1) /<vertical>/<slug>.html -> /category/<category>/<slug>.html
-            # 2) /<vertical>/<subcategory>/<slug>.html -> /category/<subcategory>/<slug>.html
-            # 3) /category/<category>/<slug>.html (no-op)
+            # Keep old path in legacy list before v2 normalization.
+            old_path = ""
             if path.startswith("/"):
                 parts = path.strip("/").split("/")
-                if len(parts) >= 3 and parts[0] == "category":
+                if len(parts) >= 3 and parts[0] == "stories":
                     normalized = LEGACY_CATEGORY_MAP.get(parts[1], parts[1])
                     obj["category"] = normalized if normalized in set(ALL_CATEGORIES) else category
-                    obj["path"] = f"/category/{obj['category']}/{parts[-1]}"
+                    obj["path"] = f"/stories/{obj['category']}/{parts[-1]}"
+                elif len(parts) >= 3 and parts[0] == "category":
+                    normalized = LEGACY_CATEGORY_MAP.get(parts[1], parts[1])
+                    obj["category"] = normalized if normalized in set(ALL_CATEGORIES) else category
+                    old_path = f"/category/{obj['category']}/{parts[-1]}"
+                    obj["path"] = f"/stories/{obj['category']}/{parts[-1]}"
                 elif len(parts) >= 3 and parts[0] in ALL_VERTICALS:
                     normalized = LEGACY_CATEGORY_MAP.get(parts[1], parts[1])
                     obj["category"] = normalized if normalized in set(ALL_CATEGORIES) else category
-                    obj["path"] = f"/category/{obj['category']}/{parts[-1]}"
+                    old_path = f"/{parts[0]}/{parts[1]}/{parts[-1]}"
+                    obj["path"] = f"/stories/{obj['category']}/{parts[-1]}"
                 elif len(parts) == 2 and parts[0] in ALL_VERTICALS:
-                    obj["path"] = f"/category/{category}/{parts[1]}"
+                    old_path = f"/{parts[0]}/{parts[1]}"
+                    obj["path"] = f"/stories/{category}/{parts[1]}"
                 else:
                     slug = str(obj.get("slug") or "").strip()
                     if slug:
-                        obj["path"] = f"/category/{category}/{slug}.html"
+                        obj["path"] = STORY_PATH_PATTERN_V2.format(category=category, slug=slug)
             else:
                 slug = str(obj.get("slug") or "").strip()
                 if slug:
-                    obj["path"] = f"/category/{category}/{slug}.html"
+                    obj["path"] = STORY_PATH_PATTERN_V2.format(category=category, slug=slug)
+
+            if path and path != obj.get("path"):
+                old_path = path
+            if old_path and old_path not in legacy_paths and old_path != obj.get("path"):
+                legacy_paths.append(old_path)
+            obj["legacy_paths"] = legacy_paths
+            obj["url_schema"] = str(obj.get("url_schema") or self.url_schema or DEFAULT_URL_SCHEMA)
+            obj["template_version"] = str(obj.get("template_version") or self.theme_variant or THEME_MAGAZINE_V2)
 
             migrated.append(obj)
 

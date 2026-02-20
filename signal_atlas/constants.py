@@ -25,7 +25,15 @@ TARGET_TIMEZONE = "Asia/Seoul"
 PROJECT_TITLE = "Signal Atlas"
 PROJECT_TAGLINE = "Clear trend signals across AI, Tech, Finance, and more."
 
-ADSENSE_SLOTS = ("top-banner", "inline-1", "inline-2", "footer")
+URL_SCHEMA_V1 = "v1"
+URL_SCHEMA_V2 = "v2"
+DEFAULT_URL_SCHEMA = URL_SCHEMA_V2
+TOPIC_PATH_PATTERN_V2 = "/topics/{category}/index.html"
+STORY_PATH_PATTERN_V2 = "/stories/{category}/{slug}.html"
+
+THEME_MAGAZINE_V2 = "magazine-v2"
+
+ADSENSE_SLOTS = ("top-banner", "inline-1", "inline-2", "inline-3", "footer")
 
 DEFAULT_CATEGORY = "general"
 CATEGORY_AI = "ai"

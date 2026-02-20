@@ -8,6 +8,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from signal_atlas.constants import DEFAULT_URL_SCHEMA, THEME_MAGAZINE_V2
 from signal_atlas.publish import StaticSitePublisher
 
 
@@ -16,6 +17,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--state-file", default="state/pipeline_state.json")
     parser.add_argument("--site-dir", default="site")
     parser.add_argument("--site-url", default=None)
+    parser.add_argument("--url-schema", choices=["v1", "v2"], default=DEFAULT_URL_SCHEMA)
+    parser.add_argument("--theme-variant", default=THEME_MAGAZINE_V2)
     return parser.parse_args()
 
 
@@ -34,6 +37,8 @@ def main() -> int:
     publisher = StaticSitePublisher(
         site_dir=str(site_dir),
         site_url=args.site_url,
+        url_schema=args.url_schema,
+        theme_variant=args.theme_variant,
     )
     publisher.publish(
         generated_briefs=[],

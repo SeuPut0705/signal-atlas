@@ -8,6 +8,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from signal_atlas.constants import DEFAULT_URL_SCHEMA, STORY_PATH_PATTERN_V2, THEME_MAGAZINE_V2
 from signal_atlas.content import build_generated_brief
 from signal_atlas.models import ApprovedTopic, SourceMeta
 from signal_atlas.publish import StaticSitePublisher
@@ -83,11 +84,20 @@ def _merge_rows(existing_rows: list[dict], new_rows: list[dict]) -> list[dict]:
     for row in existing_rows:
         path = str(row.get("path") or "")
         if path:
-            merged[path] = row
+            merged[path] = dict(row)
     for row in new_rows:
         path = str(row.get("path") or "")
         if path:
-            merged[path] = row
+            incoming = dict(row)
+            prior = merged.get(path) or {}
+            legacy = list(prior.get("legacy_paths") or []) + list(incoming.get("legacy_paths") or [])
+            dedup_legacy: list[str] = []
+            for one in legacy:
+                item = str(one or "").strip()
+                if item and item not in dedup_legacy and item != path:
+                    dedup_legacy.append(item)
+            incoming["legacy_paths"] = dedup_legacy
+            merged[path] = incoming
     rows = list(merged.values())
     rows.sort(key=lambda x: str(x.get("published_at") or ""), reverse=True)
     return rows
@@ -98,6 +108,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--scope", choices=["all"], default="all")
     parser.add_argument("--generation-engine", choices=["gemini", "template"], default="gemini")
     parser.add_argument("--quality-tier", choices=["premium", "balanced"], default="premium")
+    parser.add_argument("--url-schema", choices=["v1", "v2"], default=DEFAULT_URL_SCHEMA)
+    parser.add_argument("--theme-variant", default=THEME_MAGAZINE_V2)
     parser.add_argument("--state-file", default="state/pipeline_state.json")
     parser.add_argument("--site-dir", default="site")
     parser.add_argument("--checkpoint-file", default="state/backfill_checkpoint.json")
@@ -142,6 +154,7 @@ def main() -> int:
             failures.append({"index": idx, "path": str(row.get("path") or ""), "error": str(exc)})
         checkpoint_payload = {
             "scope": args.scope,
+            "url_schema": args.url_schema,
             "next_index": idx + 1,
             "total": total,
             "updated_at": now_iso,
@@ -149,7 +162,11 @@ def main() -> int:
         }
         write_json(checkpoint_file, checkpoint_payload)
 
-    publisher = StaticSitePublisher(site_dir=str(site_dir))
+    publisher = StaticSitePublisher(
+        site_dir=str(site_dir),
+        url_schema=args.url_schema,
+        theme_variant=args.theme_variant,
+    )
     published_rows: list[dict] = []
     if generated:
         published = publisher.publish(
@@ -157,7 +174,20 @@ def main() -> int:
             existing_rows=rows,
             now_iso=now_iso,
         )
-        published_rows = [row.to_dict() for row in published]
+        published_rows = []
+        for row in published:
+            payload = row.to_dict()
+            old_path = str(payload.get("path") or "")
+            if args.url_schema == "v2":
+                payload["path"] = STORY_PATH_PATTERN_V2.format(category=row.category, slug=row.slug)
+            if old_path and old_path != payload["path"]:
+                legacy = list(payload.get("legacy_paths") or [])
+                if old_path not in legacy:
+                    legacy.append(old_path)
+                payload["legacy_paths"] = legacy
+            payload["url_schema"] = args.url_schema
+            payload["template_version"] = args.theme_variant
+            published_rows.append(payload)
         state["published"] = _merge_rows(rows, published_rows)
         state["updated_at"] = now_iso
         state["backfill"] = {
@@ -165,6 +195,8 @@ def main() -> int:
             "scope": args.scope,
             "generation_engine": args.generation_engine,
             "quality_tier": args.quality_tier,
+            "url_schema": args.url_schema,
+            "theme_variant": args.theme_variant,
             "processed": total - start_index,
             "regenerated": len(published_rows),
             "failures": len(failures),
@@ -175,6 +207,7 @@ def main() -> int:
         checkpoint_file,
         {
             "scope": args.scope,
+            "url_schema": args.url_schema,
             "next_index": total,
             "total": total,
             "updated_at": now_iso,

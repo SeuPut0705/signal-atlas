@@ -45,8 +45,8 @@ class PublishBasePathUnitTests(unittest.TestCase):
 
             index_html = (site_dir / "index.html").read_text(encoding="utf-8")
             self.assertIn('href="/signal-atlas/assets/site.css"', index_html)
-            self.assertIn('href="/signal-atlas/category/ai/index.html"', index_html)
-            self.assertIn('href="/signal-atlas/category/ai/signal-atlas-test-headline.html"', index_html)
+            self.assertIn('href="/signal-atlas/topics/ai/index.html"', index_html)
+            self.assertIn('href="/signal-atlas/stories/ai/signal-atlas-test-headline.html"', index_html)
             self.assertIn('class="skip-link" href="#main-content"', index_html)
             self.assertIn('aria-current="page">Home</a>', index_html)
             self.assertIn('>Healthcare</a>', index_html)
@@ -63,12 +63,13 @@ class PublishBasePathUnitTests(unittest.TestCase):
             self.assertIn(">AI<", thumb_svg)
             self.assertIn("meaningful shift in AI", thumb_svg)
 
-            article_html = (site_dir / "category" / "ai" / "signal-atlas-test-headline.html").read_text(encoding="utf-8")
+            article_html = (site_dir / "stories" / "ai" / "signal-atlas-test-headline.html").read_text(encoding="utf-8")
             self.assertIn('class="article-cover featured-media featured-media-text" data-category="ai"', article_html)
             self.assertNotIn('class="hero-image"', article_html)
             self.assertIn('aria-current="page">AI</a>', article_html)
             self.assertIn('property="og:site_name" content="Signal Atlas"', article_html)
             self.assertIn('type="application/rss+xml"', article_html)
+            self.assertNotIn('data-slot="inline-3"', article_html)
             self.assertIn("<code>https://example.com/a</code>", article_html)
             self.assertNotIn('href="https://example.com/a"', article_html)
             self.assertNotIn('src="https://example.com/test-image.jpg"', article_html)
@@ -76,6 +77,16 @@ class PublishBasePathUnitTests(unittest.TestCase):
                 'property="og:image" content="https://foo.github.io/signal-atlas/assets/thumbs/signal-atlas-test-headline.svg"',
                 article_html,
             )
+
+            legacy_story_redirect = (
+                site_dir / "category" / "ai" / "signal-atlas-test-headline.html"
+            ).read_text(encoding="utf-8")
+            self.assertIn('http-equiv="refresh"', legacy_story_redirect)
+            self.assertIn('/signal-atlas/stories/ai/signal-atlas-test-headline.html', legacy_story_redirect)
+
+            legacy_topic_redirect = (site_dir / "category" / "ai" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('http-equiv="refresh"', legacy_topic_redirect)
+            self.assertIn('/signal-atlas/topics/ai/index.html', legacy_topic_redirect)
 
     def test_existing_post_hero_image_is_rewritten_to_text_cover(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -116,9 +127,41 @@ class PublishBasePathUnitTests(unittest.TestCase):
                 now_iso="2026-02-19T12:00:00+09:00",
             )
 
-            rewritten = old_post_path.read_text(encoding="utf-8")
+            rewritten = (site_dir / "stories" / "ai" / "legacy-post.html").read_text(encoding="utf-8")
             self.assertIn('class="article-cover featured-media featured-media-text" data-category="ai"', rewritten)
             self.assertNotIn('class="hero-image"', rewritten)
+            legacy_redirect = old_post_path.read_text(encoding="utf-8")
+            self.assertIn('http-equiv="refresh"', legacy_redirect)
+            self.assertIn('/signal-atlas/stories/ai/legacy-post.html', legacy_redirect)
+
+    def test_inline_3_slot_appears_for_long_article(self) -> None:
+        topic = ApprovedTopic(
+            id="a2",
+            vertical="ai_tech",
+            category="ai",
+            title="Signal Atlas long-form headline",
+            source_urls=["https://example.com/a"],
+            discovered_at="2026-02-19T00:00:00+09:00",
+            confidence_score=0.9,
+            policy_score=0.95,
+            dedupe_hash="abc124",
+            policy_flags=[],
+            snippet="Long test snippet",
+            source_meta=[SourceMeta(url="https://example.com/a")],
+        )
+        generated = build_generated_brief(topic)
+        generated.word_count = 1200
+        generated.payload["word_count"] = 1200
+
+        with tempfile.TemporaryDirectory() as tmp:
+            site_dir = Path(tmp) / "site"
+            publisher = StaticSitePublisher(
+                site_dir=str(site_dir),
+                site_url="https://foo.github.io/signal-atlas",
+            )
+            publisher.publish([generated], existing_rows=[], now_iso="2026-02-19T12:00:00+09:00")
+            article_html = (site_dir / "stories" / "ai" / "signal-atlas-long-form-headline.html").read_text(encoding="utf-8")
+            self.assertIn('data-slot="inline-3"', article_html)
 
 
 if __name__ == "__main__":

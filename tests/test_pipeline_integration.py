@@ -99,7 +99,7 @@ class PipelineIntegrationTests(unittest.TestCase):
             self.assertEqual(out["deploy_attempts"], 3)
             self.assertEqual(out["published"], 2)
             self.assertTrue((base / "site" / "index.html").exists())
-            category_indexes = list((base / "site" / "category").glob("*/index.html"))
+            category_indexes = list((base / "site" / "topics").glob("*/index.html"))
             self.assertGreaterEqual(len(category_indexes), 1)
 
     def test_vertical_is_disabled_after_3_failed_deploy_runs(self) -> None:

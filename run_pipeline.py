@@ -7,7 +7,7 @@ import argparse
 import json
 from pathlib import Path
 
-from signal_atlas.constants import ALL_VERTICALS
+from signal_atlas.constants import ALL_VERTICALS, DEFAULT_URL_SCHEMA, THEME_MAGAZINE_V2
 from signal_atlas.pipeline import Pipeline
 
 
@@ -18,6 +18,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mode", choices=["production", "dry-run"], default="production")
     parser.add_argument("--generation-engine", choices=["gemini", "template"], default="gemini")
     parser.add_argument("--quality-tier", choices=["premium", "balanced"], default="premium")
+    parser.add_argument("--url-schema", choices=["v1", "v2"], default=DEFAULT_URL_SCHEMA)
+    parser.add_argument("--theme-variant", default=THEME_MAGAZINE_V2)
     parser.add_argument("--state-file", default="state/pipeline_state.json")
     parser.add_argument("--metrics-file", default="state/ops_metrics.jsonl")
     parser.add_argument("--artifacts-dir", default="artifacts")
@@ -34,6 +36,8 @@ def main() -> int:
         metrics_file=str(root / args.metrics_file),
         artifacts_dir=str(root / args.artifacts_dir),
         site_dir=str(root / args.site_dir),
+        url_schema=args.url_schema,
+        theme_variant=args.theme_variant,
     )
     summary = pipeline.run(
         vertical=args.vertical,

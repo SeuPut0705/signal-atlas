@@ -20,16 +20,17 @@ An English trend briefing engine focused on clear, practical signals.
 ## Quick Start
 ```bash
 cd /Users/choejinseo/Desktop/github/signal-atlas
-python3 run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
+python3 run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium --url-schema v2 --theme-variant magazine-v2
 ```
 
 ## CLI
 ```bash
 # --vertical is ingest source selector
-python3 run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium
-python3 run_pipeline.py --vertical finance --mode dry-run --generation-engine template --quality-tier balanced
+python3 run_pipeline.py --vertical all --max-publish 12 --mode production --generation-engine gemini --quality-tier premium --url-schema v2 --theme-variant magazine-v2
+python3 run_pipeline.py --vertical finance --mode dry-run --generation-engine template --quality-tier balanced --url-schema v2
 python3 ops_report.py --window 24h --format json
-python3 backfill_archive.py --scope all --generation-engine gemini --quality-tier premium
+python3 backfill_archive.py --scope all --generation-engine gemini --quality-tier premium --url-schema v2 --theme-variant magazine-v2
+python3 render_site_from_state.py --state-file state/pipeline_state.json --site-dir site --url-schema v2 --theme-variant magazine-v2
 ```
 
 ## Outputs
@@ -37,7 +38,7 @@ python3 backfill_archive.py --scope all --generation-engine gemini --quality-tie
 - Metrics: `state/ops_metrics.jsonl`
 - Backfill checkpoint: `state/backfill_checkpoint.json`
 - Content artifacts: `artifacts/YYYY-MM-DD/<category>/*.md|*.json`
-- Static site: `site/category/<category>/...`
+- Static site: `site/topics/<category>/...`, `site/stories/<category>/...`
 
 ## Environment Variables
 - `GEMINI_API_KEY` (required in `gemini` mode)
@@ -45,6 +46,8 @@ python3 backfill_archive.py --scope all --generation-engine gemini --quality-tie
 - `GENERATION_ENGINE` (`gemini` or `template`, default: `gemini`)
 - `QUALITY_TIER` (`premium` or `balanced`, default: `premium`)
 - `MONTHLY_BUDGET_KRW` (default: `200000`)
+- `URL_SCHEMA` (default: `v2`)
+- `THEME_VARIANT` (default: `magazine-v2`)
 
 ## Automation Rules
 - Start at daily publish limit 12
