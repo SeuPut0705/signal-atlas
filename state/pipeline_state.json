@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-20T09:10:53+00:00",
+  "updated_at": "2026-02-20T12:04:52+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -1968,6 +1968,294 @@
       "template_version": "magazine-v2"
     },
     {
+      "slug": "week-8-s-biggest-startup-funding-rounds-in-africa-the-middle-east-led-by-breadfa",
+      "vertical": "ai_tech",
+      "title": "Week 8's Biggest Startup Funding Rounds in Africa & the Middle East, Led by Breadfast, as E-commerce and AI Drew the Biggest Checks - Techloy",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 964,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOTWd6QnYzVWNVQkdLQ1R5QVBULVNHU3NpQkRGQzFQSXN0VmZNcWI2TDNqMTBaYjdzS3B5RU5aVFdnRzdEN1daV1VSV2ZZYjBfMDh6RkFyR3BZVUFmLTBhVDd5ZDc4VTVkdzhTYXZmb2dqODItMkZIeHhVeEd1VHBNN05vcUxtMDNqWFJzUkVYU3BoSmpFYWRlZ1E0S3V2YnZlOGZ2ektUdWIxNjJOcURRd0hxN1hRY2VJMmY0Y25XNzZxRmtjcVY1bkFWaXVHVnhKNmVhZE5LLVFVdXR6ZWw3ZHJ1WUZadw?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "ded2207ab1aacf1922fa6f72",
+      "path": "/stories/ai/week-8-s-biggest-startup-funding-rounds-in-africa-the-middle-east-led-by-breadfa.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "MENA's Funding Surge: How E-commerce & AI Startups Raised Over $100M",
+      "meta_description": "Analysis of a landmark funding week in Africa & the Middle East, where Egyptian e-commerce and AI startups like Breadfast and Brimore secured over $100M.",
+      "legacy_paths": [
+        "/category/ai/week-8-s-biggest-startup-funding-rounds-in-africa-the-middle-east-led-by-breadfa.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "india-s-startups-more-funding-fewer-rounds-statista",
+      "vertical": "ai_tech",
+      "title": "India's Startups: More Funding, Fewer Rounds - Statista",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1100,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxNM2NIUWkxRW9XdjZJR3hoYUt3emtwTTVRT3RvTk8tT1JmZXFyOW5CT2ctcGFhMkg5YUZLS2tUXzI2bEw3a0tyUVJmZ3R2TW1jemtxdTA3X0xxRzFkZXZUTEhaZ2dOTU9tQUpQS2JnNFlfYW9DSk9KS1B6Y0E1WXI5RmVPN01veDUzak9UeUE0S3VhcFlhblctMTVTc9IBmwFBVV95cUxNM2NIUWkxRW9XdjZJR3hoYUt3emtwTTVRT3RvTk8tT1JmZXFyOW5CT2ctcGFhMkg5YUZLS2tUXzI2bEw3a0tyUVJmZ3R2TW1jemtxdTA3X0xxRzFkZXZUTEhaZ2dOTU9tQUpQS2JnNFlfYW9DSk9KS1B6Y0E1WXI5RmVPN01veDUzak9UeUE0S3VhcFlhblctMTVTcw?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "8dfefa078e11167717bed886",
+      "path": "/stories/startup/india-s-startups-more-funding-fewer-rounds-statista.html",
+      "category": "startup",
+      "primary_image": "/assets/covers/startup.svg",
+      "seo_title": "India's Startup Funding Paradox: Bigger Checks, Fewer Deals",
+      "meta_description": "India's startup ecosystem is maturing. Discover the trend of investors writing larger checks for fewer, more established companies and what it means for the fu.",
+      "legacy_paths": [
+        "/category/startup/india-s-startups-more-funding-fewer-rounds-statista.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "exclusive-german-startup-happyhotel-raises-6-5-million-to-build-ai-agents-for-ho",
+      "vertical": "ai_tech",
+      "title": "Exclusive: German startup happyhotel raises €6.5 million to build AI agents for hotel revenue management - EU-Startups",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1194,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNNGZSTzhJWTNWcWVWZE5BQlJtcktVTHdiUlh5YXM1dXNnLUdHd0FZMFJLRFd1dTM0NkFfd25Cc0l0V0t0NGZveHZrd0lKN2NUZXFpWGdQamZtV2ZlUW01SHcwLURQdGdTa0FDV0JvNkRwQ3Fiei1HZVpmODgzeDhZQk54LU5qN0hmcTVxcDgwb1FxT3piY0ZabzNqYjk1Q3hHREYwcktwQzJfbmdocXlseE1OcndXRjh6RC0xZVNrc3EzY2pTQ3J5bFJSblJoemN1c3JVSUdyRQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "59b9da797761d803c90032c3",
+      "path": "/stories/ai/exclusive-german-startup-happyhotel-raises-6-5-million-to-build-ai-agents-for-ho.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Happyhotel's €6.5M Seed Round: AI Agents Set to Disrupt Hotel Revenue Management",
+      "meta_description": "German startup happyhotel raises €6.5M led by Capital One Ventures to build autonomous AI agents, aiming to democratize and automate revenue management for hot.",
+      "legacy_paths": [
+        "/category/ai/exclusive-german-startup-happyhotel-raises-6-5-million-to-build-ai-agents-for-ho.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "saudi-s-humain-invested-3-billion-in-xai-s-series-e-funding-round-cnbc",
+      "vertical": "ai_tech",
+      "title": "Saudi's Humain invested $3 billion in xAI's Series E funding round - CNBC",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1201,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPc2RBSkNtaXZCcmZYSkdXWm01enZqX1VENllnSi01bm9sTGlFalV5WVpGbVFtRkZMVW4xTVdwbkV5bTN6SnJmLUhqNHZ1ajQyaWxkcHhnUXRIR1B5elNvNkFqeVJoT2RJUERhbXFhLVB4ZkFwZ3R4MElVcUY0UUlhZU1YdjlEMk9LN0tXNjJXSGhYMXBSb0pvRmpScWJuM1dTdHfSAacBQVVfeXFMUHhUbGQ3cm11ZDFNV3d3N0VIZy1MNDNmOGItMmpLX3ZzRVlkc0JLSV9iUEJIanFTR1lkN3NkNXJWUzdlYXg0T21STy1QbF9pZW1nekFpQUFVeXp1d096VVlURVFrTGZaWjdQU1VEOEpWMi0zaTBKR0NaNFA3eTQtVGZ5TU9YQkpOX1N0cnE5OXc4YnEtWm95VVZSUTVyQkk4NkxWREgweHM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5",
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNGFxMHNpbVRKRlVaeDNabU5naDBYY3VQR1NwYVE0VTNSeUJTSlFKaHR6Q2tTVTJLU041MWZuWVpoRmQ4MFAtQVdQaTdEdWhub3VKQUhSY0k0Q3JmdFlBNkZrYWg5czJKeW5jR2czWVU0eWRFTmZsWjhyME9QbklVdk9iWXB3RE9aRTVlYg?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "662a54114342ca0121486b42",
+      "path": "/stories/ai/saudi-s-humain-invested-3-billion-in-xai-s-series-e-funding-round-cnbc.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "xAI's $6B Funding: Inside Saudi Arabia's Major Bet on Musk's AI Vision",
+      "meta_description": "Elon Musk's xAI secures a massive $6 billion Series B, with a significant $3 billion from Saudi Arabia's Humain, valuing the company at $24 billion.",
+      "legacy_paths": [
+        "/category/ai/saudi-s-humain-invested-3-billion-in-xai-s-series-e-funding-round-cnbc.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "bis-quarterly-review-september-2025-bank-for-international-settlements",
+      "vertical": "finance",
+      "title": "BIS Quarterly Review, September 2025 - Bank for International Settlements",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1142,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5wTFpzcktHdFlqbkprc040VzJPRlFPNDZsMlJad0Y3eE1vM3hqd0VmMFRjMUhjUU12S1BLZUUzd2RNOUQzeVpOUG9OaEMwdzc4aXdOdWFFMA?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMmlhcVpaWjQyYVlFYkxJTk5OdEF6RnhHZUxaLXdFR192cHNlS04yR28yZHVFdGxSTVB5MDRRVkRtZ0NIZFh0SXh0QWs2cXJEZXJTY1ZQM2xwbEkwdDk4VTlwREgxYUFjaUR5MjdJZEM5UmI1TXJhRHVjYmFUcWg4RzlsZmM?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "cffe7043772e82597809093a",
+      "path": "/stories/finance/bis-quarterly-review-september-2025-bank-for-international-settlements.html",
+      "category": "finance",
+      "primary_image": "/assets/covers/finance.svg",
+      "seo_title": "BIS September 2025 Review: AI, Shadow Banking, and the New Financial Frontier",
+      "meta_description": "The Bank for International Settlements' Sept 2025 review highlights AI's systemic risks, the growing influence of non-bank lenders, and new financial vulnerabi.",
+      "legacy_paths": [
+        "/category/finance/bis-quarterly-review-september-2025-bank-for-international-settlements.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "gen-z-s-screen-obsessions-how-september-s-streaming-hits-are-defining-pop-cultur",
+      "vertical": "lifestyle_pop",
+      "title": "Gen Z’s Screen Obsessions: How September’s Streaming Hits Are Defining Pop Culture and Style - Style Rave",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1109,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1XMjlGcVlyR1BxNnp0b3Z6OXUtN2NCLTJXV3FIZWFwSHVWeEIxUDc1azRwQm9rZ1VkZ2daLUZ0YTdyLWdteERxbHpLNVU0RVpnX2hiMWdXUVJfajJvT1E?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "dc7e4482e7bf136d2dadb476",
+      "path": "/stories/general/gen-z-s-screen-obsessions-how-september-s-streaming-hits-are-defining-pop-cultur.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "Gen Z Screen Style: How One Piece and Sex Education Defined September Fashion",
+      "meta_description": "An analysis of how September's streaming blockbusters like Netflix's One Piece and Sex Education are shaping Gen Z pop culture, driving fashion trends from pir.",
+      "legacy_paths": [
+        "/category/general/gen-z-s-screen-obsessions-how-september-s-streaming-hits-are-defining-pop-cultur.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "how-does-a-papal-conclave-work-people-are-turning-to-this-oscar-winning-film-to",
+      "vertical": "lifestyle_pop",
+      "title": "How does a papal conclave work? People are turning to this Oscar-winning film to find out - NBC News",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1120,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcWJYSEh0ZWVLVzVsVS0xUk1wX2V0MGtfTzdrYjYxaVM3RG45ZVZzVVkta2hNWUdXRFM0VnllRUhnT282YkdvUk5lTnctZGxBaTlqRG94STVnRFdia2gwdUtRaXJfLWstZ2oxNEt0WHVCSTkwVTBqdlhfQm16MmxEWlpJazBIbm1RR1ZpREVUcC1ETXVmYjZiWjFYWHFEeXljdmJUdXkyekNFWVpqWVUyWFJHMA?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "5e2cd1b3378676101cc8ac9f",
+      "path": "/stories/general/how-does-a-papal-conclave-work-people-are-turning-to-this-oscar-winning-film-to.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "The Papal Conclave Explained: Why a Netflix Film is the Go-To Guide",
+      "meta_description": "Amid Pope Francis's recent health concerns, global interest in the papal conclave has surged. Discover how this ancient process works and why many are turning.",
+      "legacy_paths": [
+        "/category/general/how-does-a-papal-conclave-work-people-are-turning-to-this-oscar-winning-film-to.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "co-creating-culture-how-viewers-influence-the-content-they-love-youtube-official",
+      "vertical": "lifestyle_pop",
+      "title": "Co-creating culture: How viewers influence the content they love - YouTube Official Blog",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 1228,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdEJXclhPeEV3OW9USmJjaUlJRE4zaVdGTUhhMHN4c0MzVjd6M2IzdjJIaTY0UDNqS0ZNTGZNaGRPd0VZYktySVZaWGE2bl9WM1FjWl9aYTM5SDgxaEpQRWZtTGdjbDJjZmdDcVFvU0x3OFZWSEtPVC1OUGd2NUNwQjM3VU5uYUZTMnpBbA?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "6a07c1f8a7b9c5dcb28063c7",
+      "path": "/stories/general/co-creating-culture-how-viewers-influence-the-content-they-love-youtube-official.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "The Co-Creation Revolution: How Audiences Are Directing Digital Content",
+      "meta_description": "Explore the shift from passive viewing to active co-creation, where audiences on platforms like YouTube directly influence the content and culture they love.",
+      "legacy_paths": [
+        "/category/general/co-creating-culture-how-viewers-influence-the-content-they-love-youtube-official.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "the-8-best-livestreaming-platforms-for-creators-backstage-com",
+      "vertical": "lifestyle_pop",
+      "title": "The 8 Best Livestreaming Platforms for Creators - backstage.com",
+      "published_at": "2026-02-20T12:04:52+00:00",
+      "word_count": 948,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMHg2b1ZLTWs1QXlpWXUyRXdfX1drcXF4VlhlZ20wYVVDZ0k4MWtZOXhES24yNW4zODJvc3hkZmtCZXktME8wOWdNWkc4QU03eXdVc3hqWHNWNTVlS3R2cG55YUJLX1NOM1ZXQWRrWFd3NXhidXp0ay05YldBbVR6czhJelkzX1h0b2MwRkx5ZndQMkYya3c?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdGE4YXhiS0dINzhvVTgzTW5QWEJacVdvVUlhNG5BX0NPbjAwaHptTXVPU0RpbktYVnNCbUpNQzh0cGpRUHdtZlc4eHpjT09IRGtNZE1lMXRicElMMDRNRng5NjhNOFo0Ry03ZW9adWVxZEk0d25wMWxCcW5oUEwtMnRHSFNYREI4bVlLSXA3UHJkUkZxbFFEN1BYLVczV0tPLXZv?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "ae948bafdef599b4b04a3776",
+      "path": "/stories/general/the-8-best-livestreaming-platforms-for-creators-backstage-com.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "The Top Livestreaming Platforms for Creators: A Strategic Guide",
+      "meta_description": "Discover the best livestreaming platforms for creators. Our analysis compares Twitch, YouTube Live, Instagram, and others to help you choose the right fit.",
+      "legacy_paths": [
+        "/category/general/the-8-best-livestreaming-platforms-for-creators-backstage-com.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
       "slug": "ai-pioneer-fei-fei-li-s-startup-world-labs-raises-1-billion-bloomberg",
       "vertical": "ai_tech",
       "title": "AI Pioneer Fei-Fei Li’s Startup World Labs Raises $1 Billion - Bloomberg",
@@ -2619,16 +2907,16 @@
     },
     {
       "date": "2026-02-20",
-      "duplicate_rate": 0.85,
+      "duplicate_rate": 0.8167,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 6.125,
-      "publish_count": 8
+      "rpm_estimate": 5.222,
+      "publish_count": 9
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 3535.93,
+    "spent_krw": 5199.5,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -2636,7 +2924,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 3535.93
+    "2026-02": 5199.5
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
