@@ -5,6 +5,7 @@ from __future__ import annotations
 import html
 import json
 import os
+import re
 import shutil
 import urllib.parse
 import urllib.request
@@ -112,6 +113,7 @@ class StaticSitePublisher:
             out_path = staging / "category" / category / "index.html"
             ensure_dir(out_path.parent)
             out_path.write_text(self._render_category_html(category, category_posts), encoding="utf-8")
+        self._refresh_existing_post_layouts(staging, all_posts)
 
         (staging / "robots.txt").write_text(self._render_robots(), encoding="utf-8")
         (staging / "sitemap.xml").write_text(self._render_sitemap(all_posts), encoding="utf-8")
@@ -338,6 +340,42 @@ class StaticSitePublisher:
         thumb_path = thumbs_dir / f"{post.slug}.svg"
         thumb_path.write_text(self._build_post_thumbnail_svg(post), encoding="utf-8")
 
+    def _article_cover_block(self, *, category: str, title: str, description: str) -> str:
+        category_label = CATEGORY_LABELS.get(category, category)
+        safe_title = html.escape(str(title or ""))
+        safe_desc = html.escape(str(description or PROJECT_TAGLINE))
+        safe_category = html.escape(str(category))
+        safe_label = html.escape(str(category_label))
+        return (
+            f'<div class="article-cover featured-media featured-media-text" data-category="{safe_category}">'
+            f'<span class="featured-media-inner">'
+            f'<span class="cover-chip">{safe_label}</span>'
+            f'<strong class="cover-title">{safe_title}</strong>'
+            f'<span class="cover-desc">{safe_desc}</span>'
+            f'</span></div>'
+        )
+
+    def _refresh_existing_post_layouts(self, root: Path, posts: list[PublishedBrief]) -> None:
+        hero_pattern = re.compile(r'<img class="hero-image"[^>]*?>', re.IGNORECASE)
+        for post in posts:
+            post_file = root / post.path.lstrip("/")
+            if not post_file.exists():
+                continue
+            try:
+                blob = post_file.read_text(encoding="utf-8")
+            except OSError:
+                continue
+            if 'class="hero-image"' not in blob:
+                continue
+            replacement = self._article_cover_block(
+                category=post.category,
+                title=post.title,
+                description=post.meta_description or PROJECT_TAGLINE,
+            )
+            rewritten, count = hero_pattern.subn(replacement, blob, count=1)
+            if count:
+                post_file.write_text(rewritten, encoding="utf-8")
+
     def _write_shared_assets(self, root: Path) -> None:
         css_dir = root / "assets"
         covers_dir = css_dir / "covers"
@@ -364,6 +402,61 @@ body {
     radial-gradient(900px 450px at 110% -15%, #fde68a 0%, transparent 60%),
     var(--bg);
   color: var(--text);
+}
+.site-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,.9);
+  border-bottom: 1px solid var(--line);
+}
+.site-topbar-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: .68rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+}
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: #0f172a;
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: .01em;
+}
+.site-brand:hover { text-decoration: none; }
+.site-brand-dot {
+  width: .56rem;
+  height: .56rem;
+  border-radius: 999px;
+  background: linear-gradient(140deg, #0284c7 0%, #0f172a 100%);
+  display: inline-block;
+}
+.site-topnav {
+  display: flex;
+  align-items: center;
+  gap: .38rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.site-topnav a {
+  color: #334155;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: .22rem .62rem;
+  font-size: .84rem;
+  font-weight: 700;
+}
+.site-topnav a:hover {
+  text-decoration: none;
+  background: #f1f5f9;
+  border-color: #dbe2ec;
 }
 main { max-width: 1160px; margin: 0 auto; padding: 1.2rem 1rem 3rem; }
 a { color: #0b3ea6; text-decoration: none; }
@@ -542,14 +635,33 @@ nav.categories a {
 }
 .article p { line-height: 1.7; margin: .82rem 0; }
 .article ul { line-height: 1.6; }
-.hero-image {
+.article code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: .12rem .4rem;
+}
+.source-list {
+  list-style: none;
+  margin: .4rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: .5rem;
+}
+.source-item code {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.45;
+  padding: .5rem .62rem;
+}
+.article-cover {
+  margin: .8rem 0 1rem;
   border-radius: calc(var(--radius) - 4px);
   border: 1px solid var(--line);
-  object-fit: cover;
-  margin: .8rem 0 1rem;
-  background: #e2e8f0;
 }
 .section-grid {
   display: grid;
@@ -580,6 +692,7 @@ nav.categories a {
 @media (max-width: 959px) {
   .layout-grid, .section-grid { grid-template-columns: 1fr; }
   .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-topbar-inner { padding: .6rem .8rem; }
 }
 @media (max-width: 639px) {
   main { padding: 1rem .75rem 2.2rem; }
@@ -587,6 +700,13 @@ nav.categories a {
   .article { padding: .86rem .9rem; }
   nav.categories { gap: .4rem; }
   nav.categories a { font-size: .85rem; padding: .34rem .62rem; }
+  .site-topnav {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    max-width: 58vw;
+    padding-bottom: .08rem;
+  }
 }
             """.strip()
             + "\n",
@@ -688,6 +808,18 @@ nav.categories a {
   <script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={html.escape(self.adsense_client)}\" crossorigin=\"anonymous\"></script>
 </head>
 <body>
+  <header class=\"site-topbar\">
+    <div class=\"site-topbar-inner\">
+      <a class=\"site-brand\" href=\"{self._href('/index.html')}\"><span class=\"site-brand-dot\" aria-hidden=\"true\"></span>{html.escape(PROJECT_TITLE)}</a>
+      <nav class=\"site-topnav\" aria-label=\"Primary\">
+        <a href=\"{self._href('/index.html')}\">Home</a>
+        <a href=\"{self._href('/category/ai/index.html')}\">AI</a>
+        <a href=\"{self._href('/category/tech/index.html')}\">Tech</a>
+        <a href=\"{self._href('/category/finance/index.html')}\">Finance</a>
+        <a href=\"{self._href('/category/stocks/index.html')}\">Stocks</a>
+      </nav>
+    </div>
+  </header>
   <main>
     {body}
     <p class=\"footer-note\">{html.escape(PROJECT_TITLE)} · {html.escape(PROJECT_TAGLINE)}</p>
@@ -719,9 +851,7 @@ nav.categories a {
     def _render_post_html(self, brief: GeneratedBrief, published: PublishedBrief, internal_links: list[PublishedBrief]) -> str:
         payload = brief.payload
         category_label = CATEGORY_LABELS.get(brief.topic.category, brief.topic.category)
-        hero = str(published.primary_image or payload.get("hero_image_url") or f"/assets/covers/{brief.topic.category}.svg")
         thumb = self._thumbnail_relpath(published)
-        hero_src = self._href(hero) if hero.startswith("/") else hero
 
         key_points = "".join([f"<li>{html.escape(one)}</li>" for one in payload.get("key_points") or []])
         deep_dive = "".join([f"<p>{html.escape(one)}</p>" for one in payload.get("deep_dive") or []])
@@ -731,7 +861,7 @@ nav.categories a {
         )
         src_items = "".join(
             [
-                f"<li><code>{html.escape(url)}</code></li>"
+                f"<li class=\"source-item\"><code>{html.escape(url)}</code></li>"
                 for url in payload.get("source_urls") or []
             ]
         )
@@ -745,7 +875,7 @@ nav.categories a {
         article_schema = dict(article_schema)
         article_schema["url"] = self._public_url(published.path)
         article_schema["mainEntityOfPage"] = self._public_url(published.path)
-        article_schema["image"] = [self._public_url(hero)]
+        article_schema["image"] = [self._public_url(thumb)]
         article_schema["headline"] = payload.get("title") or published.title
         article_schema["description"] = payload.get("meta_description") or published.meta_description
         article_schema["datePublished"] = published.published_at
@@ -775,7 +905,7 @@ nav.categories a {
 </header>
 {self._ad_slot('top-banner')}
 <article class=\"article\">
-  <img class=\"hero-image\" src=\"{html.escape(hero_src)}\" alt=\"{html.escape(str(payload.get('hero_image_alt') or payload.get('title') or published.title))}\" loading=\"eager\" width=\"1200\" height=\"675\" />
+  {self._article_cover_block(category=brief.topic.category, title=str(payload.get('title') or published.title), description=str(payload.get('meta_description') or payload.get('summary') or published.meta_description or PROJECT_TAGLINE))}
   {disclaimer}
   <h2>TL;DR</h2>
   <p>{html.escape(str(payload.get('summary') or ''))}</p>
@@ -791,7 +921,7 @@ nav.categories a {
   <h2>FAQ</h2>
   <ul>{faq_items}</ul>
   <h2>Sources</h2>
-  <ul>{src_items}</ul>
+  <ul class="source-list">{src_items}</ul>
   {self._ad_slot('inline-2')}
 </article>
 <section class=\"panel\">
