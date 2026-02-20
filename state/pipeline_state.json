@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-20T15:12:05+00:00",
+  "updated_at": "2026-02-20T18:08:34+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,230 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "ai-seed-trends-more-multimedia-backend-automation-agentic-security-and-yes-robot",
+      "vertical": "ai_tech",
+      "title": "AI Seed Trends: More Multimedia, Backend Automation, Agentic Security, And Yes, Robots - Crunchbase News",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1249,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWswMUUtUnZkRHlrUVI5NWdWeG1zdjBqdlFLM1FsYXRJMFRyeGFnNG1vSmNtS3IxQ0xXR0ZicUpjdW5sQnhVZFk4X0RPZUx0elJKV0g3eEg3SWd5M0ZzMFlodklHeW5GRUdZZTdPdFFvLTBkbWJ4a0NXekIyOFBFNDhHRWFtM3VaX0dsclF3NA?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "6874a32ed0189704431e5a7b",
+      "path": "/stories/ai/ai-seed-trends-more-multimedia-backend-automation-agentic-security-and-yes-robot.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "AI Seed Funding Trends: Multimedia, Automation Agents, and Robotics",
+      "meta_description": "Explore the latest AI seed funding trends. Investors are backing multimedia generation, backend automation agents, agentic security, and a new wave of AI-power.",
+      "legacy_paths": [
+        "/category/ai/ai-seed-trends-more-multimedia-backend-automation-agentic-security-and-yes-robot.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "bessemer-leads-25m-series-a-in-us-financial-ai-startup-tech-in-asia",
+      "vertical": "ai_tech",
+      "title": "Bessemer leads $25m series A in US financial AI startup - Tech in Asia",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1123,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWswMUUtUnZkRHlrUVI5NWdWeG1zdjBqdlFLM1FsYXRJMFRyeGFnNG1vSmNtS3IxQ0xXR0ZicUpjdW5sQnhVZFk4X0RPZUx0elJKV0g3eEg3SWd5M0ZzMFlodklHeW5GRUdZZTdPdFFvLTBkbWJ4a0NXekIyOFBFNDhHRWFtM3VaX0dsclF3NA?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxORVQzQURVTFprRjJoTV9xMktnQTdFQzR1a21Yb2tlNjhEV21xMTNfVERaNHBCbUtjRWdGcTU1NU0xLV9BZkVfNEJWUlNLNWZHZ0J5SDZhY3BtSGRveklYZGp4Y2I2ZjNibVJqUGdyQWVJVnBFd3hoMjZHT3lmMW05M1h4WThySkgzcl9lZG5aU2FTUFBXSEFFX1hYU0t6Zw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "bd5ad74cff024ae32a59788d",
+      "path": "/stories/ai/bessemer-leads-25m-series-a-in-us-financial-ai-startup-tech-in-asia.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Norm Ai Secures $25M to Automate Financial Compliance with AI Agents",
+      "meta_description": "Norm Ai has raised $25 million in a Series A round led by Bessemer Venture Partners to deploy its Regulatory AI Agents for the financial services industry.",
+      "legacy_paths": [
+        "/category/ai/bessemer-leads-25m-series-a-in-us-financial-ai-startup-tech-in-asia.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "peak-xv-closes-1-3b-fund-bets-big-on-india-s-ai-boom-the-tech-buzz",
+      "vertical": "ai_tech",
+      "title": "Peak XV closes $1.3B fund, bets big on India's AI boom - The Tech Buzz",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1223,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxORnNHN3pOejl5dFA0Ti0tTWowbFpLUDE3ckZSMVJtallxdjZvV3lZY1hqelB4R0NZaVJQZFlsa0R3dGVDa2dZc2wxMThMQzU1dGV5TTF1MXhkWGo4amowbEFvZHhhU2hrOV8waV9BV0lNQ2VCYW1BMTZURkxueXpZcFFWQ3p0MDZWLVNHQVR3?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWswMUUtUnZkRHlrUVI5NWdWeG1zdjBqdlFLM1FsYXRJMFRyeGFnNG1vSmNtS3IxQ0xXR0ZicUpjdW5sQnhVZFk4X0RPZUx0elJKV0g3eEg3SWd5M0ZzMFlodklHeW5GRUdZZTdPdFFvLTBkbWJ4a0NXekIyOFBFNDhHRWFtM3VaX0dsclF3NA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "1130ccea873e03f221bc2218",
+      "path": "/stories/ai/peak-xv-closes-1-3b-fund-bets-big-on-india-s-ai-boom-the-tech-buzz.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Peak XV's $1.3B Fund: Fueling India's Ascent as a Global AI Powerhouse",
+      "meta_description": "Peak XV Partners, formerly Sequoia India, closes a $1.3B fund, signaling a massive bet on India's burgeoning AI ecosystem and its potential to shape global tec.",
+      "legacy_paths": [
+        "/category/ai/peak-xv-closes-1-3b-fund-bets-big-on-india-s-ai-boom-the-tech-buzz.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "openai-alumni-launch-18-startups-reshaping-ai-findarticles-com",
+      "vertical": "ai_tech",
+      "title": "OpenAI Alumni Launch 18 Startups Reshaping AI - findarticles.com",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1186,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQN1Vld0NKWllFQ2Q1UWxXODh6UDg2SjAxM3BSVmNhemQ1emRyYkVvdC1QcG1yeWNKMzBmRXI3WjVncV9lMWRNN3VRbVRndDV4TnprVjNnYlc5RkIyeV9nalJnYkNFR1ZiQkpHMm5CVW1aR2xlT00yRHBaa1R4OFlPYtIBiAFBVV95cUxQSWgwVmZiMmNoOVVDZUJrQmowcVV0eElwWjIzZ09pazVoMFVSaTA2NWZ3Rld0eTdEYlpVQW5sMEl6ZHVFaHNfVDRLV2Uta0hHOXJxNWQtOEJBbTZfclFwZDFJRTdaQUtMWFhvU1dFeWliX0xfNVdPMWZXMGpiOXhVTWw5czZJWl9x?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPZWswMUUtUnZkRHlrUVI5NWdWeG1zdjBqdlFLM1FsYXRJMFRyeGFnNG1vSmNtS3IxQ0xXR0ZicUpjdW5sQnhVZFk4X0RPZUx0elJKV0g3eEg3SWd5M0ZzMFlodklHeW5GRUdZZTdPdFFvLTBkbWJ4a0NXekIyOFBFNDhHRWFtM3VaX0dsclF3NA?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "fdf0431c98fb2f1ee697954c",
+      "path": "/stories/ai/openai-alumni-launch-18-startups-reshaping-ai-findarticles-com.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "The OpenAI Exodus: How Alumni Startups Are Shaping the Next AI Wave",
+      "meta_description": "An in-depth analysis of the 18 influential AI startups founded by OpenAI alumni, which have collectively raised over $1 billion to redefine the industry.",
+      "legacy_paths": [
+        "/category/ai/openai-alumni-launch-18-startups-reshaping-ai-findarticles-com.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "monetary-policy-implementation-workshop-unwinding-large-central-bank-balance-she",
+      "vertical": "finance",
+      "title": "Monetary Policy Implementation Workshop: Unwinding Large Central Bank Balance Sheets - Federal Reserve Bank of New York",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1000,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTE50S2lzelptc1JzRnphckljcEdacnI0SEMxR1VJemVRdWExSGRIWkRxMHJZclNabWw5a1NHckwtZDVhanBDM2pnVkE0bml2emp3VlZCTUJ3WkFqVkwzNVdXYi1paHAtaHBYR1FjcldtUmVlbjVmSmc?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUVRpWnpzel9vdWlfUTRyMGZwLVhXN2dmVDBNclBHRzhhNWx4MnVDSFBZNl8wZmxuZzlpZjZPTC0zMTZMRU9Udl9zWTB1X0FFR2ZBMGFQaWgydTVSY21qTzBkUWoyaTlGUHFJeVZybVZnb3d3YWoyRkZHeDVyLWszMmFPLUNZUmh0WUh3UG9ZejBFanRudmt5VV9YNmVSa1hmeWp2TE1CUWgtdw?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMmlhcVpaWjQyYVlFYkxJTk5OdEF6RnhHZUxaLXdFR192cHNlS04yR28yZHVFdGxSTVB5MDRRVkRtZ0NIZFh0SXh0QWs2cXJEZXJTY1ZQM2xwbEkwdDk4VTlwREgxYUFjaUR5MjdJZEM5UmI1TXJhRHVjYmFUcWg4RzlsZmM?oc=5",
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTE9keHZKTjBMa0NLZXBaV2pjNG0tUm5jZjZ6Ukd3bHRVNDExZmJmcWtOaFlMbmNmSXFiaWVRQU9xTWhrZHJJdzhZcXRybVVnSnhpNldjUU9mVktnVFZLeE1LQ0pBX0kxN2ZaMGNIYmRXVzZNbkJwR09wM3V4Z2g?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "33ad64edd997bef3a69f3d38",
+      "path": "/stories/finance/monetary-policy-implementation-workshop-unwinding-large-central-bank-balance-she.html",
+      "category": "finance",
+      "primary_image": "/assets/covers/finance.svg",
+      "seo_title": "The Great Unwinding: Central Banks Navigate Post-QE Balance Sheet Reduction",
+      "meta_description": "An analysis of the complex process of quantitative tightening (QT), as global central banks, led by the Fed, unwind their massive balance sheets.",
+      "legacy_paths": [
+        "/category/finance/monetary-policy-implementation-workshop-unwinding-large-central-bank-balance-she.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "heated-rivalry-is-steamy-the-fan-edits-are-even-steamier-nbc-news",
+      "vertical": "lifestyle_pop",
+      "title": "'Heated Rivalry' is steamy. The fan edits are even steamier. - NBC News",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1085,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOLVBRTS1WbWJIVUh3SUZ2VG1hYU4tbjMtVWUzcm1EdlJIVUFydXFDdWFWR1pWc3JuSUxiSTN5MEUzdmtLT1RzdDYyWFhRemdSMzZkRXZObzFOZk5kb2NNU05OYk1INFJTQnQxeEJsT3BBYnE1VkRoR2UyQVVCM2NUTWhhdWFVMHFQN2pFSXNMOUNab2VsVnBWMTVjWUtrNEUwTDJmMjFNNjJEMW12blJvUHVpMWNGaG1maVRwb1Jn?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWEFGTGVXd0xEN3RRVk9uTmRYbnM2WkZlTWRHRDgxem5aUm1UODQtSHR3R1FROUlmZHRQU1RBNl9UNGQ5MnlkSGtWaEZlMG1nTVJEQkE4SWNDOXp6VEVaMnByRkVGaWJNRmtGYk9aR2Z4TVZITXdDQjdMV0U2cFNCRw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "94506491540700124de0e189",
+      "path": "/stories/general/heated-rivalry-is-steamy-the-fan-edits-are-even-steamier-nbc-news.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "Heated Rivalry: How a TikTok Fan Edit Frenzy Reignited a Queer Hockey Romance",
+      "meta_description": "Discover how Rachel Reid's 2019 novel 'Heated Rivalry' became a BookTok sensation, fueled by a passionate fan base creating steamy video edits and content.",
+      "legacy_paths": [
+        "/category/general/heated-rivalry-is-steamy-the-fan-edits-are-even-steamier-nbc-news.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "state-of-the-consumer-2025-when-disruption-becomes-permanent-mckinsey-company",
+      "vertical": "lifestyle_pop",
+      "title": "State of the Consumer 2025: When disruption becomes permanent - McKinsey & Company",
+      "published_at": "2026-02-20T18:08:34+00:00",
+      "word_count": 1295,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNbmgxNmF5TjA0LUU5Yi1nekhZVnRwTWwtSG5yMzZjOTM5VjRJdVpQNGVGQVZBekdZdUh2dFN5SDZRUmFVYWxBbW5DTEZuQVpGVUowc0loOHJEMlRfLXVZOTdjVnkxUmk4WDdnUzJPeF9zQ2FFOTRyb29paEFaMzNFYkhhQ1NlTzJ0UnVPMUVlcU1wZnF0?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxNWEFGTGVXd0xEN3RRVk9uTmRYbnM2WkZlTWRHRDgxem5aUm1UODQtSHR3R1FROUlmZHRQU1RBNl9UNGQ5MnlkSGtWaEZlMG1nTVJEQkE4SWNDOXp6VEVaMnByRkVGaWJNRmtGYk9aR2Z4TVZITXdDQjdMV0U2cFNCRw?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "7349ee6d9a07af25cf3cd62d",
+      "path": "/stories/general/state-of-the-consumer-2025-when-disruption-becomes-permanent-mckinsey-company.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "The 2025 Consumer: How Permanent Disruption is Reshaping Behavior",
+      "meta_description": "McKinsey analysis reveals the 2025 consumer is permanently changed by disruption. Explore the shifts in spending, sentiment, and values shaping the future.",
+      "legacy_paths": [
+        "/category/general/state-of-the-consumer-2025-when-disruption-becomes-permanent-mckinsey-company.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "exclusive-peter-thiel-backed-industrial-ai-startup-emerges-from-stealth-with-fun",
       "vertical": "ai_tech",
@@ -3035,16 +3259,16 @@
     },
     {
       "date": "2026-02-20",
-      "duplicate_rate": 0.9333,
+      "duplicate_rate": 0.6833,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 5.5,
-      "publish_count": 4
+      "rpm_estimate": 5.714,
+      "publish_count": 7
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 5935.04,
+    "spent_krw": 7086.14,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -3052,7 +3276,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 5935.04
+    "2026-02": 7086.14
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
