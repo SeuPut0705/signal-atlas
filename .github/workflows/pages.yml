@@ -8,8 +8,6 @@ on:
         required: false
         default: false
         type: boolean
-  schedule:
-    - cron: "0 */3 * * *"
 
 permissions:
   contents: write
@@ -43,7 +41,7 @@ jobs:
       - name: Decide Publish Mode
         id: mode
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.publish_new }}" = "true" ]; then
+          if [ "${{ github.event.inputs.publish_new }}" = "true" ]; then
             echo "publish_new=true" >> "$GITHUB_OUTPUT"
           else
             echo "publish_new=false" >> "$GITHUB_OUTPUT"
