@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-21T03:42:57+00:00",
+  "updated_at": "2026-02-21T06:08:13+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,38 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "what-s-fueling-california-s-record-run-for-startup-funding-crunchbase-news",
+      "vertical": "ai_tech",
+      "title": "What’s Fueling California’s Record Run For Startup Funding? - Crunchbase News",
+      "published_at": "2026-02-21T06:08:13+00:00",
+      "word_count": 943,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSEFGS0MycjRoa29VSWZacURmT0pLZmt2NU9IRHJnRS1YTHdWU2U1VkJyQm9XbGtmb1hIWk0xWEVxdHM0QTNOZUtNOV9kZHNscEMyb1YwdjZScG14cFhsTDZNSzZSYmxEQ0ZPakZSR0M0al9VWnhaWm00ZTNVNUFONUEtTzl4TTlCM0Y5Nw?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHVVNUp5aktRZEhuUVBwRWkxeW1nRjlYOGNGRXpPR3F4Q3dkRWJnYkw5RWJUM2MyY0p0bjZmQV9tVVF3YnFaM3ZGRVhFQ3BIUEM5T1FQcC15VHFGYW1MakNHcDRYbnpJbjk3WTdoOWdCbXcxRlFCR1JIVl85MTJFZ0stTF9mM0laY21kTDY5emo?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcWtiSWFWVUJEQjM3cFBYSm15N1ZMVlh4c3lGQ2tDdlVsSDhwcm5jMVl2Zl93RkZIM3p5ZmZoelVZVF9XeUpUTzZVMDBXMlZUQnE1VXpjdVVxV2VhUi1pbFNFVjdOWGNZc0RQazVhYjRTcEltTHVXeFE2eFo4M2R0X3JzVjJmel80dHJ2bklNdWNBT0xqVUNPcWJDTUtDekIwVU00NnAtQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "f9dd1ca3067d5c8967d7ac19",
+      "path": "/stories/startup/what-s-fueling-california-s-record-run-for-startup-funding-crunchbase-news.html",
+      "category": "startup",
+      "primary_image": "/assets/covers/startup.svg",
+      "seo_title": "California's Startup Funding Boom: What's Driving the Record Investment Surge?",
+      "meta_description": "California's startup scene is seeing record funding. We explore the key drivers, from booming sectors like climate tech to new crowdfunding laws and talent dyn.",
+      "legacy_paths": [
+        "/category/startup/what-s-fueling-california-s-record-run-for-startup-funding-crunchbase-news.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "spotify-s-3rd-culture-next-report-looks-at-rebuilding-culture-adweek",
       "vertical": "lifestyle_pop",
@@ -3654,13 +3686,13 @@
       "duplicate_rate": 0.9833,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 3.5,
+      "rpm_estimate": 6.0,
       "publish_count": 1
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 8907.06,
+    "spent_krw": 9064.49,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -3668,7 +3700,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 8907.06
+    "2026-02": 9064.49
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
