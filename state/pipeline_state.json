@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-21T06:08:13+00:00",
+  "updated_at": "2026-02-21T09:04:57+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,38 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "rbi-expected-to-maintain-prolonged-rate-pause-supported-by-low-inflation-stable",
+      "vertical": "finance",
+      "title": "RBI expected to maintain prolonged rate pause, supported by low inflation, stable growth outlook: Report - The Times of India",
+      "published_at": "2026-02-21T09:04:57+00:00",
+      "word_count": 1142,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgJBVV95cUxQREJzeVFEVW4wckJmS29EakxYaDFIWlFmLXQ2RmMzeFdlOU1YNUhpLXBHUG5oeTNrN29YNDNWY2phM1llcTF2MEFqc3VhT3FOenM2T2pIUEpNT2l3cTZuMkR1R01hQUxGRS1ZaXpfeEx6SVVFMElmX1JlRGhBN28wUU9taS1jV05tOHVaN3UzTnRWRmhlVWhNNHUtZVZpY1UtemV1SnFkZlNHMTcxQ01EWFR5TDBiU1cwM2s4S0pzZmhPSG1OeFltV0FRQnIyYzI1S01BRVh1OS1Ddl9sV1RzMW5mX1FGUV8wa0ltSm5IcllQMmxUYjRValk4SjhuaENlVkY5OUNPYXF2c2NRQnFDZnFIY2tFZ9IBmwJBVV95cUxNdFYwUzZIQVBDUHg5TldMZGRBY3k0a0o0NXJkM1p3cWFRVkVsdGVaSmU3MmI5UTkxSVBiWG1MTmFlSGZCUmVzM0dqXzJpUkItM01sWVBwUGJTVmpUMFFlYnlVRFplZzRBSjcwejZXV0pJdERwQjV4VVd2YU1faklsMF9GMmg1MEdNYkQ0OFluQlU0cUhtVzYwZjlhVjRzM25vci1jYU5UWWsya0hTTE0tNmRocEwyOGtUN3hCQTJLaFlfLU1oRWFWTEV5R0M4RXdWM18yY1B4dkV6dE8xQUhRak1yVWhmako2dHJocTM0aWJWRVNKSUNUNVZwNGNvUTRQTm8yWnNFREVjZlMxekZVRnFuSHZ0Ni1qWTdr?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUVRpWnpzel9vdWlfUTRyMGZwLVhXN2dmVDBNclBHRzhhNWx4MnVDSFBZNl8wZmxuZzlpZjZPTC0zMTZMRU9Udl9zWTB1X0FFR2ZBMGFQaWgydTVSY21qTzBkUWoyaTlGUHFJeVZybVZnb3d3YWoyRkZHeDVyLWszMmFPLUNZUmh0WUh3UG9ZejBFanRudmt5VV9YNmVSa1hmeWp2TE1CUWgtdw?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOMmlhcVpaWjQyYVlFYkxJTk5OdEF6RnhHZUxaLXdFR192cHNlS04yR28yZHVFdGxSTVB5MDRRVkRtZ0NIZFh0SXh0QWs2cXJEZXJTY1ZQM2xwbEkwdDk4VTlwREgxYUFjaUR5MjdJZEM5UmI1TXJhRHVjYmFUcWg4RzlsZmM?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "23ac0ff77fe36f31b113e995",
+      "path": "/stories/ai/rbi-expected-to-maintain-prolonged-rate-pause-supported-by-low-inflation-stable.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "RBI's Extended Rate Pause: Why India's Central Bank is Holding Steady",
+      "meta_description": "Analysts predict the Reserve Bank of India will maintain its 6.5% repo rate for the eighth consecutive time, citing stable growth and easing inflation.",
+      "legacy_paths": [
+        "/category/ai/rbi-expected-to-maintain-prolonged-rate-pause-supported-by-low-inflation-stable.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "what-s-fueling-california-s-record-run-for-startup-funding-crunchbase-news",
       "vertical": "ai_tech",
@@ -3686,13 +3718,13 @@
       "duplicate_rate": 0.9833,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 6.0,
+      "rpm_estimate": 9.0,
       "publish_count": 1
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 9064.49,
+    "spent_krw": 9270.43,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -3700,7 +3732,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 9064.49
+    "2026-02": 9270.43
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
