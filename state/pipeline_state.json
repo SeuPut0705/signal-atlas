@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-20T21:03:25+00:00",
+  "updated_at": "2026-02-21T00:05:39+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,262 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "the-week-s-10-biggest-funding-rounds-world-labs-leads-another-ai-heavy-lineup-cr",
+      "vertical": "ai_tech",
+      "title": "The Week’s 10 Biggest Funding Rounds: World Labs Leads Another AI-Heavy Lineup - CryptoRank",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1280,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHVVNUp5aktRZEhuUVBwRWkxeW1nRjlYOGNGRXpPR3F4Q3dkRWJnYkw5RWJUM2MyY0p0bjZmQV9tVVF3YnFaM3ZGRVhFQ3BIUEM5T1FQcC15VHFGYW1MakNHcDRYbnpJbjk3WTdoOWdCbXcxRlFCR1JIVl85MTJFZ0stTF9mM0laY21kTDY5emo?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcWtiSWFWVUJEQjM3cFBYSm15N1ZMVlh4c3lGQ2tDdlVsSDhwcm5jMVl2Zl93RkZIM3p5ZmZoelVZVF9XeUpUTzZVMDBXMlZUQnE1VXpjdVVxV2VhUi1pbFNFVjdOWGNZc0RQazVhYjRTcEltTHVXeFE2eFo4M2R0X3JzVjJmel80dHJ2bklNdWNBT0xqVUNPcWJDTUtDekIwVU00NnAtQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "54ad15988421c18218e7cf3f",
+      "path": "/stories/ai/the-week-s-10-biggest-funding-rounds-world-labs-leads-another-ai-heavy-lineup-cr.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "AI Venture Capital Surge: World Labs Leads $587M Week of AI-Dominated Funding",
+      "meta_description": "AI's dominance in venture capital continues, with 8 of the top 10 funding rounds this week. World Labs leads with a $155M raise in a $587M week.",
+      "legacy_paths": [
+        "/category/ai/the-week-s-10-biggest-funding-rounds-world-labs-leads-another-ai-heavy-lineup-cr.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "qumis-raises-4-3-million-to-scale-attorney-trained-ai-for-insurance-coverage-int",
+      "vertical": "ai_tech",
+      "title": "Qumis raises $4.3 million to scale attorney-trained AI for insurance coverage intelligence - The American Bazaar",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1109,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcWtiSWFWVUJEQjM3cFBYSm15N1ZMVlh4c3lGQ2tDdlVsSDhwcm5jMVl2Zl93RkZIM3p5ZmZoelVZVF9XeUpUTzZVMDBXMlZUQnE1VXpjdVVxV2VhUi1pbFNFVjdOWGNZc0RQazVhYjRTcEltTHVXeFE2eFo4M2R0X3JzVjJmel80dHJ2bklNdWNBT0xqVUNPcWJDTUtDekIwVU00NnAtQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHVVNUp5aktRZEhuUVBwRWkxeW1nRjlYOGNGRXpPR3F4Q3dkRWJnYkw5RWJUM2MyY0p0bjZmQV9tVVF3YnFaM3ZGRVhFQ3BIUEM5T1FQcC15VHFGYW1MakNHcDRYbnpJbjk3WTdoOWdCbXcxRlFCR1JIVl85MTJFZ0stTF9mM0laY21kTDY5emo?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "feca90777351468247fdf396",
+      "path": "/stories/ai/qumis-raises-4-3-million-to-scale-attorney-trained-ai-for-insurance-coverage-int.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Qumis Raises $4.3M to Embed Attorney-Trained AI into Insurance",
+      "meta_description": "Qumis has secured $4.3 million in seed funding to scale its attorney-trained AI co-pilot, designed to provide insurance professionals with instant coverage int.",
+      "legacy_paths": [
+        "/category/ai/qumis-raises-4-3-million-to-scale-attorney-trained-ai-for-insurance-coverage-int.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "peak-xv-s-bold-1-3b-gamble-doubling-down-on-ai-as-global-vc-titans-clash-in-indi",
+      "vertical": "ai_tech",
+      "title": "Peak XV’s Bold $1.3B Gamble: Doubling Down on AI as Global VC Titans Clash in India’s Booming Tech Arena - CryptoRank",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1192,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiekFVX3lxTFByQTNpWkdxWHgxUnlfV0NCa0stZ01KbjVaelh0Z3FSMmpmemhTVG9HUTF2OFJ3a2RHbGpTLWs1NUdSNFlaS0RCbDZNd2NJZEdYbGcyMWFzRDE4RDFCZFhkZHFBUlVULWJZd1Z4TU1KcGN4ZFVodEE4T2V3?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHVVNUp5aktRZEhuUVBwRWkxeW1nRjlYOGNGRXpPR3F4Q3dkRWJnYkw5RWJUM2MyY0p0bjZmQV9tVVF3YnFaM3ZGRVhFQ3BIUEM5T1FQcC15VHFGYW1MakNHcDRYbnpJbjk3WTdoOWdCbXcxRlFCR1JIVl85MTJFZ0stTF9mM0laY21kTDY5emo?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcWtiSWFWVUJEQjM3cFBYSm15N1ZMVlh4c3lGQ2tDdlVsSDhwcm5jMVl2Zl93RkZIM3p5ZmZoelVZVF9XeUpUTzZVMDBXMlZUQnE1VXpjdVVxV2VhUi1pbFNFVjdOWGNZc0RQazVhYjRTcEltTHVXeFE2eFo4M2R0X3JzVjJmel80dHJ2bklNdWNBT0xqVUNPcWJDTUtDekIwVU00NnAtQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPREhjR1lJSFpZNlMza2ZiTmZRTEJHQ1gyS2pMWHF2TXduaU43SEctMWVBV0dBQzFlVGZrYmNJc0I2enZYa0VYTFBwLXNOMUlwOFBIMm9KamdPOW0zMXJJLUVISXJIMlNBRlBrRnlQeDY3dWgwVUU3dFgtN0NfQ1JIYUJmSVV2akxGT29FQnNhUWRmT3NTU2NEWGw1RldUZXVM?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "13cb80710a8df731c7df473b",
+      "path": "/stories/ai/peak-xv-s-bold-1-3b-gamble-doubling-down-on-ai-as-global-vc-titans-clash-in-indi.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Peak XV's $1.3B AI Gambit: Inside the Venture Capital Clash for India's Tech Future",
+      "meta_description": "Peak XV Partners is doubling down on India's AI sector with a massive capital commitment, sparking a fierce battle among global VCs for tech supremacy.",
+      "legacy_paths": [
+        "/category/ai/peak-xv-s-bold-1-3b-gamble-doubling-down-on-ai-as-global-vc-titans-clash-in-indi.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "climbing-us-government-debt-casts-a-fiscal-shadow-deloitte",
+      "vertical": "finance",
+      "title": "Climbing US government debt casts a fiscal shadow - Deloitte",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 956,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOEhPUnVmbzRENG1zRUZGdmxjNmZybTBReEVBb3JsbGcxNk16djR6d3lfdFJOR01LTXdtdFdGMDVaUjQyckF6aEphTXpSUmpObG9kSEZDZS1Ebm1GbTloOFl6bGxVLXFTSXRRU19pd3hyRy1Rd1EwVW5GLUpkcUMtTzhwMkc2ZDdNbnRjSmMtZG9YLUU2MUIyOE9QUHdlZXZxazA4?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LVzA0b01HYXNMTlR5VTdHVkFVTkkyR2dUbFF1NXhCZmFoR1JFLVo1YURqRnkzUm9iX2tIdEFQaXVmUFhaMVJQQmtuNGVEeGs1V2tMQXBFRWpVQTEzbGprMjdkRDY2a0R1V00w?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "55562e836d896535ccfa3d6b",
+      "path": "/stories/general/climbing-us-government-debt-casts-a-fiscal-shadow-deloitte.html",
+      "category": "general",
+      "primary_image": "/assets/covers/general.svg",
+      "seo_title": "Climbing US government debt casts a fiscal shadow - Deloitte | Signal Atlas",
+      "meta_description": "Climbing US government debt casts a fiscal shadow - Deloitte signals a meaningful shift in General. This briefing explains what changed, why the signal matters.",
+      "legacy_paths": [
+        "/category/general/climbing-us-government-debt-casts-a-fiscal-shadow-deloitte.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "financial-stability-report-2025-bank-of-canada",
+      "vertical": "finance",
+      "title": "Financial Stability Report—2025 - Bank of Canada",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1138,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTE02M21pel9xWjkxMVgxS3VPdjRzbVczN1JvTjF2WldvMEJQSml4b0ZlWmd2RlhYUHJzaGNVeENYUFFYNDB1cDJMYUNId1dRRnhVdHc0czQ4d1otdGdBWWg2RnlJOEtVMUZDQ2FKMjRfd1c5bEN5eTZv?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LVzA0b01HYXNMTlR5VTdHVkFVTkkyR2dUbFF1NXhCZmFoR1JFLVo1YURqRnkzUm9iX2tIdEFQaXVmUFhaMVJQQmtuNGVEeGs1V2tMQXBFRWpVQTEzbGprMjdkRDY2a0R1V00w?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "fe9a073019571786465eb785",
+      "path": "/stories/finance/financial-stability-report-2025-bank-of-canada.html",
+      "category": "finance",
+      "primary_image": "/assets/covers/finance.svg",
+      "seo_title": "Bank of Canada 2025 Financial Stability Report: Navigating High Debt in a Volatile World",
+      "meta_description": "The Bank of Canada's 2025 Financial Stability Report highlights risks from high household debt and a cooling housing market amid global uncertainty.",
+      "legacy_paths": [
+        "/category/finance/financial-stability-report-2025-bank-of-canada.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "interest-rates-and-monetary-policy-economic-indicators-the-house-of-commons-libr",
+      "vertical": "finance",
+      "title": "Interest rates and monetary policy: Economic indicators - The House of Commons Library",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1245,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE92Wm8yQUtBUUMySFA5VHVva05qYlNhMkNTTHY5RThzOVE0VUdsZnRJOUFtYlcyODk3Y0RBWERCV2pSWXlST0xWWUpRX3B4V3JDX3k3am8wenJLcVdzTDh4MDhfM3VpUnllTW5QU19Nc3dCQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LVzA0b01HYXNMTlR5VTdHVkFVTkkyR2dUbFF1NXhCZmFoR1JFLVo1YURqRnkzUm9iX2tIdEFQaXVmUFhaMVJQQmtuNGVEeGs1V2tMQXBFRWpVQTEzbGprMjdkRDY2a0R1V00w?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "6a3da61190c489441c4a9c5c",
+      "path": "/stories/finance/interest-rates-and-monetary-policy-economic-indicators-the-house-of-commons-libr.html",
+      "category": "finance",
+      "primary_image": "/assets/covers/finance.svg",
+      "seo_title": "UK Monetary Policy: Decoding the Indicators Driving Interest Rate Decisions",
+      "meta_description": "An in-depth analysis of the key UK economic indicators—inflation, GDP, and labour market data—shaping the Bank of England's interest rate decisions.",
+      "legacy_paths": [
+        "/category/finance/interest-rates-and-monetary-policy-economic-indicators-the-house-of-commons-libr.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "monetary-policy-under-uncertainty-european-central-bank",
+      "vertical": "finance",
+      "title": "Monetary policy under uncertainty - European Central Bank",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1250,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxPV085aDV0aHRWZzJuV25LZ0JJRlJmSGN0aHVMX1dXZTdFNDJ6VGdtdnZVaGFZVzdsQmhNUVlKODM4c3Y0V3FsRlZ3U0FzWExBUFp2NzlhOUtaRHBwR2o2R0pYeWstNllTRUdrSUhIdWxRVmxkOGNVQmRFNGNrRkw1SnNYZUljVThhcFE?oc=5",
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNcV9VYnV0R0RPcWN0d2g1SHJIVlNmaVA1TV9nXzRKdVlFcWtSMjQ1T1B0djE4dDNRanZvSVFGX0ZBNUd6cnZkVnAtenFuMnFzdU9zYzg5cFdkTVRxU1F5YVVXVFhVWGdhd2RsTDBkNS1Xcm9ub1FnMFp5NnB3WVBYa3JJa1FVbG5IT0ZRRHphTUhtNThkenVJS1ZrdWNDdw?oc=5",
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOd0ZPNDdQdGczd2U4eEFXMUVzNkk0SHJkMmktR0p4SVAzVzAya192b2U5djRwZVJUQmdQNTEtSmtRcHhXa3B6TWxieExMSDJxeHlCNXVtc3BBemRGa2FzdU9CeWRHUmRPNWxyN1Q0bGtrc0plbjVoYmwwUndockptRVFxX1JyMDBuU1Zj?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOa2V2OFo4WjFPclRZRGtjZXJvb3dsaDVUM3FjRnVCTkxfX184eHRyQjJ2NFlDc09TUlZrUDZGUzQzTjgyV1drNG9PSnc2Y0RELWZ5LVktLTlFcGFFa2s0Qm04RzRoYjNRSE9aSGw3aDljNFEyUEZJS1RNa203WlBLdmxxS2lWNmNXT0pRZGdDcGdqdEZ1YmMxN2lhci1RdVRMTEJtWE5wM3RJSFhGMXJjMjdqZw?oc=5",
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE1LVzA0b01HYXNMTlR5VTdHVkFVTkkyR2dUbFF1NXhCZmFoR1JFLVo1YURqRnkzUm9iX2tIdEFQaXVmUFhaMVJQQmtuNGVEeGs1V2tMQXBFRWpVQTEzbGprMjdkRDY2a0R1V00w?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "936d2c933ec073d5c598bb51",
+      "path": "/stories/ai/monetary-policy-under-uncertainty-european-central-bank.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "ECB Deploys AI to Navigate Unprecedented Economic Uncertainty",
+      "meta_description": "Discover how the European Central Bank is leveraging AI, machine learning, and high-frequency data to guide monetary policy amid historic economic uncertainty.",
+      "legacy_paths": [
+        "/category/ai/monetary-policy-under-uncertainty-european-central-bank.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
+    {
+      "slug": "how-cybercriminals-exploit-the-popularity-of-gen-z-s-favorite-films-series-and-a",
+      "vertical": "lifestyle_pop",
+      "title": "How cybercriminals exploit the popularity of Gen Z’s favorite films, series and anime | Kaspersky official blog - Kaspersky",
+      "published_at": "2026-02-21T00:05:39+00:00",
+      "word_count": 1119,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTFAwQngxeXpmYnJlSG5GcDhYOGh2U2VCUnhFWjNIWE41bGR4a0hXXzZvLTdIWm1fSWkzc3VILVUtd1BRYmgyU01xaUQ5N2labkl0VkRUanVLTjJsV0xOb3p3czk4emdWWWgzVEtN?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wJBVV95cUxNQS1rcTUydVIyb3N1Znp6XzJVamdCY2NrXzE4ODFuM1pNZXBVZ1RiUWd2clpQV21VTXpnR3o2MHpCaUJJUTJXeWpyQl9aWlJqdndBcWJJdTRNLUptcTQxc2o0RHhvS25IZXFUcXZDdVBVX0h5UWNjdnhtWFZJLWJjdGJxRUVPWTBxZ09qUDJRcS1MUURlRkRvVzhOUlh6QTVhOHhfWGJ4dTdKMHVmZGhwUjlXWTJST0xJLW1uVGN0NWxSdDc5S1hlT19QOHZybTRSbFVQNXRRNTRZaWNEblJwcE5RZXJDYWZHZXh6bllLUjFpenk3b1JXbUNlbHJScDBLMF9KcE9QYm5mcHN4ZlNwTzFpY2RGR01WMUM1WEJYNDRMdWs5NnNkY3NIUDVZaXhKeXg5NkhXaUxCWk50M3kxMnFjZThRdGYycTRVQ2ZZbjByQzBZVHAzbHZpdlFONnU0Vk9PNl9zb1hKTmc3dllV?oc=5",
+        "https://news.google.com/rss/articles/CBMibkFVX3lxTE90MkNXSDFEMnFnMG9EeldzMnFLMF9hd1ZPekJBeXBTc09BZjRjdDBKZGY4b2JYRVRJYUU3c1MxV3VLYjBnMVJFNmZsakdHaUFIWF9oNjRlZnAyN0tEUlhBUDljbzNwei1hazE0TlpR?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQanBoYnpWQ3hNNWlPWkZCU3ZPZmRMSEFHQjRsa2I0eVFoeGZVUktKT3hNMEplN1dFR05sdmJhZnNCQm0yNGRoYTc0ZDZma2Q0SGFkU0h3Y0ZHTFlWc0ZkRHFSbXFZV1FJcklvTkg4dDY3cUZucWpzem9IR0FlNEdsU2ljNUJTclhmSUJVWG5idlgwcGtYM2U2RHBLTFdBc3pWRnJvMXFhRmJGVXdPZUlxdVMzeWF1bzQ?oc=5",
+        "https://news.google.com/rss/articles/CBMigwFBVV95cUxOMk5ZWVdTdzdxeUZHeDZzeVliMmtqMl8xdGo2RXdFMV82VlpLVTZTSm1jcUxQd3BRN1lGd3ZYRWJNRTltSTUtVGIzSnI0MU5admhwanJJZUh6MzdqWkJPcEFjVXVBZUNIZHRBcFhwVUkxNE5jQTZGZG5XNEJOakppa1VGWQ?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "bba486971937abd6048b3047",
+      "path": "/stories/startup/how-cybercriminals-exploit-the-popularity-of-gen-z-s-favorite-films-series-and-a.html",
+      "category": "startup",
+      "primary_image": "/assets/covers/startup.svg",
+      "seo_title": "Fandoms Under Fire: How Cybercriminals Exploit Gen Z's Favorite Media",
+      "meta_description": "Cybercriminals are targeting Gen Z by using popular films, series, and anime like 'Barbie' and 'Attack on Titan' as bait for malware and phishing scams.",
+      "legacy_paths": [
+        "/category/startup/how-cybercriminals-exploit-the-popularity-of-gen-z-s-favorite-films-series-and-a.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "nvidia-deepens-early-stage-push-into-india-s-ai-startup-ecosystem-techcrunch",
       "vertical": "ai_tech",
@@ -3360,11 +3616,19 @@
       "indexed_rate": 0.0,
       "rpm_estimate": 5.167,
       "publish_count": 3
+    },
+    {
+      "date": "2026-02-21",
+      "duplicate_rate": 0.75,
+      "policy_flag_rate": 0.0,
+      "indexed_rate": 0.0,
+      "rpm_estimate": 7.188,
+      "publish_count": 8
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 7555.69,
+    "spent_krw": 8732.36,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -3372,7 +3636,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 7555.69
+    "2026-02": 8732.36
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
