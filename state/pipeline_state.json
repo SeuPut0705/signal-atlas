@@ -2,7 +2,7 @@
   "version": 1,
   "timezone": "Asia/Seoul",
   "created_at": "2026-02-19T14:12:14+09:00",
-  "updated_at": "2026-02-21T09:04:57+00:00",
+  "updated_at": "2026-02-21T12:02:02+00:00",
   "publish_limit": 12,
   "disabled_verticals": [],
   "vertical_deploy_failures": {
@@ -11,6 +11,38 @@
     "lifestyle_pop": 0
   },
   "published": [
+    {
+      "slug": "world-labs-secures-1-billion-for-spatial-ai-push-malaysiasun-com",
+      "vertical": "ai_tech",
+      "title": "World Labs secures $1 billion for spatial AI push - malaysiasun.com",
+      "published_at": "2026-02-21T12:02:02+00:00",
+      "word_count": 1108,
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOU5WUHZId28tcUJCVUFJTEdUX2tpVnhZd1dBS3E3bVc2N3dBMEtKNlo2YUY4V2g1emdIcDdWbGtoYnlkdzBhZVJPN3IxWFZYX092cTg1eUNpSHpyRTh3UkVDOG8yNGhhWU1vbVZyMnRZeUE5SG4tanc0M0VDT0VNYm9leThJdDBYdy1KTVNZR1Q4dFRMRXBzSGpnUlE?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNckJSSUlPcnRaRFhOZjlidUs2RWhfQ2N5NVZFdzJXNW1rWVdpakV1dlNlQ0JLOFNmOFd3bHdqZ0taUkh2NThkb3FnWmdTdmU5eHpyUXhhdy1xVFpmdFNyYXdQbU52aW1jMmxFdy15ekx5N3B1aDJpMEJHT19FUFpHbEFHdGNiVnJOQUE4ZG1KMVJxSGJ4SE1mTzhyQlNKZWVORU9JRXE4cFdwR2o0YkkwUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbHVVNUp5aktRZEhuUVBwRWkxeW1nRjlYOGNGRXpPR3F4Q3dkRWJnYkw5RWJUM2MyY0p0bjZmQV9tVVF3YnFaM3ZGRVhFQ3BIUEM5T1FQcC15VHFGYW1MakNHcDRYbnpJbjk3WTdoOWdCbXcxRlFCR1JIVl85MTJFZ0stTF9mM0laY21kTDY5emo?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcWtiSWFWVUJEQjM3cFBYSm15N1ZMVlh4c3lGQ2tDdlVsSDhwcm5jMVl2Zl93RkZIM3p5ZmZoelVZVF9XeUpUTzZVMDBXMlZUQnE1VXpjdVVxV2VhUi1pbFNFVjdOWGNZc0RQazVhYjRTcEltTHVXeFE2eFo4M2R0X3JzVjJmel80dHJ2bklNdWNBT0xqVUNPcWJDTUtDekIwVU00NnAtQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPcnJhMnlZTmFHNVlxZzlWNlVlVl9zMHRKdXdwZGIzNWZGWWp3eml0Zk5mUDhHbEp5WGpNNGd5OUhFXzBXRWk0d1NSZUlpQXgzX1NMQ29qeFpBUHdkZ2h4bTBDd3BiM0lQYnlaSzAwTVdXYkoycEN5V2NzWTlKeXZ1MElBUVEwSERWbTJteGkwa2poX25wNEtLU0xNa3lHRC02Q3FBRkd0Y9IBrAFBVV95cUxOZ2ZwbjZEWC1adnlCV21VMTJpdXR5Q2NjbU1td3JUVTFWd21DVU0tQjRubkVCUFhjRTdRa0ZtdUNLWDY1dzdJZ3B1R0J4UFhKc0k4VGx1VmdBcGlOeFpHeU1IZXdXMDlDakVpVmcweGdmYXlKXzBhUTF2a1lLZmdhRW5DNC04R3JHeUNGQkVlNTVaQ1JKQndqT1dpdDdYc1p4SzViUUhuQndVLWRN?oc=5"
+      ],
+      "ad_slots": [
+        "top-banner",
+        "inline-1",
+        "inline-2",
+        "inline-3",
+        "footer"
+      ],
+      "dedupe_hash": "b87b06fa96e9a6514b0fdd84",
+      "path": "/stories/ai/world-labs-secures-1-billion-for-spatial-ai-push-malaysiasun-com.html",
+      "category": "ai",
+      "primary_image": "/assets/covers/ai.svg",
+      "seo_title": "Imbue's $1B Funding Round Signals a New Frontier in AI Agents",
+      "meta_description": "AI research lab Imbue has raised a staggering $1 billion to build practical AI agents capable of reasoning, a major pivot towards AI that can 'do' not just 'ta.",
+      "legacy_paths": [
+        "/category/ai/world-labs-secures-1-billion-for-spatial-ai-push-malaysiasun-com.html"
+      ],
+      "url_schema": "v2",
+      "template_version": "magazine-v2"
+    },
     {
       "slug": "rbi-expected-to-maintain-prolonged-rate-pause-supported-by-low-inflation-stable",
       "vertical": "finance",
@@ -3718,13 +3750,13 @@
       "duplicate_rate": 0.9833,
       "policy_flag_rate": 0.0,
       "indexed_rate": 0.0,
-      "rpm_estimate": 9.0,
+      "rpm_estimate": 6.0,
       "publish_count": 1
     }
   ],
   "budget": {
     "month": "2026-02",
-    "spent_krw": 9270.43,
+    "spent_krw": 9458.43,
     "limit_krw": 200000,
     "last_engine": "gemini",
     "last_quality_tier": "premium",
@@ -3732,7 +3764,7 @@
     "capped": false
   },
   "budget_usage": {
-    "2026-02": 9270.43
+    "2026-02": 9458.43
   },
   "backfill": {
     "last_run_at": "2026-02-20T14:02:51+09:00",
